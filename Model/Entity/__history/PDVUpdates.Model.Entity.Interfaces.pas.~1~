@@ -1,0 +1,7 @@
+unit PDVUpdates.Model.Entity.Interfaces;
+
+interface
+
+implementation
+
+end.

@@ -1,0 +1,37 @@
+unit PDVUpdates.Model.Usuario.Iterator;
+
+interface
+
+uses PDVUpdates.Model.Usuario.Interfaces;
+
+type
+
+  TModelUsuarioIterator = class(TInterfacedObject, iModelUsuarioIterator)
+  private
+  public
+    constructor Create;
+    destructor Destroy; override;
+    class function New: iModelUsuarioIterator;
+  end;
+
+implementation
+
+{ TModelUsuarioIterator }
+
+constructor TModelUsuarioIterator.Create;
+begin
+
+end;
+
+destructor TModelUsuarioIterator.Destroy;
+begin
+
+  inherited;
+end;
+
+class function TModelUsuarioIterator.New: iModelUsuarioIterator;
+begin
+  Result := Self.Create;
+end;
+
+end.

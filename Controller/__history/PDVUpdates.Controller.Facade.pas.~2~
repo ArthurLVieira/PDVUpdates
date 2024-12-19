@@ -1,0 +1,40 @@
+unit PDVUpdates.Controller.Facade;
+
+interface
+
+uses
+  PDVUpdates.Controller.Interfaces;
+
+type
+
+  TControllerFacade = class(TInterfacedObject, iControllerFacade)
+  private
+
+  public
+    constructor Create;
+    destructor Destroy; override;
+    class function New: iControllerFacade;
+    function Usuario: iControllerUsuario;
+  end;
+
+implementation
+
+{ TControllerFacade }
+
+constructor TControllerFacade.Create;
+begin
+
+end;
+
+destructor TControllerFacade.Destroy;
+begin
+
+  inherited;
+end;
+
+class function TControllerFacade.New: iControllerFacade;
+begin
+  Result := Self.Create;
+end;
+
+end.

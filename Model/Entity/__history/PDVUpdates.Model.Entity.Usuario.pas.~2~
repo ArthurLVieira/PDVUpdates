@@ -1,0 +1,13 @@
+unit PDVUpdates.Model.Entity.Usuario;
+
+interface
+
+type
+
+  [Entity]
+  [Table('USUARIOS', '')]
+  [PrimaryKey('ID', 'Chave primaria')]
+
+implementation
+
+end.

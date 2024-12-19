@@ -1,0 +1,69 @@
+unit PDVUpdates.Controller.Usuario;
+
+interface
+
+uses
+  PDVUpdates.Controller.Usuario.Interfaces,
+  PDVUpdates.Model.Usuario.Interfaces;
+
+type
+
+  TControllerUsuario = class(TInterfacedObject, iControllerUsuario)
+  private
+    FModelUsuario: iModelUsuario;
+  public
+    constructor Create;
+    destructor Destroy; override;
+    class function New: iControllerUsuario;
+    function Model: iModelUsuario;
+    function Caixa: iModelUsuarioMetodos;
+    function Operador: iModelUsuarioMetodos;
+    function Gerente: iModelUsuarioMetodos;
+  end;
+
+implementation
+
+{ TControllerUsuario }
+
+uses PDVUpdates.Model.Usuario.Factory, PDVUpdates.Model.Usuario.Tipo.Factory;
+
+function TControllerUsuario.Caixa: iModelUsuarioMetodos;
+begin
+  Result := TModelUsuarioFactory.New.Usuario.Metodos
+    (TModelUsuarioTipoFactory.New.UsuarioTipo(Caixa, FModelUsuario));
+end;
+
+constructor TControllerUsuario.Create;
+begin
+
+end;
+
+destructor TControllerUsuario.Destroy;
+begin
+  FModelUsuario := TModelUsuarioFactory.New.Usuario;
+  inherited;
+end;
+
+function TControllerUsuario.Gerente: iModelUsuarioMetodos;
+begin
+  Result := TModelUsuarioFactory.New.Usuario.Metodos
+    (TModelUsuarioTipoFactory.New.UsuarioTipo(Gerente, FModelUsuario));
+end;
+
+function TControllerUsuario.Model: iModelUsuario;
+begin
+  Result := FModelUsuario;
+end;
+
+class function TControllerUsuario.New: iControllerUsuario;
+begin
+  Result := Self.Create;
+end;
+
+function TControllerUsuario.Operador: iModelUsuarioMetodos;
+begin
+  Result := TModelUsuarioFactory.New.Usuario.Metodos
+    (TModelUsuarioTipoFactory.New.UsuarioTipo(Operador, FModelUsuario));
+end;
+
+end.

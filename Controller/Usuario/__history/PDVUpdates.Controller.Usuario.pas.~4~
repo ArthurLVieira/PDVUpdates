@@ -1,0 +1,42 @@
+unit PDVUpdates.Controller.Usuario;
+
+interface
+
+uses
+  PDVUpdates.Controller.Usuario.Interfaces,
+  PDVUpdates.Model.Usuario.Interfaces;
+
+type
+
+  TControllerUsuario = class(TInterfacedObject, iControllerUsuario)
+  private
+    FModelUsuario: iModelUsuario;
+  public
+    constructor Create;
+    destructor Destroy; override;
+    class function New: iControllerUsuario;
+  end;
+
+implementation
+
+{ TControllerUsuario }
+
+uses PDVUpdates.Model.Usuario.Factory;
+
+constructor TControllerUsuario.Create;
+begin
+  FModelUsuario := TModelUsuarioFactory.New.Usuario;
+end;
+
+destructor TControllerUsuario.Destroy;
+begin
+
+  inherited;
+end;
+
+class function TControllerUsuario.New: iControllerUsuario;
+begin
+  Result := Self.Create;
+end;
+
+end.

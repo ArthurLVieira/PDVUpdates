@@ -1,0 +1,22 @@
+unit PDVUpdates.Controller.Usuario.Interfaces;
+
+interface
+
+uses
+  PDVUpdates.Model.Usuario.Interfaces;
+
+type
+
+  iControllerUsuario = interface
+    ['{A4CF9EF9-7D5A-49D7-A24E-B2F266B69700}']
+    function Model: iModelUsuario;
+  end;
+
+  iControllerUsuarioFactory = interface
+    ['{0B8CE229-CB7B-45C2-BB0D-D5626F907E26}']
+    function Usuario: iControllerUsuario;
+  end;
+
+implementation
+
+end.

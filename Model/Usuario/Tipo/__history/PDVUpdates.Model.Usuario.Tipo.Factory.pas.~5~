@@ -1,0 +1,41 @@
+unit PDVUpdates.Model.Usuario.Tipo.Factory;
+
+interface
+
+uses PDVUpdates.Model.Usuario.Tipo.Interfaces,
+  PDVUpdates.Model.Usuario.Interfaces;
+
+type
+
+  TModelUsuarioTipoFactory = class(TInterfacedObject, iModelUsuarioTipoFactory)
+  private
+  public
+    constructor Create;
+    destructor Destroy; override;
+    class function New: iModelUsuarioTipoFactory;
+    function Caixa(Value: iModelUsuario): iModelUsuarioMetodos;
+    function Fiscal(Value: iModelUsuario): iModelUsuarioMetodos;
+    function Gerante(Value: iModelUsuario): iModelUsuarioMetodos;
+  end;
+
+implementation
+
+{ TModelUsuarioTipoFactory }
+
+constructor TModelUsuarioTipoFactory.Create;
+begin
+
+end;
+
+destructor TModelUsuarioTipoFactory.Destroy;
+begin
+
+  inherited;
+end;
+
+class function TModelUsuarioTipoFactory.New: iModelUsuarioTipoFactory;
+begin
+  Result := Self.Create;
+end;
+
+end.

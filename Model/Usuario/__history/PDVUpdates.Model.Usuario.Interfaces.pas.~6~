@@ -1,0 +1,44 @@
+unit PDVUpdates.Model.Usuario.Interfaces;
+
+interface
+
+uses
+  System.Generics.Collections;
+
+type
+
+  iModelUsuarioMetodos = interface;
+
+  iModelUsuario = interface
+    ['{52C8A07B-20F9-4550-87B0-092CE39CC668}']
+    function Metodos(Value: iModelUsuarioMetodos): iModelUsuarioMetodos;
+  end;
+
+  iModelUsuarioMetodos = interface
+    ['{77C0D186-442E-4B6D-BFCD-65DB95C50C76}']
+    function AbrirCaixa: iModelUsuarioMetodos;
+    function FecharCaixa: iModelUsuarioMetodos;
+    function Desconto: iModelUsuarioMetodos;
+    function Acrescimo: iModelUsuarioMetodos;
+    function DevolucaoCupom: iModelUsuarioMetodos;
+    function CancelamentoCupom: iModelUsuarioMetodos;
+    function CancelamentoItem: iModelUsuarioMetodos;
+    function DevolucaoItem: iModelUsuarioMetodos;
+  end;
+
+  iModelUsuarioIterator = interface
+    ['{57FFFF48-4559-4817-BA61-4A614DB256A5}']
+    function hasNext: Boolean;
+    function Next: iModelUsuario;
+    function Add(Value: iModelUsuario): iModelUsuarioIterator;
+    function Lista: TList<iModelUsuario>;
+  end;
+
+  iModelUsuarioFactory = interface
+    ['{AECABAA4-211C-43E2-A4C4-DF3CE7380019}']
+    function Usuario: iModelUsuario;
+  end;
+
+implementation
+
+end.

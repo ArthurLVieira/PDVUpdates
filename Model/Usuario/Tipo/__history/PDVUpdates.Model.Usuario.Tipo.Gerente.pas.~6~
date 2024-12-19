@@ -1,0 +1,94 @@
+unit PDVUpdates.Model.Usuario.Tipo.Gerente;
+
+interface
+
+uses PDVUpdates.Model.Usuario.Interfaces;
+
+type
+
+  TModelUsuarioTipoGerente = class(TInterfacedObject, iModelUsuario,
+    iModelUsuarioMetodos)
+  private
+    FParent: iModelUsuario;
+  public
+    constructor Create;
+    destructor Destroy; override;
+    class function New: iModelUsuario;
+    function Metodos: iModelUsuarioMetodos;
+    function AbrirCaixa: iModelUsuarioMetodos;
+    function FecharCaixa: iModelUsuarioMetodos;
+    function Desconto: iModelUsuarioMetodos;
+    function Acrescimo: iModelUsuarioMetodos;
+    function DevolucaoCupom: iModelUsuarioMetodos;
+    function CancelamentoCupom: iModelUsuarioMetodos;
+    function CancelamentoItem: iModelUsuarioMetodos;
+    function DevolucaoItem: iModelUsuarioMetodos;
+
+  end;
+
+implementation
+
+{ TModelUsuarioTipoGerente }
+
+function TModelUsuarioTipoGerente.AbrirCaixa: iModelUsuarioMetodos;
+begin
+  Result := Self;
+end;
+
+function TModelUsuarioTipoGerente.Acrescimo: iModelUsuarioMetodos;
+begin
+  Result := Self;
+end;
+
+function TModelUsuarioTipoGerente.CancelamentoCupom: iModelUsuarioMetodos;
+begin
+  Result := Self;
+end;
+
+function TModelUsuarioTipoGerente.CancelamentoItem: iModelUsuarioMetodos;
+begin
+  Result := Self;
+end;
+
+constructor TModelUsuarioTipoGerente.Create;
+begin
+
+end;
+
+function TModelUsuarioTipoGerente.Desconto: iModelUsuarioMetodos;
+begin
+  Result := Self;
+end;
+
+destructor TModelUsuarioTipoGerente.Destroy;
+begin
+
+  inherited;
+end;
+
+function TModelUsuarioTipoGerente.DevolucaoCupom: iModelUsuarioMetodos;
+begin
+  Result := Self;
+end;
+
+function TModelUsuarioTipoGerente.DevolucaoItem: iModelUsuarioMetodos;
+begin
+  Result := Self;
+end;
+
+function TModelUsuarioTipoGerente.FecharCaixa: iModelUsuarioMetodos;
+begin
+  Result := Self;
+end;
+
+function TModelUsuarioTipoGerente.Metodos: iModelUsuarioMetodos;
+begin
+  Result := Self;
+end;
+
+class function TModelUsuarioTipoGerente.New: iModelUsuario;
+begin
+  Result := Self.Create;
+end;
+
+end.

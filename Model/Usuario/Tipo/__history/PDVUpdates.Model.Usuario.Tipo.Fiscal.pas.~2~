@@ -1,0 +1,17 @@
+unit PDVUpdates.Model.Usuario.Tipo.Fiscal;
+
+interface
+
+uses PDVUpdates.Model.Usuario.Interfaces;
+
+type
+
+  TModelUsuarioTipoFiscal = class(TInterfacedObject, iModelUsuario,
+    iModelUsuarioMetodos)
+  private
+  public
+  end;
+
+implementation
+
+end.

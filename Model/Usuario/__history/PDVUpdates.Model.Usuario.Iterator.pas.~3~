@@ -1,0 +1,42 @@
+unit PDVUpdates.Model.Usuario.Iterator;
+
+interface
+
+uses PDVUpdates.Model.Usuario.Interfaces, System.Generics.Collections;
+
+type
+
+  TModelUsuarioIterator = class(TInterfacedObject, iModelUsuarioIterator)
+  private
+    FLista: TList<iModelUsuario>;
+  public
+    constructor Create;
+    destructor Destroy; override;
+    class function New: iModelUsuarioIterator;
+    function hasNext: Boolean;
+    function Next: iModelUsuario;
+    function Add(Value: iModelUsuario): iModelUsuarioIterator;
+    function Lista: TList<iModelUsuario>;
+  end;
+
+implementation
+
+{ TModelUsuarioIterator }
+
+constructor TModelUsuarioIterator.Create;
+begin
+
+end;
+
+destructor TModelUsuarioIterator.Destroy;
+begin
+
+  inherited;
+end;
+
+class function TModelUsuarioIterator.New: iModelUsuarioIterator;
+begin
+  Result := Self.Create;
+end;
+
+end.

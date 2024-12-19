@@ -1,0 +1,18 @@
+unit PDVUpdates.Model.Usuario.Interfaces;
+
+interface
+
+type
+
+  iUsuario = interface
+    ['{52C8A07B-20F9-4550-87B0-092CE39CC668}']
+  end;
+
+  iFactory = interface
+    ['{AECABAA4-211C-43E2-A4C4-DF3CE7380019}']
+    function Usuario: iUsuario;
+  end;
+
+implementation
+
+end.

@@ -1,0 +1,69 @@
+unit PDVUpdates.Model.Usuario.Iterator;
+
+interface
+
+uses PDVUpdates.Model.Usuario.Interfaces, System.Generics.Collections;
+
+type
+
+  TModelUsuarioIterator = class(TInterfacedObject, iModelUsuarioIterator)
+  private
+    FLista: TList<iModelUsuario>;
+    FConunt: Integer;
+  public
+    constructor Create;
+    destructor Destroy; override;
+    class function New: iModelUsuarioIterator;
+    function hasNext: Boolean;
+    function Next: iModelUsuario;
+    function Add(Value: iModelUsuario): iModelUsuarioIterator;
+    function Lista: TList<iModelUsuario>;
+  end;
+
+implementation
+
+uses
+  System.SysUtils;
+
+{ TModelUsuarioIterator }
+
+function TModelUsuarioIterator.Add(Value: iModelUsuario): iModelUsuarioIterator;
+begin
+  Result := Self;
+  FLista.Add(Value);
+end;
+
+constructor TModelUsuarioIterator.Create;
+begin
+  FLista := TList<iModelUsuario>.Create;
+  FConunt := 0;
+
+end;
+
+destructor TModelUsuarioIterator.Destroy;
+begin
+  FreeAndNil(FLista);
+  inherited;
+end;
+
+function TModelUsuarioIterator.hasNext: Boolean;
+begin
+  Result := not(FConunt = FLista.Count);
+end;
+
+function TModelUsuarioIterator.Lista: TList<iModelUsuario>;
+begin
+
+end;
+
+class function TModelUsuarioIterator.New: iModelUsuarioIterator;
+begin
+  Result := Self.Create;
+end;
+
+function TModelUsuarioIterator.Next: iModelUsuario;
+begin
+
+end;
+
+end.

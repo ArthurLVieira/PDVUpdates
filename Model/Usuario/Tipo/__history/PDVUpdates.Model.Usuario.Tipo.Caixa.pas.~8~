@@ -1,0 +1,90 @@
+unit PDVUpdates.Model.Usuario.Tipo.Caixa;
+
+interface
+
+uses PDVUpdates.Model.Usuario.Interfaces;
+
+type
+
+  TModelUsuarioTipoCAixa = class(TInterfacedObject, iModelUsuarioMetodos)
+  private
+    FParent: iModelUsuario;
+  public
+    constructor Create(Value: iModelUsuario);
+    destructor Destroy; override;
+    class function New(Value: iModelUsuario): iModelUsuarioMetodos;
+    class function New(Value: iModelUsuario;
+      NextResponsabily: iModelUsuarioMetodos): iModelUsuarioMetodos;
+    function AbrirCaixa: iModelUsuarioMetodos;
+    function FecharCaixa: iModelUsuarioMetodos;
+    function Desconto: iModelUsuarioMetodos;
+    function Acrescimo: iModelUsuarioMetodos;
+    function DevolucaoCupom: iModelUsuarioMetodos;
+    function CancelamentoCupom: iModelUsuarioMetodos;
+    function CancelamentoItem: iModelUsuarioMetodos;
+    function DevolucaoItem: iModelUsuarioMetodos;
+
+  end;
+
+implementation
+
+{ TModelUsuarioTipoCAixa }
+
+function TModelUsuarioTipoCAixa.AbrirCaixa: iModelUsuarioMetodos;
+begin
+  Result := Self;
+end;
+
+function TModelUsuarioTipoCAixa.Acrescimo: iModelUsuarioMetodos;
+begin
+  Result := Self;
+end;
+
+function TModelUsuarioTipoCAixa.CancelamentoCupom: iModelUsuarioMetodos;
+begin
+
+end;
+
+function TModelUsuarioTipoCAixa.CancelamentoItem: iModelUsuarioMetodos;
+begin
+  Result := Self;
+end;
+
+constructor TModelUsuarioTipoCAixa.Create(Value: iModelUsuario);
+begin
+  FParent := Value;
+end;
+
+function TModelUsuarioTipoCAixa.Desconto: iModelUsuarioMetodos;
+begin
+  Result := Self;
+end;
+
+destructor TModelUsuarioTipoCAixa.Destroy;
+begin
+
+  inherited;
+end;
+
+function TModelUsuarioTipoCAixa.DevolucaoCupom: iModelUsuarioMetodos;
+begin
+  Result := Self;
+end;
+
+function TModelUsuarioTipoCAixa.DevolucaoItem: iModelUsuarioMetodos;
+begin
+  Result := Self;
+end;
+
+function TModelUsuarioTipoCAixa.FecharCaixa: iModelUsuarioMetodos;
+begin
+  Result := Self;
+end;
+
+class function TModelUsuarioTipoCAixa.New(Value: iModelUsuario)
+  : iModelUsuarioMetodos;
+begin
+  Result := Self.Create(Value);
+end;
+
+end.

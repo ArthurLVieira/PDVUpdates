@@ -1,0 +1,58 @@
+unit PDVUpdates.Model.Usuario;
+
+interface
+
+uses PDVUpdates.Model.Usuario.Interfaces;
+
+type
+
+  [Entity]
+  [Table('USUARIOS', '')]
+
+  TModelUsuario = class(TInterfacedObject, iModelUsuario)
+  private
+    FTipoMetodo: iModelUsuarioMetodos;
+    FIterator: iModelUsuarioIterator;
+  public
+    constructor Create;
+    destructor Destroy; override;
+    class function New: iModelUsuario;
+    function Metodos(Value: iModelUsuarioMetodos): iModelUsuarioMetodos;
+    function Iterator: iModelUsuarioIterator;
+  end;
+
+implementation
+
+{ TModelUsuario }
+
+uses PDVUpdates.Model.Usuario.Factory;
+
+constructor TModelUsuario.Create;
+begin
+  FIterator := TModelUsuarioFactory.New.Iterator(Self);
+end;
+
+destructor TModelUsuario.Destroy;
+begin
+
+  inherited;
+end;
+
+function TModelUsuario.Iterator: iModelUsuarioIterator;
+begin
+  Result := FIterator;
+end;
+
+function TModelUsuario.Metodos(Value: iModelUsuarioMetodos)
+  : iModelUsuarioMetodos;
+begin
+  FTipoMetodo := Value;
+  Result := FTipoMetodo;
+end;
+
+class function TModelUsuario.New: iModelUsuario;
+begin
+  Result := Self.Create;
+end;
+
+end.

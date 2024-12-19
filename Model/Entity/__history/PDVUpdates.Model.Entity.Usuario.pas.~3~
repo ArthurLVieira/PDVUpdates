@@ -1,0 +1,30 @@
+unit PDVUpdates.Model.Entity.Usuario;
+
+interface
+
+type
+
+  [Entity]
+  [Table('USUARIOS', '')]
+  [PrimaryKey('ID', 'Chave primaria')]
+
+  TCliete = class
+  private
+    FID: Integer;
+    FNOME: string;
+    FPASSWORD: string;
+  public
+    [Restrictions([NoUpdate, NotNull])]
+    [Colunn('ID', tfInteger)]
+    [Dictionary('ID', 'Menssagem de validação', '', '', '', taCenter)]
+    property ID: Integer read FID write FID;
+
+    [Colunn('NOME', tfInteger)]
+    [Dictionary('NOME', 'Menssagem de validação', '', '', '', taLeftJustify)]
+    property ID: string read FNOME write FNOME;
+
+  end;
+
+implementation
+
+end.

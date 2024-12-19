@@ -1,0 +1,46 @@
+unit PDVUpdates.Model.Usuario;
+
+interface
+
+uses PDVUpdates.Model.Usuario.Interfaces;
+
+type
+
+  TModelUsuario = class(TInterfacedObject, iModelUsuario)
+  private
+    FTipoMetodo: iModelUsuarioMetodos;
+  public
+    constructor Create;
+    destructor Destroy; override;
+    class function New: iModelUsuario;
+    function Metodos(Value: iModelUsuarioMetodos): iModelUsuarioMetodos;
+  end;
+
+implementation
+
+{ TModelUsuario }
+
+constructor TModelUsuario.Create;
+begin
+
+end;
+
+destructor TModelUsuario.Destroy;
+begin
+
+  inherited;
+end;
+
+function TModelUsuario.Metodos(Value: iModelUsuarioMetodos)
+  : iModelUsuarioMetodos;
+begin
+  FTipoMetodo := Value;
+  Result := FTipoMetodo;
+end;
+
+class function TModelUsuario.New: iModelUsuario;
+begin
+  Result := Self.Create;
+end;
+
+end.

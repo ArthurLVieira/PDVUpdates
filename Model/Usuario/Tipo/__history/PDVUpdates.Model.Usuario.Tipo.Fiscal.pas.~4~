@@ -1,0 +1,38 @@
+unit PDVUpdates.Model.Usuario.Tipo.Fiscal;
+
+interface
+
+uses PDVUpdates.Model.Usuario.Interfaces;
+
+type
+
+  TModelUsuarioTipoFiscal = class(TInterfacedObject, iModelUsuario,
+    iModelUsuarioMetodos)
+  private
+  public
+    constructor Create;
+    destructor Destroy; override;
+    class function New: iModelUsuario;
+  end;
+
+implementation
+
+{ TModelUsuarioTipoFiscal }
+
+constructor TModelUsuarioTipoFiscal.Create;
+begin
+
+end;
+
+destructor TModelUsuarioTipoFiscal.Destroy;
+begin
+
+  inherited;
+end;
+
+class function TModelUsuarioTipoFiscal.New: iModelUsuario;
+begin
+  Result := Self.Create;
+end;
+
+end.

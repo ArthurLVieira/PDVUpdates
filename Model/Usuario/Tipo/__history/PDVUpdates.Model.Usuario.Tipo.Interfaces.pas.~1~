@@ -1,0 +1,9 @@
+unit PDVUpdates.Model.Usuario.Tipo.Interfaces;
+
+interface
+
+
+
+implementation
+
+end.
