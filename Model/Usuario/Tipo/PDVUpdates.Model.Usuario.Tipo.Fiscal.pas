@@ -2,7 +2,8 @@ unit PDVUpdates.Model.Usuario.Tipo.Fiscal;
 
 interface
 
-uses PDVUpdates.Model.Usuario.Interfaces;
+uses PDVUpdates.Model.Usuario.Interfaces,
+  PDVUpdates.Controller.Usuario.Operacoes.Interfaces;
 
 type
 
@@ -10,6 +11,9 @@ type
   private
     FParent: iModelUsuario;
     FResponsability: iModelUsuarioMetodos;
+    FOperacoes: iControllerUsuarioOperacoes;
+    procedure OnConfirmSenha(Sender: TObject);
+    procedure OnCancelSenha(Sender: TObject);
   public
     constructor Create(Value: iModelUsuario); overload;
     constructor Create(Value: iModelUsuario;
@@ -18,6 +22,8 @@ type
     class function New(Value: iModelUsuario): iModelUsuarioMetodos; overload;
     class function New(Value: iModelUsuario;
       NextResponsability: iModelUsuarioMetodos): iModelUsuarioMetodos; overload;
+    function SetOperacao(Value: iControllerUsuarioOperacoes)
+      : iModelUsuarioMetodos;
     function AbrirCaixa: iModelUsuarioMetodos;
     function FecharCaixa: iModelUsuarioMetodos;
     function Desconto: iModelUsuarioMetodos;
@@ -32,6 +38,9 @@ type
 
 implementation
 
+uses
+  System.SysUtils;
+
 { TModelUsuarioTipoFiscal }
 
 function TModelUsuarioTipoFiscal.&End: iModelUsuario;
@@ -42,7 +51,11 @@ end;
 function TModelUsuarioTipoFiscal.AbrirCaixa: iModelUsuarioMetodos;
 begin
   Result := Self;
-  FResponsability.AbrirCaixa;
+  FOperacoes.PedirSenha.SetTitle('Entre com a senha do Fiscal')
+    .SetTextConfirm('OK').SetTextCancel('Cancelar')
+    .SetOnClickConfirm(OnConfirmSenha).SetOnClickCancel(OnCancelSenha).&End;
+
+  // FResponsability.AbrirCaixa;
 end;
 
 function TModelUsuarioTipoFiscal.Acrescimo: iModelUsuarioMetodos;
@@ -108,6 +121,23 @@ class function TModelUsuarioTipoFiscal.New(Value: iModelUsuario;
   NextResponsability: iModelUsuarioMetodos): iModelUsuarioMetodos;
 begin
   Result := Self.Create(Value, NextResponsability);
+end;
+
+procedure TModelUsuarioTipoFiscal.OnCancelSenha(Sender: TObject);
+begin
+  raise Exception.Create('Cancelar');
+end;
+
+procedure TModelUsuarioTipoFiscal.OnConfirmSenha(Sender: TObject);
+begin
+  raise Exception.Create('Confirmar');
+end;
+
+function TModelUsuarioTipoFiscal.SetOperacao(Value: iControllerUsuarioOperacoes)
+  : iModelUsuarioMetodos;
+begin
+  Result := Self;
+  FOperacoes := Value;
 end;
 
 class function TModelUsuarioTipoFiscal.New(Value: iModelUsuario)

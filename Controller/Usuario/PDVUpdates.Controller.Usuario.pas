@@ -26,7 +26,8 @@ implementation
 { TControllerUsuario }
 
 uses PDVUpdates.Model.Usuario.Factory, PDVUpdates.Model.Usuario.Tipo.Factory,
-  PDVUpdates.Model.Usuario.Tipo.Interfaces;
+  PDVUpdates.Model.Usuario.Tipo.Interfaces,
+  PDVUpdates.Controller.Usuario.Factory;
 
 function TControllerUsuario.Caixa: iModelUsuarioMetodos;
 begin
@@ -34,7 +35,9 @@ begin
     (TModelUsuarioTipoFactory.New.UsuarioTipo(TUsuarioTipo.Caixa, FModelUsuario,
     TModelUsuarioTipoFactory.New.UsuarioTipo(TUsuarioTipo.Fiscal, FModelUsuario,
     TModelUsuarioTipoFactory.New.UsuarioTipo(TUsuarioTipo.Gerente,
-    FModelUsuario))));
+    FModelUsuario).SetOperacao(TControllerUsuarioFactory.New.Operacoes))
+    .SetOperacao(TControllerUsuarioFactory.New.Operacoes))
+    .SetOperacao(TControllerUsuarioFactory.New.Operacoes));
 end;
 
 constructor TControllerUsuario.Create;
@@ -52,7 +55,7 @@ function TControllerUsuario.Gerente: iModelUsuarioMetodos;
 begin
   Result := TModelUsuarioFactory.New.Usuario.Metodos
     (TModelUsuarioTipoFactory.New.UsuarioTipo(TUsuarioTipo.Gerente,
-    FModelUsuario));
+    FModelUsuario).SetOperacao(TControllerUsuarioFactory.New.Operacoes));
 end;
 
 function TControllerUsuario.Model: iModelUsuario;
@@ -70,7 +73,8 @@ begin
   Result := TModelUsuarioFactory.New.Usuario.Metodos
     (TModelUsuarioTipoFactory.New.UsuarioTipo(TUsuarioTipo.Fiscal,
     FModelUsuario, TModelUsuarioTipoFactory.New.UsuarioTipo(TUsuarioTipo.Fiscal,
-    FModelUsuario)));
+    FModelUsuario).SetOperacao(TControllerUsuarioFactory.New.Operacoes))
+    .SetOperacao(TControllerUsuarioFactory.New.Operacoes));
 end;
 
 end.

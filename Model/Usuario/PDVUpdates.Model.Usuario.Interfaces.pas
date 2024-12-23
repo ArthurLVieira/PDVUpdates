@@ -3,7 +3,8 @@ unit PDVUpdates.Model.Usuario.Interfaces;
 interface
 
 uses
-  System.Generics.Collections, PDVUpdates.Model.Entity.Usuario;
+  System.Generics.Collections, PDVUpdates.Model.Entity.Usuario,
+  PDVUpdates.Controller.Usuario.Operacoes.Interfaces;
 
 type
 
@@ -20,6 +21,8 @@ type
 
   iModelUsuarioMetodos = interface
     ['{77C0D186-442E-4B6D-BFCD-65DB95C50C76}']
+    function SetOperacao(Value: iControllerUsuarioOperacoes)
+      : iModelUsuarioMetodos;
     function AbrirCaixa: iModelUsuarioMetodos;
     function FecharCaixa: iModelUsuarioMetodos;
     function Desconto: iModelUsuarioMetodos;

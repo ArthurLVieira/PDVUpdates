@@ -1,0 +1,36 @@
+unit PDVUpdates.Controller.Usuario.Operacoes;
+
+interface
+
+type
+
+  TControllerUsuarioOperacoes = class(TInterfacedObject, IControllerUsuarioOperacoes)
+    private
+
+    public
+      constructor Create;
+      destructor Destroy; override;
+      class function New : IControllerUsuarioOperacoes;
+  end;
+
+implementation
+
+{ TControllerUsuarioOperacoes }
+
+constructor TControllerUsuarioOperacoes.Create;
+begin
+
+end;
+
+destructor TControllerUsuarioOperacoes.Destroy;
+begin
+
+  inherited;
+end;
+
+class function TControllerUsuarioOperacoes.New: IControllerUsuarioOperacoes;
+begin
+  Result := Self.Create;
+end;
+
+end.

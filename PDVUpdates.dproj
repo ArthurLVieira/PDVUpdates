@@ -329,11 +329,15 @@
         <DCCReference Include="Controller\PDVUpdates.Controller.Facade.pas"/>
         <DCCReference Include="Controller\Usuario\PDVUpdates.Controller.Usuario.Factory.pas"/>
         <DCCReference Include="View\Dialog\PDVUpdates.View.Dialog.SenhaUsuario.pas">
-            <Form>Form2</Form>
+            <Form>FrmSenhaUsuario</Form>
             <FormType>fmx</FormType>
         </DCCReference>
         <DCCReference Include="Controller\Dialog\PDVUpdates.Controller.Dialog.SenhaUsuario.pas"/>
         <DCCReference Include="Controller\Dialog\PDVUpdates.Controller.Dialog.SenhaUsuario.Interfaces.pas"/>
+        <DCCReference Include="Controller\Usuario\Operacoes\PDVUpdates.Controller.Usuario.Operacoes.pas"/>
+        <DCCReference Include="Controller\Usuario\Operacoes\PDVUpdates.Controller.Usuario.Operacoes.Interfaces.pas"/>
+        <DCCReference Include="Model\Caixa\PDVUpdates.Model.Caixa.Interfaces.pas"/>
+        <DCCReference Include="Model\Caixa\PDVUpdates.Model.Caixa.pas"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>

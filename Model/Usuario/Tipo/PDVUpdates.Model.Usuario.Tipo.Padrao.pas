@@ -2,7 +2,8 @@ unit PDVUpdates.Model.Usuario.Tipo.Padrao;
 
 interface
 
-uses PDVUpdates.Model.Usuario.Interfaces;
+uses PDVUpdates.Model.Usuario.Interfaces,
+  PDVUpdates.Controller.Usuario.Operacoes.Interfaces;
 
 type
 
@@ -10,6 +11,7 @@ type
   private
     FParent: iModelUsuario;
     FResponsability: iModelUsuarioMetodos;
+    FOperacoes: iControllerUsuarioOperacoes;
   public
     constructor Create(Value: iModelUsuario); overload;
     constructor Create(Value: iModelUsuario;
@@ -18,6 +20,8 @@ type
     class function New(Value: iModelUsuario): iModelUsuarioMetodos; overload;
     class function New(Value: iModelUsuario;
       NextResponsability: iModelUsuarioMetodos): iModelUsuarioMetodos; overload;
+    function SetOperacao(Value: iControllerUsuarioOperacoes)
+      : iModelUsuarioMetodos;
     function AbrirCaixa: iModelUsuarioMetodos;
     function FecharCaixa: iModelUsuarioMetodos;
     function Desconto: iModelUsuarioMetodos;
@@ -102,6 +106,13 @@ class function TModelUsuarioTipoPadrao.New(Value: iModelUsuario;
   NextResponsability: iModelUsuarioMetodos): iModelUsuarioMetodos;
 begin
   Result := Self.Create(Value, NextResponsability);
+end;
+
+function TModelUsuarioTipoPadrao.SetOperacao(Value: iControllerUsuarioOperacoes)
+  : iModelUsuarioMetodos;
+begin
+  Result := Self;
+  FOperacoes := Value;
 end;
 
 class function TModelUsuarioTipoPadrao.New(Value: iModelUsuario)
