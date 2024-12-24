@@ -1,0 +1,62 @@
+unit PDVUpdates.Model.Caixa.Metodos.Fechar;
+
+interface
+
+uses PDVUpdates.Model.Caixa.Metodos.Interfaces,
+  PDVUpdates.Model.Usuario.Interfaces;
+
+type
+
+  TModelCaixaMetodosFechar = class(TInterfacedObject, iModelCaixaMetodosFechar)
+  private
+    FMetodos: iModelCaixaMetodos;
+    FValor: Currency;
+    FUsuario: iModelUsuario;
+  public
+    constructor Create(Value: iModelCaixaMetodos);
+    destructor Destroy; override;
+    class function New(Value: iModelCaixaMetodos): iModelCaixaMetodosFechar;
+    function SetValorFechamento(Value: Currency): iModelCaixaMetodosFechar;
+    function SetFiscal(Value: iModelUsuario): iModelCaixaMetodosFechar;
+    function &EndFechar: iModelCaixaMetodos;
+  end;
+
+implementation
+
+{ TModelCaixaMetodosFechar }
+
+constructor TModelCaixaMetodosFechar.Create(Value: iModelCaixaMetodos);
+begin
+  FMetodos := Value;
+end;
+
+destructor TModelCaixaMetodosFechar.Destroy;
+begin
+
+  inherited;
+end;
+
+function TModelCaixaMetodosFechar.EndFechar: iModelCaixaMetodos;
+begin
+  Result := FMetodos;
+end;
+
+class function TModelCaixaMetodosFechar.New(Value: iModelCaixaMetodos)
+  : iModelCaixaMetodosFechar;
+begin
+  Result := Self.Create(Value);
+end;
+
+function TModelCaixaMetodosFechar.SetFiscal(Value: iModelUsuario)
+  : iModelCaixaMetodosFechar;
+begin
+  Result := Self;
+end;
+
+function TModelCaixaMetodosFechar.SetValorFechamento(Value: Currency)
+  : iModelCaixaMetodosFechar;
+begin
+
+end;
+
+end.

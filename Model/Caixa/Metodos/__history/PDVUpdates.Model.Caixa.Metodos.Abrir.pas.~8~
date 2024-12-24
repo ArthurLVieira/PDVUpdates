@@ -39,7 +39,7 @@ end;
 
 function TModelCaixaMetodosAbrir.EndAbrir: iModelCaixaMetodos;
 begin
-  Result := FMetodos;
+  Result := tmodelcaixa
 end;
 
 class function TModelCaixaMetodosAbrir.New(Value: iModelCaixaMetodos)

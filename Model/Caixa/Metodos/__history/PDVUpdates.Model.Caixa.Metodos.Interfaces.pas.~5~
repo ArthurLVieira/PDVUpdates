@@ -7,7 +7,7 @@ uses
 
 type
 
-  iModelCaixaMetodos = interface
+  iModelCaixaMetodosFactory = interface
     ['{664B29D2-BB70-469C-B387-B105C5A79FFD}']
     function Abrir: iModelCaixaMetodosAbrir;
     function Fechar: iModelCaixaMetodosFechar;
@@ -22,14 +22,14 @@ type
     ['{3A7B8AFC-D671-4280-AC39-8CA27840E6E0}']
     function SetValorAbertuta(Value: Currency): iModelCaixaMetodosAbrir;
     function SetOperador(Value: iModelUsuario): iModelCaixaMetodosAbrir;
-    function &EndAbrir: iModelCaixaMetodos;
+    function &EndAbrir: iModelCaixaMetodosFactory;
   end;
 
   iModelCaixaMetodosFechar = interface
     ['{3A7B8AFC-D671-4280-AC39-8CA27840E6E0}']
     function SetValorFechamento(Value: Currency): iModelCaixaMetodosFechar;
     function SetFiscal(Value: iModelUsuario): iModelCaixaMetodosFechar;
-    function &EndFechar: iModelCaixaMetodos;
+    function &EndFechar: iModelCaixaMetodosFactory;
   end;
 
   iModelCaixaMetodosSuprimento = interface
@@ -37,7 +37,7 @@ type
     Function SetValorSuprimento(Value: Currency): iModelCaixaMetodosSuprimento;
     function SetAutorizadorSuprimento(Value: iModelUsuario)
       : iModelCaixaMetodosSuprimento;
-    function &EndSuprimento: iModelCaixaMetodos;
+    function &EndSuprimento: iModelCaixaMetodosFactory;
   end;
 
   iModelCaixaMetodosSangria = interface
@@ -45,7 +45,7 @@ type
     Function SetValorSangria(Value: Currency): iModelCaixaMetodosSangria;
     function SetAutorizadorSangria(Value: iModelUsuario)
       : iModelCaixaMetodosSangria;
-    function &EndSangria: iModelCaixaMetodos;
+    function &EndSangria: iModelCaixaMetodosFactory;
   end;
 
   iModelCaixaMetodosTrocarOperador = interface
@@ -54,14 +54,14 @@ type
       : iModelCaixaMetodosTrocarOperador;
     function SetAutorizadorTroca(Value: iModelUsuario)
       : iModelCaixaMetodosTrocarOperador;
-    function &EndTrocarOperador: iModelCaixaMetodos;
+    function &EndTrocarOperador: iModelCaixaMetodosFactory;
   end;
 
   iModelCaixaMetodosBloquearCaixa = interface
     ['{5831AD84-1824-4DD3-AB41-0C00AE5501BF}']
     function SetAutorizadorBloqueio(Value: iModelUsuario)
       : iModelCaixaMetodosBloquearCaixa;
-    function &EndBloquear: iModelCaixaMetodos;
+    function &EndBloquear: iModelCaixaMetodosFactory;
   end;
 
 implementation

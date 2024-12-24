@@ -1,0 +1,39 @@
+unit PDVUpdates.Model.Caixa.Metodos.Fechar;
+
+interface
+
+uses PDVUpdates.Model.Caixa.Metodos.Interfaces;
+
+type
+
+  TModelCaixaMetodosFechar = class(TInterfacedObject, iModelCaixaMetodosFechar)
+  private
+    FMetodos: iModelCaixaMetodos;
+  public
+    constructor Create(Value: iModelCaixaMetodos);
+    destructor Destroy; override;
+    class function New(Value: iModelCaixaMetodos): iModelCaixaMetodosFechar;
+  end;
+
+implementation
+
+{ TModelCaixaMetodosFechar }
+
+constructor TModelCaixaMetodosFechar.Create(Value: iModelCaixaMetodos);
+begin
+  FMetodos := Value;
+end;
+
+destructor TModelCaixaMetodosFechar.Destroy;
+begin
+
+  inherited;
+end;
+
+class function TModelCaixaMetodosFechar.New(Value: iModelCaixaMetodos)
+  : iModelCaixaMetodosFechar;
+begin
+
+end;
+
+end.

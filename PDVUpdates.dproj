@@ -339,8 +339,10 @@
         <DCCReference Include="Model\Caixa\PDVUpdates.Model.Caixa.Interfaces.pas"/>
         <DCCReference Include="Model\Caixa\PDVUpdates.Model.Caixa.pas"/>
         <DCCReference Include="Model\Caixa\Metodos\PDVUpdates.Model.Caixa.Metodos.Interfaces.pas"/>
-        <DCCReference Include="Model\Caixa\Metodos\PDVUpdates.Model.Caixa.Metodos.Factory.pas"/>
+        <DCCReference Include="Model\Caixa\Metodos\PDVUpdates.Model.Caixa.Metodos.pas"/>
         <DCCReference Include="Model\Caixa\Metodos\PDVUpdates.Model.Caixa.Metodos.Abrir.pas"/>
+        <DCCReference Include="Model\Caixa\Metodos\PDVUpdates.Model.Caixa.Metodos.Fechar.pas"/>
+        <DCCReference Include="Model\Caixa\Metodos\PDVUpdates.Model.Caixa.Metodos.Suprimento.pas"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>
@@ -362,7 +364,7 @@
                     <Source Name="MainSource">PDVUpdates.dpr</Source>
                 </Source>
             </Delphi.Personality>
-            <Deployment Version="5">
+            <Deployment Version="4">
                 <DeployFile LocalName="$(BDS)\Redist\iossimulator\libcgunwind.1.0.dylib" Class="DependencyModule">
                     <Platform Name="iOSSimulator">
                         <Overwrite>true</Overwrite>
@@ -396,6 +398,16 @@
                         <Operation>0</Operation>
                     </Platform>
                 </DeployClass>
+                <DeployClass Name="AndroidClasses">
+                    <Platform Name="Android">
+                        <RemoteDir>classes</RemoteDir>
+                        <Operation>64</Operation>
+                    </Platform>
+                    <Platform Name="Android64">
+                        <RemoteDir>classes</RemoteDir>
+                        <Operation>64</Operation>
+                    </Platform>
+                </DeployClass>
                 <DeployClass Name="AndroidFileProvider">
                     <Platform Name="Android">
                         <RemoteDir>res\xml</RemoteDir>
@@ -403,6 +415,12 @@
                     </Platform>
                     <Platform Name="Android64">
                         <RemoteDir>res\xml</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="AndroidGDBServer">
+                    <Platform Name="Android">
+                        <RemoteDir>library\lib\armeabi-v7a</RemoteDir>
                         <Operation>1</Operation>
                     </Platform>
                 </DeployClass>
@@ -1026,9 +1044,6 @@
                         <Operation>1</Operation>
                     </Platform>
                     <Platform Name="Win64">
-                        <Operation>1</Operation>
-                    </Platform>
-                    <Platform Name="Win64x">
                         <Operation>1</Operation>
                     </Platform>
                 </DeployClass>

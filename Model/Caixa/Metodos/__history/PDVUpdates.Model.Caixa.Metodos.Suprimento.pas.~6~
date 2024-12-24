@@ -1,0 +1,40 @@
+unit PDVUpdates.Model.Caixa.Metodos.Suprimento;
+
+interface
+
+uses PDVUpdates.Model.Caixa.Metodos.Interfaces;
+
+type
+
+  TModelCaixaMetodosSuprimento = class(TInterfacedObject,
+    iModelCaixaMetodosSuprimento)
+  private
+    FMetodos: iModelCaixaMetodos;
+  public
+    constructor Create(Value: iModelCaixaMetodos);
+    destructor Destroy; override;
+    class function New(Value: iModelCaixaMetodos): iModelCaixaMetodosSuprimento;
+  end;
+
+implementation
+
+{ TModelCaixaMetodosSuprimento }
+
+constructor TModelCaixaMetodosSuprimento.Create(Value: iModelCaixaMetodos);
+begin
+  FMetodos := Value;
+end;
+
+destructor TModelCaixaMetodosSuprimento.Destroy;
+begin
+
+  inherited;
+end;
+
+class function TModelCaixaMetodosSuprimento.New(Value: iModelCaixaMetodos)
+  : iModelCaixaMetodosSuprimento;
+begin
+  Result := Self.Create(Value);
+end;
+
+end.

@@ -14,9 +14,9 @@ type
     FValor: Currency;
     FUsuario: iModelUsuario;
   public
-    constructor Create(Value: iModelCaixaMetodos);
+    constructor Create;
     destructor Destroy; override;
-    class function New(Value: iModelCaixaMetodos): iModelCaixaMetodosAbrir;
+    class function New: iModelCaixaMetodosAbrir;
     function SetValorAbertuta(Value: Currency): iModelCaixaMetodosAbrir;
     function SetOperador(Value: iModelUsuario): iModelCaixaMetodosAbrir;
     function &EndAbrir: iModelCaixaMetodos;
@@ -26,9 +26,9 @@ implementation
 
 { TModelCaixaMetodosAbrir }
 
-constructor TModelCaixaMetodosAbrir.Create(Value: iModelCaixaMetodos);
+constructor TModelCaixaMetodosAbrir.Create;
 begin
-  FMetodos := Value;
+
 end;
 
 destructor TModelCaixaMetodosAbrir.Destroy;
@@ -39,13 +39,12 @@ end;
 
 function TModelCaixaMetodosAbrir.EndAbrir: iModelCaixaMetodos;
 begin
-  Result := FMetodos;
+  Result := tmodelcaixa
 end;
 
-class function TModelCaixaMetodosAbrir.New(Value: iModelCaixaMetodos)
-  : iModelCaixaMetodosAbrir;
+class function TModelCaixaMetodosAbrir.New: iModelCaixaMetodosAbrir;
 begin
-  Result := Self.Create(Value);
+  Result := Self.Create;
 end;
 
 function TModelCaixaMetodosAbrir.SetOperador(Value: iModelUsuario)
