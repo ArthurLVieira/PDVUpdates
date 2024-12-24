@@ -338,6 +338,9 @@
         <DCCReference Include="Controller\Usuario\Operacoes\PDVUpdates.Controller.Usuario.Operacoes.Interfaces.pas"/>
         <DCCReference Include="Model\Caixa\PDVUpdates.Model.Caixa.Interfaces.pas"/>
         <DCCReference Include="Model\Caixa\PDVUpdates.Model.Caixa.pas"/>
+        <DCCReference Include="Model\Caixa\Metodos\PDVUpdates.Model.Caixa.Metodos.Interfaces.pas"/>
+        <DCCReference Include="Model\Caixa\Metodos\PDVUpdates.Model.Caixa.Metodos.Factory.pas"/>
+        <DCCReference Include="Model\Caixa\Metodos\PDVUpdates.Model.Caixa.Metodos.Abrir.pas"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>

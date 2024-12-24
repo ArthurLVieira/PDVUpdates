@@ -165,8 +165,7 @@ end;
 function TModelCaixa.SetAutorizadorSuprimento(Value: iModelUsuario)
   : iModelCaixaMetodosSuprimento;
 begin
-  Result := Self;
-  FUsuario := Value;
+
 end;
 
 function TModelCaixa.SetAutorizadorTroca(Value: iModelUsuario)
@@ -211,15 +210,13 @@ end;
 function TModelCaixa.SetValorSangria(Value: Currency)
   : iModelCaixaMetodosSangria;
 begin
-  Result := Self;
-  FValor := Value;
+
 end;
 
 function TModelCaixa.SetValorSuprimento(Value: Currency)
   : iModelCaixaMetodosSuprimento;
 begin
-  Result := Self;
-  FValor := Value;
+
 end;
 
 function TModelCaixa.Suprimento: iModelCaixaMetodosSuprimento;

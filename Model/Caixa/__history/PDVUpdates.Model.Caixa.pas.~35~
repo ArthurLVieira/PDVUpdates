@@ -165,8 +165,7 @@ end;
 function TModelCaixa.SetAutorizadorSuprimento(Value: iModelUsuario)
   : iModelCaixaMetodosSuprimento;
 begin
-  Result := Self;
-  FUsuario := Value;
+
 end;
 
 function TModelCaixa.SetAutorizadorTroca(Value: iModelUsuario)

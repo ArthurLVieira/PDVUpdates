@@ -11,6 +11,8 @@ type
   iModelCaixaMetodosFechar = interface;
   iModelCaixaMetodosSuprimento = interface;
   iModelCaixaMetodosSangria = interface;
+  iModelCaixaMetodosTrocarOperador = interface;
+  iModelCaixaMetodosBloquearCaixa = interface;
 
   iModelCaixa = interface
     ['{BFD9C7A1-1465-47C0-980D-A0DF7386DB4F}']
@@ -24,7 +26,8 @@ type
     function Fechar: iModelCaixaMetodosFechar;
     function Suprimento: iModelCaixaMetodosSuprimento;
     function Sangria: iModelCaixaMetodosSangria;
-    function TrocarOperador: iModelCaixaMetodos;
+    function TrocarOperador: iModelCaixaMetodosTrocarOperador;
+    function BloquearCaixa: iModelCaixaMetodosBloquearCaixa;
     function &End: iModelCaixa;
   end;
 
@@ -44,15 +47,33 @@ type
 
   iModelCaixaMetodosSuprimento = interface
     ['{370B4FE0-4A2C-4B3D-93F7-6696A5449B6C}']
-    Function SetValorSangria(Value: Currency): iModelCaixaMetodosSuprimento;
-    function SetAutorizador(Value: iModelUsuario): iModelCaixaMetodosSuprimento;
+    Function SetValorSuprimento(Value: Currency): iModelCaixaMetodosSuprimento;
+    function SetAutorizadorSuprimento(Value: iModelUsuario)
+      : iModelCaixaMetodosSuprimento;
     function &End: iModelCaixaMetodos;
   end;
 
   iModelCaixaMetodosSangria = interface
     ['{370B4FE0-4A2C-4B3D-93F7-6696A5449B6C}']
-    Function SetValorSangria(Value: Currency): iModelCaixaMetodosSuprimento;
-    function SetAutorizador(Value: iModelUsuario): iModelCaixaMetodosSuprimento;
+    Function SetValorSangria(Value: Currency): iModelCaixaMetodosSangria;
+    function SetAutorizadorSangria(Value: iModelUsuario)
+      : iModelCaixaMetodosSangria;
+    function &End: iModelCaixaMetodos;
+  end;
+
+  iModelCaixaMetodosTrocarOperador = interface
+    ['{5831AD84-1824-4DD3-AB41-0C00AE5501BF}']
+    function SetOperador(Value: iModelUsuario)
+      : iModelCaixaMetodosTrocarOperador;
+    function SetAutorizadorTroca(Value: iModelUsuario)
+      : iModelCaixaMetodosTrocarOperador;
+    function &End: iModelCaixaMetodos;
+  end;
+
+  iModelCaixaMetodosBloquearCaixa = interface
+    ['{5831AD84-1824-4DD3-AB41-0C00AE5501BF}']
+    function SetAutorizadorBloqueio(Value: iModelUsuario)
+      : iModelCaixaMetodosBloquearCaixa;
     function &End: iModelCaixaMetodos;
   end;
 

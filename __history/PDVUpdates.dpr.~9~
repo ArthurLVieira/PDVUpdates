@@ -30,8 +30,7 @@ uses
   PDVUpdates.Model.Caixa.Interfaces in 'Model\Caixa\PDVUpdates.Model.Caixa.Interfaces.pas',
   PDVUpdates.Model.Caixa in 'Model\Caixa\PDVUpdates.Model.Caixa.pas',
   PDVUpdates.Model.Caixa.Metodos.Interfaces in 'Model\Caixa\Metodos\PDVUpdates.Model.Caixa.Metodos.Interfaces.pas',
-  PDVUpdates.Model.Caixa.Metodos.Factory in 'Model\Caixa\Metodos\PDVUpdates.Model.Caixa.Metodos.Factory.pas',
-  PDVUpdates.Model.Caixa.Metodos.Abrir in 'Model\Caixa\Metodos\PDVUpdates.Model.Caixa.Metodos.Abrir.pas';
+  PDVUpdates.Model.Caixa.Metodos.Factory in 'Model\Caixa\Metodos\PDVUpdates.Model.Caixa.Metodos.Factory.pas';
 
 {$R *.res}
 

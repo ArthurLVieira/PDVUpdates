@@ -158,68 +158,58 @@ end;
 function TModelCaixa.SetAutorizadorSangria(Value: iModelUsuario)
   : iModelCaixaMetodosSangria;
 begin
-  Result := Self;
-  FUsuario := Value;
+
 end;
 
 function TModelCaixa.SetAutorizadorSuprimento(Value: iModelUsuario)
   : iModelCaixaMetodosSuprimento;
 begin
-  Result := Self;
-  FUsuario := Value;
+
 end;
 
 function TModelCaixa.SetAutorizadorTroca(Value: iModelUsuario)
   : iModelCaixaMetodosTrocarOperador;
 begin
-  Result := Self;
-  FUsuario := Value;
+
 end;
 
 function TModelCaixa.SetFiscal(Value: iModelUsuario): iModelCaixaMetodosFechar;
 begin
-  Result := Self;
-  FUsuario := Value;
+
 end;
 
 function TModelCaixa.SetOperador(Value: iModelUsuario): iModelCaixaMetodosAbrir;
 begin
-  Result := Self;
-  FUsuario := Value;
+
 end;
 
 function TModelCaixa.SetTrocaOperador(Value: iModelUsuario)
   : iModelCaixaMetodosTrocarOperador;
 begin
-  Result := Self;
-  FUsuario := Value;
+
 end;
 
 function TModelCaixa.SetValorAbertuta(Value: Currency): iModelCaixaMetodosAbrir;
 begin
-  Result := Self;
-  FValor := Value;
+
 end;
 
 function TModelCaixa.SetValorFechamento(Value: Currency)
   : iModelCaixaMetodosFechar;
 begin
-  Result := Self;
-  FValor := Value;
+
 end;
 
 function TModelCaixa.SetValorSangria(Value: Currency)
   : iModelCaixaMetodosSangria;
 begin
-  Result := Self;
-  FValor := Value;
+
 end;
 
 function TModelCaixa.SetValorSuprimento(Value: Currency)
   : iModelCaixaMetodosSuprimento;
 begin
-  Result := Self;
-  FValor := Value;
+
 end;
 
 function TModelCaixa.Suprimento: iModelCaixaMetodosSuprimento;

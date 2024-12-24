@@ -35,14 +35,14 @@ type
     ['{3A7B8AFC-D671-4280-AC39-8CA27840E6E0}']
     function SetValorAbertuta(Value: Currency): iModelCaixaMetodosAbrir;
     function SetOperador(Value: iModelUsuario): iModelCaixaMetodosAbrir;
-    function &EndAbrir: iModelCaixaMetodos;
+    function &End: iModelCaixaMetodos;
   end;
 
   iModelCaixaMetodosFechar = interface
     ['{3A7B8AFC-D671-4280-AC39-8CA27840E6E0}']
     function SetValorFechamento(Value: Currency): iModelCaixaMetodosFechar;
     function SetFiscal(Value: iModelUsuario): iModelCaixaMetodosFechar;
-    function &EndFechar: iModelCaixaMetodos;
+    function &End: iModelCaixaMetodos;
   end;
 
   iModelCaixaMetodosSuprimento = interface
@@ -50,7 +50,7 @@ type
     Function SetValorSuprimento(Value: Currency): iModelCaixaMetodosSuprimento;
     function SetAutorizadorSuprimento(Value: iModelUsuario)
       : iModelCaixaMetodosSuprimento;
-    function &EndSuprimento: iModelCaixaMetodos;
+    function &End: iModelCaixaMetodos;
   end;
 
   iModelCaixaMetodosSangria = interface
@@ -58,7 +58,7 @@ type
     Function SetValorSangria(Value: Currency): iModelCaixaMetodosSangria;
     function SetAutorizadorSangria(Value: iModelUsuario)
       : iModelCaixaMetodosSangria;
-    function &EndSangria: iModelCaixaMetodos;
+    function &End: iModelCaixaMetodos;
   end;
 
   iModelCaixaMetodosTrocarOperador = interface
@@ -67,14 +67,14 @@ type
       : iModelCaixaMetodosTrocarOperador;
     function SetAutorizadorTroca(Value: iModelUsuario)
       : iModelCaixaMetodosTrocarOperador;
-    function &EndTrocarOperador: iModelCaixaMetodos;
+    function &End: iModelCaixaMetodos;
   end;
 
   iModelCaixaMetodosBloquearCaixa = interface
     ['{5831AD84-1824-4DD3-AB41-0C00AE5501BF}']
     function SetAutorizadorBloqueio(Value: iModelUsuario)
       : iModelCaixaMetodosBloquearCaixa;
-    function &EndBloquear: iModelCaixaMetodos;
+    function &End: iModelCaixaMetodos;
   end;
 
 implementation
