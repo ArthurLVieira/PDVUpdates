@@ -33,7 +33,9 @@ uses
   PDVUpdates.Model.Caixa.Metodos in 'Model\Caixa\Metodos\PDVUpdates.Model.Caixa.Metodos.pas',
   PDVUpdates.Model.Caixa.Metodos.Abrir in 'Model\Caixa\Metodos\PDVUpdates.Model.Caixa.Metodos.Abrir.pas',
   PDVUpdates.Model.Caixa.Metodos.Fechar in 'Model\Caixa\Metodos\PDVUpdates.Model.Caixa.Metodos.Fechar.pas',
-  PDVUpdates.Model.Caixa.Metodos.Suprimento in 'Model\Caixa\Metodos\PDVUpdates.Model.Caixa.Metodos.Suprimento.pas';
+  PDVUpdates.Model.Caixa.Metodos.Suprimento in 'Model\Caixa\Metodos\PDVUpdates.Model.Caixa.Metodos.Suprimento.pas',
+  PDVUpdates.Model.Caixa.Metodos.Sangria in 'Model\Caixa\Metodos\PDVUpdates.Model.Caixa.Metodos.Sangria.pas',
+  PDVUpdates.Model.Caixa.Metodos.Factory in 'Model\Caixa\Metodos\PDVUpdates.Model.Caixa.Metodos.Factory.pas';
 
 {$R *.res}
 

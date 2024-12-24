@@ -13,13 +13,10 @@ type
     constructor Create;
     destructor Destroy; override;
     class function New: iModelCaixaMetodosFactory;
-    function Metodos(Value: iModelCaixaMetodos): iModelCaixaMetodos;
+    function Metodos: iModelCaixaMetodos;
   end;
 
 implementation
-
-uses
-  PDVUpdates.Model.Caixa.Metodos;
 
 { TModelCaixaMetodosFactory }
 
@@ -34,10 +31,9 @@ begin
   inherited;
 end;
 
-function TModelCaixaMetodosFactory.Metodos(Value: iModelCaixaMetodos)
-  : iModelCaixaMetodos;
+function TModelCaixaMetodosFactory.Metodos: iModelCaixaMetodos;
 begin
-  Result := TModelCaixaMetodos.New(Value);
+
 end;
 
 class function TModelCaixaMetodosFactory.New: iModelCaixaMetodosFactory;

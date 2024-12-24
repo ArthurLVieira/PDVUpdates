@@ -1,0 +1,40 @@
+unit PDVUpdates.Model.Usuario.Tipo.Sangria;
+
+interface
+
+uses PDVUpdates.Model.Caixa.Metodos.Interfaces;
+
+type
+
+  TModelCaixaMetodosSangria = class(TInterfacedObject,
+    iModelCaixaMetodosSangria)
+  private
+    FMetodos: iModelCaixaMetodos;
+  public
+    constructor Create(Value: iModelCaixaMetodos);
+    destructor Destroy; override;
+    class function New(Value: iModelCaixaMetodos): iModelCaixaMetodosSangria;
+  end;
+
+implementation
+
+{ TModelCaixaMetodosSangria }
+
+constructor TModelCaixaMetodosSangria.Create(Value: iModelCaixaMetodos);
+begin
+
+end;
+
+destructor TModelCaixaMetodosSangria.Destroy;
+begin
+
+  inherited;
+end;
+
+class function TModelCaixaMetodosSangria.New(Value: iModelCaixaMetodos)
+  : iModelCaixaMetodosSangria;
+begin
+  Result := Self.Create(Value);
+end;
+
+end.

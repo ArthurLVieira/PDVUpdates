@@ -68,7 +68,7 @@ type
 
   iModelCaixaMetodosFactory = interface
     ['{D8780329-8A17-41F8-A529-9580A54148CE}']
-    function Metodos(Value: iModelCaixaMetodos): iModelCaixaMetodos;
+    function Metodos: iModelCaixaMetodos;
   end;
 
 implementation

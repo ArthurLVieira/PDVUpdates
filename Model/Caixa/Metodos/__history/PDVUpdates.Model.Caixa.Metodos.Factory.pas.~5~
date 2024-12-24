@@ -1,0 +1,20 @@
+unit PDVUpdates.Model.Caixa.Metodos.Factory;
+
+interface
+
+uses PDVUpdates.Model.Caixa.Metodos.Interfaces;
+
+type
+
+  TModelCaixaMetodosFactory = class(TInterfacedObject,
+    iModelCaixaMetodosFactory)
+  private
+  public
+    constructor Create;
+    destructor Destroy; override;
+    class function New: iModelCaixaMetodosFactory;
+  end;
+
+implementation
+
+end.

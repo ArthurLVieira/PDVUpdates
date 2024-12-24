@@ -25,8 +25,16 @@ uses
   PDVUpdates.View.Dialog.SenhaUsuario in 'View\Dialog\PDVUpdates.View.Dialog.SenhaUsuario.pas' {FrmSenhaUsuario},
   PDVUpdates.Controller.Dialog.SenhaUsuario in 'Controller\Dialog\PDVUpdates.Controller.Dialog.SenhaUsuario.pas',
   PDVUpdates.Controller.Dialog.SenhaUsuario.Interfaces in 'Controller\Dialog\PDVUpdates.Controller.Dialog.SenhaUsuario.Interfaces.pas',
-  PDVUpdates.Controller.Usuario.Operacoes in 'Controller\Usuario\PDVUpdates.Controller.Usuario.Operacoes.pas',
-  PDVUpdates.Controller.Usuario.Operacoes.Interfaces in 'Controller\Usuario\Operacoes\PDVUpdates.Controller.Usuario.Operacoes.Interfaces.pas';
+  PDVUpdates.Controller.Usuario.Operacoes in 'Controller\Usuario\Operacoes\PDVUpdates.Controller.Usuario.Operacoes.pas',
+  PDVUpdates.Controller.Usuario.Operacoes.Interfaces in 'Controller\Usuario\Operacoes\PDVUpdates.Controller.Usuario.Operacoes.Interfaces.pas',
+  PDVUpdates.Model.Caixa.Interfaces in 'Model\Caixa\PDVUpdates.Model.Caixa.Interfaces.pas',
+  PDVUpdates.Model.Caixa in 'Model\Caixa\PDVUpdates.Model.Caixa.pas',
+  PDVUpdates.Model.Caixa.Metodos.Interfaces in 'Model\Caixa\Metodos\PDVUpdates.Model.Caixa.Metodos.Interfaces.pas',
+  PDVUpdates.Model.Caixa.Metodos in 'Model\Caixa\Metodos\PDVUpdates.Model.Caixa.Metodos.pas',
+  PDVUpdates.Model.Caixa.Metodos.Abrir in 'Model\Caixa\Metodos\PDVUpdates.Model.Caixa.Metodos.Abrir.pas',
+  PDVUpdates.Model.Caixa.Metodos.Fechar in 'Model\Caixa\Metodos\PDVUpdates.Model.Caixa.Metodos.Fechar.pas',
+  PDVUpdates.Model.Caixa.Metodos.Suprimento in 'Model\Caixa\Metodos\PDVUpdates.Model.Caixa.Metodos.Suprimento.pas',
+  PDVUpdates.Model.Usuario.Tipo.Sangria in 'Model\Usuario\Tipo\PDVUpdates.Model.Usuario.Tipo.Sangria.pas';
 
 {$R *.res}
 

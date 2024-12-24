@@ -16,5 +16,10 @@
     <Transaction>2024/12/24 14:39:14.899,C:\Users\user\Documents\GitHub\PDVUpdates\Model\Caixa\Metodos\PDVUpdates.Model.Caixa.Metodos.Fechar.pas=C:\Users\user\Documents\GitHub\PDVUpdates\Unit1.pas</Transaction>
     <Transaction>2024/12/24 15:29:33.549,=C:\Users\user\Documents\GitHub\PDVUpdates\Unit1.pas</Transaction>
     <Transaction>2024/12/24 15:29:48.428,C:\Users\user\Documents\GitHub\PDVUpdates\Model\Caixa\Metodos\PDVUpdates.Model.Caixa.Metodos.Suprimento.pas=C:\Users\user\Documents\GitHub\PDVUpdates\Unit1.pas</Transaction>
+    <Transaction>2024/12/24 17:18:22.659,=C:\Users\user\Documents\GitHub\PDVUpdates\Unit1.pas</Transaction>
+    <Transaction>2024/12/24 17:18:49.065,C:\Users\user\Documents\GitHub\PDVUpdates\Model\Usuario\Tipo\PDVUpdates.Model.Usuario.Tipo.Sangria.pas=C:\Users\user\Documents\GitHub\PDVUpdates\Unit1.pas</Transaction>
+    <Transaction>2024/12/24 17:23:06.232,C:\Users\user\Documents\GitHub\PDVUpdates\Model\Caixa\Metodos\PDVUpdates.Model.Caixa.Metodos.Sangria.pas=C:\Users\user\Documents\GitHub\PDVUpdates\Model\Usuario\Tipo\PDVUpdates.Model.Usuario.Tipo.Sangria.pas</Transaction>
+    <Transaction>2024/12/24 17:26:07.338,=C:\Users\user\Documents\GitHub\PDVUpdates\Unit1.pas</Transaction>
+    <Transaction>2024/12/24 17:26:21.062,C:\Users\user\Documents\GitHub\PDVUpdates\Model\Caixa\Metodos\PDVUpdates.Model.Caixa.Metodos.Factory.pas=C:\Users\user\Documents\GitHub\PDVUpdates\Unit1.pas</Transaction>
   </Transactions>
 </BorlandProject>

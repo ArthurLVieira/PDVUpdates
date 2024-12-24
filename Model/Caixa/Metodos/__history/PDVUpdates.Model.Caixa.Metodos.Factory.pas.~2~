@@ -2,24 +2,29 @@ unit PDVUpdates.Model.Caixa.Metodos.Factory;
 
 interface
 
-uses PDVUpdates.Model.Caixa.Metodos.Interfaces;
+uses
+  PDVUpdates.Model.Caixa.Metodos.Interfaces;
 
 type
 
   TModelCaixaMetodosFactory = class(TInterfacedObject,
     iModelCaixaMetodosFactory)
   private
+
   public
     constructor Create;
     destructor Destroy; override;
     class function New: iModelCaixaMetodosFactory;
-    function Metodos(Value: iModelCaixaMetodos): iModelCaixaMetodos;
+    function Abrir: iModelCaixaMetodosAbrir;
+    function Fechar: iModelCaixaMetodosFechar;
+    function Suprimento: iModelCaixaMetodosSuprimento;
+    function Sangria: iModelCaixaMetodosSangria;
+    function TrocarOperador: iModelCaixaMetodosTrocarOperador;
+    function BloquearCaixa: iModelCaixaMetodosBloquearCaixa;
+    function &EndMetodos: iModelCaixa;
   end;
 
 implementation
-
-uses
-  PDVUpdates.Model.Caixa.Metodos;
 
 { TModelCaixaMetodosFactory }
 
@@ -32,12 +37,6 @@ destructor TModelCaixaMetodosFactory.Destroy;
 begin
 
   inherited;
-end;
-
-function TModelCaixaMetodosFactory.Metodos(Value: iModelCaixaMetodos)
-  : iModelCaixaMetodos;
-begin
-  Result := TModelCaixaMetodos.New(Value);
 end;
 
 class function TModelCaixaMetodosFactory.New: iModelCaixaMetodosFactory;

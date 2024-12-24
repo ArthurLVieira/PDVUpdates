@@ -343,6 +343,8 @@
         <DCCReference Include="Model\Caixa\Metodos\PDVUpdates.Model.Caixa.Metodos.Abrir.pas"/>
         <DCCReference Include="Model\Caixa\Metodos\PDVUpdates.Model.Caixa.Metodos.Fechar.pas"/>
         <DCCReference Include="Model\Caixa\Metodos\PDVUpdates.Model.Caixa.Metodos.Suprimento.pas"/>
+        <DCCReference Include="Model\Caixa\Metodos\PDVUpdates.Model.Caixa.Metodos.Sangria.pas"/>
+        <DCCReference Include="Model\Caixa\Metodos\PDVUpdates.Model.Caixa.Metodos.Factory.pas"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>
