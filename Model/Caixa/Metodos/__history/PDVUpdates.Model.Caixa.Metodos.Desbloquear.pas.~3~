@@ -1,0 +1,40 @@
+unit PDVUpdates.Model.Caixa.Metodos.Desbloquear;
+
+interface
+
+uses PDVUpdates.Model.Caixa.Interfaces;
+
+type
+
+  TModelCaixaMetodosDesbloquear = class(TInterfacedObject,
+    iModelCaixaMetodosDesbloquear)
+  private
+
+  public
+    constructor Create(Value: iModelCaixa);
+    destructor Destroy; override;
+    class function New(Value: iModelCaixa): iModelCaixaMetodosDesbloquear;
+  end;
+
+implementation
+
+{ TMinhaClasse }
+
+constructor TModelCaixaMetodosDesbloquear.Create(Value: iModelCaixa);
+begin
+
+end;
+
+destructor TModelCaixaMetodosDesbloquear.Destroy;
+begin
+
+  inherited;
+end;
+
+class function TModelCaixaMetodosDesbloquear.New(Value: iModelCaixa)
+  : iModelCaixaMetodosDesbloquear;
+begin
+  Result := Self.Create;
+end;
+
+end.

@@ -1,0 +1,92 @@
+unit PDVUpdates.Model.Caixa.State.Fechado;
+
+interface
+
+uses
+  PDVUpdates.Model.Caixa.Interfaces;
+
+type
+
+  iModelCaixaStateFechado = class(TInterfacedObject, iModelCaixaMetodos)
+  private
+
+  public
+    constructor Create;
+    destructor Destroy; override;
+    class function New: iModelCaixaMetodos;
+    function Abrir: iModelCaixaMetodosAbrir;
+    function Fechar: iModelCaixaMetodosFechar;
+    function Suprimento: iModelCaixaMetodosSuprimento;
+    function Sangria: iModelCaixaMetodosSangria;
+    function TrocarOperador: iModelCaixaMetodosTrocarOperador;
+    function BloquearCaixa: iModelCaixaMetodosBloquear;
+    function &EndMetodos: iModelCaixa;
+    function DesbloquearCaixa: iModelCaixaMetodosDesbloquear;
+  end;
+
+implementation
+
+uses
+  System.SysUtils;
+
+{ iModelCaixaStateFechado }
+
+function iModelCaixaStateFechado.Abrir: iModelCaixaMetodosAbrir;
+begin
+
+end;
+
+function iModelCaixaStateFechado.BloquearCaixa: iModelCaixaMetodosBloquear;
+begin
+  raise Exception.Create('O caixa esta fechado!');
+end;
+
+constructor iModelCaixaStateFechado.Create;
+begin
+
+end;
+
+function iModelCaixaStateFechado.DesbloquearCaixa
+  : iModelCaixaMetodosDesbloquear;
+begin
+  raise Exception.Create('O caixa esta fechado!');
+end;
+
+destructor iModelCaixaStateFechado.Destroy;
+begin
+
+  inherited;
+end;
+
+function iModelCaixaStateFechado.EndMetodos: iModelCaixa;
+begin
+
+end;
+
+function iModelCaixaStateFechado.Fechar: iModelCaixaMetodosFechar;
+begin
+  raise Exception.Create('O caixa esta fechado!');
+end;
+
+class function iModelCaixaStateFechado.New: iModelCaixaMetodos;
+begin
+  Result := Self.Create;
+end;
+
+function iModelCaixaStateFechado.Sangria: iModelCaixaMetodosSangria;
+begin
+  raise Exception.Create('O caixa esta fechado!');
+end;
+
+function iModelCaixaStateFechado.Suprimento: iModelCaixaMetodosSuprimento;
+begin
+  raise Exception.Create('O caixa esta fechado!');
+end;
+
+function iModelCaixaStateFechado.TrocarOperador
+  : iModelCaixaMetodosTrocarOperador;
+begin
+  raise Exception.Create('O caixa esta fechado!');
+end;
+
+end.

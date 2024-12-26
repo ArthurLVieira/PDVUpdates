@@ -21,7 +21,7 @@ type
 
   iModelUsuarioMetodos = interface
     ['{77C0D186-442E-4B6D-BFCD-65DB95C50C76}']
-    function SetOperacao(Value: iControllerUsuarioOperacoes)
+    function SetOperacao(Value: iControllerUsuarioOperacoesFactory)
       : iModelUsuarioMetodos;
     function AbrirCaixa: iModelUsuarioMetodos;
     function FecharCaixa: iModelUsuarioMetodos;
@@ -41,12 +41,6 @@ type
     function Add(Value: iModelUsuario): iModelUsuarioIterator;
     function Lista: TList<iModelUsuario>;
     function &End: iModelUsuario;
-  end;
-
-  iModelUsuarioFactory = interface
-    ['{AECABAA4-211C-43E2-A4C4-DF3CE7380019}']
-    function Usuario: iModelUsuario;
-    function Iterator(Parent: iModelUsuario): iModelUsuarioIterator;
   end;
 
 implementation

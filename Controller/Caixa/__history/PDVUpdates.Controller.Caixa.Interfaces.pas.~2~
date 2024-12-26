@@ -1,0 +1,13 @@
+unit PDVUpdates.Controller.Caixa.Interfaces;
+
+interface
+
+type
+
+  iControllerCaixa = interface
+    ['{7042ABD9-A8BA-4B4B-B351-7DA47E598242}']
+  end;
+
+implementation
+
+end.

@@ -1,0 +1,46 @@
+unit PDVUpdates.Model.Caixa.State.Aberto;
+
+interface
+
+uses
+  PDVUpdates.Model.Caixa.Interfaces;
+
+type
+
+  iModelCaixaStateAberto = class(TInterfacedObject, iModelCaixaMetodos)
+  private
+
+  public
+    constructor Create;
+    destructor Destroy; override;
+    class function New: iModelCaixaMetodos;
+    function Abrir: iModelCaixaMetodosAbrir;
+    function Fechar: iModelCaixaMetodosFechar;
+    function Suprimento: iModelCaixaMetodosSuprimento;
+    function Sangria: iModelCaixaMetodosSangria;
+    function TrocarOperador: iModelCaixaMetodosTrocarOperador;
+    function BloquearCaixa: iModelCaixaMetodosBloquear;
+    function &EndMetodos: iModelCaixa;
+  end;
+
+implementation
+
+{ iModelCaixaStateAberto }
+
+constructor iModelCaixaStateAberto.Create;
+begin
+
+end;
+
+destructor iModelCaixaStateAberto.Destroy;
+begin
+
+  inherited;
+end;
+
+class function iModelCaixaStateAberto.New: iModelCaixaMetodos;
+begin
+  Result := Self.Create;
+end;
+
+end.

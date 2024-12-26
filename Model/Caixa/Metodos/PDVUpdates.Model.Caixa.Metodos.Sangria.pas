@@ -2,21 +2,20 @@ unit PDVUpdates.Model.Caixa.Metodos.Sangria;
 
 interface
 
-uses PDVUpdates.Model.Caixa.Metodos.Interfaces,
-  PDVUpdates.Model.Usuario.Interfaces;
+uses PDVUpdates.Model.Caixa.Interfaces, PDVUpdates.Model.Usuario.Interfaces;
 
 type
 
   TModelCaixaMetodosSangria = class(TInterfacedObject,
     iModelCaixaMetodosSangria)
   private
-    FMetodos: iModelCaixaMetodos;
+    FPerent: iModelCaixa;
     FValor: Currency;
     FUsuario: iModelUsuario;
   public
-    constructor Create(Value: iModelCaixaMetodos);
+    constructor Create(Value: iModelCaixa);
     destructor Destroy; override;
-    class function New(Value: iModelCaixaMetodos): iModelCaixaMetodosSangria;
+    class function New(Value: iModelCaixa): iModelCaixaMetodosSangria;
     Function SetValorSangria(Value: Currency): iModelCaixaMetodosSangria;
     function SetAutorizadorSangria(Value: iModelUsuario)
       : iModelCaixaMetodosSangria;
@@ -27,9 +26,9 @@ implementation
 
 { TModelCaixaMetodosSangria }
 
-constructor TModelCaixaMetodosSangria.Create(Value: iModelCaixaMetodos);
+constructor TModelCaixaMetodosSangria.Create(Value: iModelCaixa);
 begin
-  FMetodos := Value;
+  FPerent := Value;
 end;
 
 destructor TModelCaixaMetodosSangria.Destroy;
@@ -40,10 +39,11 @@ end;
 
 function TModelCaixaMetodosSangria.EndSangria: iModelCaixaMetodos;
 begin
-  Result := FMetodos;
+  Result := FPerent.Metodos
+  // TODO: Implementar metodos de sangria do caixa;;
 end;
 
-class function TModelCaixaMetodosSangria.New(Value: iModelCaixaMetodos)
+class function TModelCaixaMetodosSangria.New(Value: iModelCaixa)
   : iModelCaixaMetodosSangria;
 begin
   Result := Self.Create(Value);

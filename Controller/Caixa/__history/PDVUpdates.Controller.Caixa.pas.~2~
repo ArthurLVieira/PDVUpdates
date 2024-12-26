@@ -1,0 +1,39 @@
+unit PDVUpdates.Controller.Caixa;
+
+interface
+
+uses
+  PDVUpdates.Controller.Caixa.Interfaces;
+
+type
+
+  TControllerCaixa = class(TInterfacedObject, iControllerCaixa)
+  private
+
+  public
+    constructor Create;
+    destructor Destroy; override;
+    class function New: iControllerCaixa;
+  end;
+
+implementation
+
+{ TControllerCaixa }
+
+constructor TControllerCaixa.Create;
+begin
+
+end;
+
+destructor TControllerCaixa.Destroy;
+begin
+
+  inherited;
+end;
+
+class function TControllerCaixa.New: iControllerCaixa;
+begin
+  Result := Self.Create;
+end;
+
+end.

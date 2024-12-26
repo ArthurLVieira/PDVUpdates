@@ -16,14 +16,15 @@ type
     destructor Destroy; override;
     class function New: iControllerUsuarioFactory;
     function Usuario: iControllerUsuario;
-    function Operacoes: iControllerUsuarioOperacoes;
+    function Operacoes: iControllerUsuarioOperacoesFactory;
   end;
 
 implementation
 
 { TControllerUsuarioFactory }
 
-uses PDVUpdates.Controller.Usuario, PDVUpdates.Controller.Usuario.Operacoes;
+uses PDVUpdates.Controller.Usuario,
+  PDVUpdates.Controller.Usuario.Operacoes.Factory;
 
 constructor TControllerUsuarioFactory.Create;
 begin
@@ -41,9 +42,10 @@ begin
   Result := Self.Create;
 end;
 
-function TControllerUsuarioFactory.Operacoes: iControllerUsuarioOperacoes;
+function TControllerUsuarioFactory.Operacoes
+  : iControllerUsuarioOperacoesFactory;
 begin
-  Result := TControllerUsuarioOperacoes.New;
+  Result := TContrllerUsuarioOperacoesFactory.New;
 end;
 
 function TControllerUsuarioFactory.Usuario: iControllerUsuario;

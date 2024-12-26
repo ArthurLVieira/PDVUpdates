@@ -1,0 +1,42 @@
+unit PDVUpdates.Model.Caixa.State.Factory;
+
+interface
+
+uses
+  PDVUpdates.Model.Caixa.State.Interfaces, PDVUpdates.Model.Caixa.Interfaces;
+
+type
+
+  TModelCaixaStateFactory = class(TInterfacedObject, iModelCaixaStateFactory)
+  private
+
+  public
+    constructor Create;
+    destructor Destroy; override;
+    class function New: iModelCaixaStateFactory;
+    function Aberto: iModelCaixaMetodos;
+    function Fechado: iModelCaixaMetodos;
+    function Bloqueado: iModelCaixaMetodos;
+  end;
+
+implementation
+
+{ TModelCaixaStateFactory }
+
+constructor TModelCaixaStateFactory.Create;
+begin
+
+end;
+
+destructor TModelCaixaStateFactory.Destroy;
+begin
+
+  inherited;
+end;
+
+class function TModelCaixaStateFactory.New: iModelCaixaStateFactory;
+begin
+  Result := Self.Create;
+end;
+
+end.

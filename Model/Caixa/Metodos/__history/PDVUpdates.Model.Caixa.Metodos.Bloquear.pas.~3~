@@ -1,0 +1,43 @@
+unit PDVUpdates.Model.Caixa.Metodos.Bloquear;
+
+interface
+
+uses PDVUpdates.Model.Caixa.Interfaces, PDVUpdates.Model.Usuario.Interfaces;
+
+type
+
+  TModelCaixaMetodosBloquear = class(TInterfacedObject,
+    iModelCaixaMetodosBloquear)
+  private
+    FParent: iModelCaixa;
+  public
+    constructor Create(Value: iModelCaixa);
+    destructor Destroy; override;
+    class function New(Value: iModelCaixa): iModelCaixaMetodosBloquear;
+    function SetAutorizadorBloqueio(Value: iModelUsuario)
+      : iModelCaixaMetodosBloquearCaixa;
+    function &EndBloquear: iModelCaixaMetodos;
+  end;
+
+implementation
+
+{ TModelCaixaMetodosBloquear }
+
+constructor TModelCaixaMetodosBloquear.Create(Value: iModelCaixa);
+begin
+
+end;
+
+destructor TModelCaixaMetodosBloquear.Destroy;
+begin
+
+  inherited;
+end;
+
+class function TModelCaixaMetodosBloquear.New(Value: iModelCaixa)
+  : iModelCaixaMetodosBloquear;
+begin
+  Result := Self.Create(Value);
+end;
+
+end.

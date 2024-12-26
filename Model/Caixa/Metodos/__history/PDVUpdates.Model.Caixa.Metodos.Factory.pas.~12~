@@ -1,0 +1,86 @@
+unit PDVUpdates.Model.Caixa.Metodos.Factory;
+
+interface
+
+uses PDVUpdates.Model.Caixa.Metodos.Interfaces,
+  PDVUpdates.Model.Caixa.Interfaces;
+
+type
+
+  TModelCaixaMetodosFactory = class(TInterfacedObject,
+    iModelCaixaMetodosFactory)
+  private
+  public
+    constructor Create;
+    destructor Destroy; override;
+    class function New: iModelCaixaMetodosFactory;
+    function Abrir(Value: iModelCaixa): iModelCaixaMetodosAbrir;
+    function Fechar(Value: iModelCaixa): iModelCaixaMetodosFechar;
+    function Suprimento(Value: iModelCaixa): iModelCaixaMetodosSuprimento;
+    function Sangria(Value: iModelCaixa): iModelCaixaMetodosSangria;
+    function TrocarOperador(Value: iModelCaixa)
+      : iModelCaixaMetodosTrocarOperador;
+    function BloquearCaixa(Value: iModelCaixa): iModelCaixaMetodosBloquearCaixa;
+
+  end;
+
+implementation
+
+uses
+  PDVUpdates.Model.Caixa.Metodos.Abrir;
+
+{ TModelCaixaMetodosFactory }
+
+function TModelCaixaMetodosFactory.Abrir(Value: iModelCaixa)
+  : iModelCaixaMetodosAbrir;
+begin
+  Result := TModelCaixaMetodosAbrir.New(Value);
+end;
+
+function TModelCaixaMetodosFactory.BloquearCaixa(Value: iModelCaixa)
+  : iModelCaixaMetodosBloquearCaixa;
+begin
+
+end;
+
+constructor TModelCaixaMetodosFactory.Create;
+begin
+
+end;
+
+destructor TModelCaixaMetodosFactory.Destroy;
+begin
+
+  inherited;
+end;
+
+function TModelCaixaMetodosFactory.Fechar(Value: iModelCaixa)
+  : iModelCaixaMetodosFechar;
+begin
+
+end;
+
+class function TModelCaixaMetodosFactory.New: iModelCaixaMetodosFactory;
+begin
+  Result := Self.Create;
+end;
+
+function TModelCaixaMetodosFactory.Sangria(Value: iModelCaixa)
+  : iModelCaixaMetodosSangria;
+begin
+
+end;
+
+function TModelCaixaMetodosFactory.Suprimento(Value: iModelCaixa)
+  : iModelCaixaMetodosSuprimento;
+begin
+
+end;
+
+function TModelCaixaMetodosFactory.TrocarOperador(Value: iModelCaixa)
+  : iModelCaixaMetodosTrocarOperador;
+begin
+
+end;
+
+end.

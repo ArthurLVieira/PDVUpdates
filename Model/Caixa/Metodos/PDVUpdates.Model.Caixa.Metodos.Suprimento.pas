@@ -2,21 +2,20 @@ unit PDVUpdates.Model.Caixa.Metodos.Suprimento;
 
 interface
 
-uses PDVUpdates.Model.Caixa.Metodos.Interfaces,
-  PDVUpdates.Model.Usuario.Interfaces;
+uses PDVUpdates.Model.Caixa.Interfaces, PDVUpdates.Model.Usuario.Interfaces;
 
 type
 
   TModelCaixaMetodosSuprimento = class(TInterfacedObject,
     iModelCaixaMetodosSuprimento)
   private
-    FMetodos: iModelCaixaMetodos;
+    FParent: iModelCaixa;
     FValor: Currency;
     FUsuario: iModelUsuario;
   public
-    constructor Create(Value: iModelCaixaMetodos);
+    constructor Create(Value: iModelCaixa);
     destructor Destroy; override;
-    class function New(Value: iModelCaixaMetodos): iModelCaixaMetodosSuprimento;
+    class function New(Value: iModelCaixa): iModelCaixaMetodosSuprimento;
     Function SetValorSuprimento(Value: Currency): iModelCaixaMetodosSuprimento;
     function SetAutorizadorSuprimento(Value: iModelUsuario)
       : iModelCaixaMetodosSuprimento;
@@ -27,9 +26,9 @@ implementation
 
 { TModelCaixaMetodosSuprimento }
 
-constructor TModelCaixaMetodosSuprimento.Create(Value: iModelCaixaMetodos);
+constructor TModelCaixaMetodosSuprimento.Create(Value: iModelCaixa);
 begin
-  FMetodos := Value;
+  FParent := Value;
 end;
 
 destructor TModelCaixaMetodosSuprimento.Destroy;
@@ -40,10 +39,11 @@ end;
 
 function TModelCaixaMetodosSuprimento.EndSuprimento: iModelCaixaMetodos;
 begin
-  Result := FMetodos;
+  Result := FParent.Metodos;
+  // TODO: Implementar metodos de suprimento do caixa;
 end;
 
-class function TModelCaixaMetodosSuprimento.New(Value: iModelCaixaMetodos)
+class function TModelCaixaMetodosSuprimento.New(Value: iModelCaixa)
   : iModelCaixaMetodosSuprimento;
 begin
   Result := Self.Create(Value);

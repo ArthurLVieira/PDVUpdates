@@ -11,7 +11,7 @@ type
   private
     FParent: iModelUsuario;
     FResponsability: iModelUsuarioMetodos;
-    FOperacoes: iControllerUsuarioOperacoes;
+    FOperacoes: iControllerUsuarioOperacoesFactory;
     procedure OnConfirmSenha(Sender: TObject);
     procedure OnCancelSenha(Sender: TObject);
   public
@@ -22,7 +22,7 @@ type
     class function New(Value: iModelUsuario): iModelUsuarioMetodos; overload;
     class function New(Value: iModelUsuario;
       NextResponsability: iModelUsuarioMetodos): iModelUsuarioMetodos; overload;
-    function SetOperacao(Value: iControllerUsuarioOperacoes)
+    function SetOperacao(Value: iControllerUsuarioOperacoesFactory)
       : iModelUsuarioMetodos;
     function AbrirCaixa: iModelUsuarioMetodos;
     function FecharCaixa: iModelUsuarioMetodos;
@@ -133,7 +133,7 @@ begin
   raise Exception.Create('Confirmar');
 end;
 
-function TModelUsuarioTipoFiscal.SetOperacao(Value: iControllerUsuarioOperacoes)
+function TModelUsuarioTipoFiscal.SetOperacao(Value: iControllerUsuarioOperacoesFactory)
   : iModelUsuarioMetodos;
 begin
   Result := Self;

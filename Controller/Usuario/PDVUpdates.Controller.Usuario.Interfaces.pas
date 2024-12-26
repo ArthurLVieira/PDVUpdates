@@ -19,7 +19,7 @@ type
   iControllerUsuarioFactory = interface
     ['{0B8CE229-CB7B-45C2-BB0D-D5626F907E26}']
     function Usuario: iControllerUsuario;
-    function Operacoes: iControllerUsuarioOperacoes;
+    function Operacoes: iControllerUsuarioOperacoesFactory;
   end;
 
 implementation

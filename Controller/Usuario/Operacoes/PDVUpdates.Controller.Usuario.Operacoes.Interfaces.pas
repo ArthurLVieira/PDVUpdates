@@ -8,10 +8,12 @@ uses
 type
 
   iControllerUsuarioOperacoesPedirSenha = interface;
+  iControllerUsuarioOperacoesCapturarValor = interface;
 
-  iControllerUsuarioOperacoes = interface
+  iControllerUsuarioOperacoesFactory = interface
     ['{8774E484-A683-4B6B-88AD-1B04DE471901}']
     function PedirSenha: iControllerUsuarioOperacoesPedirSenha;
+    function CapturaValor: iControllerUsuarioOperacoesCapturarValor;
   end;
 
   iControllerUsuarioOperacoesPedirSenha = interface
@@ -25,7 +27,22 @@ type
       : iControllerUsuarioOperacoesPedirSenha;
     function SetOnClickCancel(Value: TNotifyEvent)
       : iControllerUsuarioOperacoesPedirSenha;
-    function &End: iControllerUsuarioOperacoes;
+    function &End: iControllerUsuarioOperacoesFactory;
+  end;
+
+  iControllerUsuarioOperacoesCapturarValor = interface
+    ['{EC8DF74D-22D1-4064-937F-AF43601011FE}']
+    function SetTitle(Value: string): iControllerUsuarioOperacoesCapturarValor;
+    function SetTextConfirm(Value: string)
+      : iControllerUsuarioOperacoesCapturarValor;
+    function SetTextCancel(Value: string)
+      : iControllerUsuarioOperacoesCapturarValor;
+    function SetOnClickConfirm(Value: TNotifyEvent)
+      : iControllerUsuarioOperacoesCapturarValor;
+    function SetOnClickCancel(Value: TNotifyEvent)
+      : iControllerUsuarioOperacoesCapturarValor;
+    function GetValor: Currency;
+    function &End: iControllerUsuarioOperacoesFactory;
   end;
 
 implementation

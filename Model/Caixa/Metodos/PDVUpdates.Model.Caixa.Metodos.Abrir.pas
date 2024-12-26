@@ -2,21 +2,19 @@ unit PDVUpdates.Model.Caixa.Metodos.Abrir;
 
 interface
 
-uses
-  PDVUpdates.Model.Usuario.Interfaces,
-  PDVUpdates.Model.Caixa.Metodos.Interfaces;
+uses PDVUpdates.Model.Caixa.Interfaces, PDVUpdates.Model.Usuario.Interfaces;
 
 type
 
   TModelCaixaMetodosAbrir = class(TInterfacedObject, iModelCaixaMetodosAbrir)
   private
-    FMetodos: iModelCaixaMetodos;
+    FParent: iModelCaixa;
     FValor: Currency;
     FUsuario: iModelUsuario;
   public
-    constructor Create(Value: iModelCaixaMetodos);
+    constructor Create(Value: iModelCaixa);
     destructor Destroy; override;
-    class function New(Value: iModelCaixaMetodos): iModelCaixaMetodosAbrir;
+    class function New(Value: iModelCaixa): iModelCaixaMetodosAbrir;
     function SetValorAbertuta(Value: Currency): iModelCaixaMetodosAbrir;
     function SetOperador(Value: iModelUsuario): iModelCaixaMetodosAbrir;
     function &EndAbrir: iModelCaixaMetodos;
@@ -26,9 +24,9 @@ implementation
 
 { TModelCaixaMetodosAbrir }
 
-constructor TModelCaixaMetodosAbrir.Create(Value: iModelCaixaMetodos);
+constructor TModelCaixaMetodosAbrir.Create(Value: iModelCaixa);
 begin
-  FMetodos := Value;
+  FParent := Value;
 end;
 
 destructor TModelCaixaMetodosAbrir.Destroy;
@@ -39,10 +37,11 @@ end;
 
 function TModelCaixaMetodosAbrir.EndAbrir: iModelCaixaMetodos;
 begin
-  Result := FMetodos;
+  Result := FParent.Metodos;
+  // TODO: Implementar metodos de abertura do caixa;
 end;
 
-class function TModelCaixaMetodosAbrir.New(Value: iModelCaixaMetodos)
+class function TModelCaixaMetodosAbrir.New(Value: iModelCaixa)
   : iModelCaixaMetodosAbrir;
 begin
   Result := Self.Create(Value);

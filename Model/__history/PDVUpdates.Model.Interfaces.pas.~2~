@@ -1,0 +1,18 @@
+unit PDVUpdates.Model.Interfaces;
+
+interface
+
+uses
+  PDVUpdates.Model.Caixa.Interfaces, PDVUpdates.Model.Usuario.Interfaces;
+
+type
+
+  iModelFacade = interface
+    ['{476DCE51-770E-4A1F-8317-D27B0CFF0E8D}']
+    function Caixa: iModelCaixaFactory;
+    function Usuario: iModelUsuarioFactory;
+  end;
+
+implementation
+
+end.

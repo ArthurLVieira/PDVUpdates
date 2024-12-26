@@ -1,0 +1,42 @@
+unit PDVUpdates.Model;
+
+interface
+
+uses
+  PDVUpdates.Model.Interfaces, PDVUpdates.Model.Caixa.Interfaces,
+  PDVUpdates.Model.Usuario.Interfaces;
+
+type
+
+  TModelFacade = class(TInterfacedObject, iModelFacade)
+  private
+
+  public
+    constructor Create;
+    destructor Destroy; override;
+    class function New: iModelFacade;
+    function Caixa: iModelCaixaFactory;
+    function Usuario: iModelUsuarioFactory;
+  end;
+
+implementation
+
+{ TModelFacade }
+
+constructor TModelFacade.Create;
+begin
+
+end;
+
+destructor TModelFacade.Destroy;
+begin
+
+  inherited;
+end;
+
+class function TModelFacade.New: iModelFacade;
+begin
+  Result := Self.Create;
+end;
+
+end.

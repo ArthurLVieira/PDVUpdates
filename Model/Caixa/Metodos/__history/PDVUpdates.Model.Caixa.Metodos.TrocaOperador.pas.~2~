@@ -1,0 +1,46 @@
+unit PDVUpdates.Model.Caixa.Metodos.TrocaOperador;
+
+interface
+
+uses PDVUpdates.Model.Caixa.Metodos.Interfaces;
+
+type
+
+  TModelCaixaMetodosTrocaOperador = class(TInterfacedObject,
+    iModelCaixaMetodosTrocaOperador)
+  private
+    FMetodos: iModelCaixaMetodos;
+  public
+    constructor Create(Value: iModelCaixaMetodos);
+    destructor Destroy; override;
+    class function New(Value: iModelCaixaMetodos)
+      : iModelCaixaMetodosTrocaOperador;
+    function SetTrocaOperador(Value: iModelUsuario)
+      : iModelCaixaMetodosTrocarOperador;
+    function SetAutorizadorTroca(Value: iModelUsuario)
+      : iModelCaixaMetodosTrocarOperador;
+    function &EndTrocarOperador: iModelCaixaMetodos;
+  end;
+
+implementation
+
+{ TModelCaixaMetodosTrocaOperador }
+
+constructor TModelCaixaMetodosTrocaOperador.Create(Value: iModelCaixaMetodos);
+begin
+  f
+end;
+
+destructor TModelCaixaMetodosTrocaOperador.Destroy;
+begin
+
+  inherited;
+end;
+
+class function TModelCaixaMetodosTrocaOperador.New(Value: iModelCaixaMetodos)
+  : iModelCaixaMetodosTrocaOperador;
+begin
+  Result := Self.Create(Value);
+end;
+
+end.

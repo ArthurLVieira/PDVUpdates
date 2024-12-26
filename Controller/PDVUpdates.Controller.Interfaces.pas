@@ -3,13 +3,15 @@ unit PDVUpdates.Controller.Interfaces;
 interface
 
 uses
-  PDVUpdates.Controller.Usuario.Interfaces;
+  PDVUpdates.Controller.Usuario.Interfaces,
+  PDVUpdates.Controller.Caixa.Interfaces;
 
 type
 
   iControllerFacade = interface
     ['{5B0EA1AA-7B92-4CF3-94A0-716C4A6DBEB0}']
-    function Usuario: iControllerUsuario;
+    function Usuario: iControllerUsuarioFactory;
+    function Caixa: iControllerCaixaFactory;
   end;
 
 implementation

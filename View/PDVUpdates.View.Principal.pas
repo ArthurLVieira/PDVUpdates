@@ -28,7 +28,7 @@ uses PDVUpdates.Controller.Facade;
 
 procedure TForm1.FormCreate(Sender: TObject);
 begin
-  TControllerFacade.New.Usuario.Fiscal.AbrirCaixa;
+  TControllerFacade.New.Usuario.Usuario.Caixa.AbrirCaixa;
 end;
 
 end.

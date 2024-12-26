@@ -334,17 +334,38 @@
         </DCCReference>
         <DCCReference Include="Controller\Dialog\PDVUpdates.Controller.Dialog.SenhaUsuario.pas"/>
         <DCCReference Include="Controller\Dialog\PDVUpdates.Controller.Dialog.SenhaUsuario.Interfaces.pas"/>
-        <DCCReference Include="Controller\Usuario\Operacoes\PDVUpdates.Controller.Usuario.Operacoes.pas"/>
+        <DCCReference Include="Controller\Usuario\Operacoes\PDVUpdates.Controller.Usuario.Operacoes.PedirSenha.pas"/>
         <DCCReference Include="Controller\Usuario\Operacoes\PDVUpdates.Controller.Usuario.Operacoes.Interfaces.pas"/>
         <DCCReference Include="Model\Caixa\PDVUpdates.Model.Caixa.Interfaces.pas"/>
         <DCCReference Include="Model\Caixa\PDVUpdates.Model.Caixa.pas"/>
         <DCCReference Include="Model\Caixa\Metodos\PDVUpdates.Model.Caixa.Metodos.Interfaces.pas"/>
-        <DCCReference Include="Model\Caixa\Metodos\PDVUpdates.Model.Caixa.Metodos.pas"/>
         <DCCReference Include="Model\Caixa\Metodos\PDVUpdates.Model.Caixa.Metodos.Abrir.pas"/>
         <DCCReference Include="Model\Caixa\Metodos\PDVUpdates.Model.Caixa.Metodos.Fechar.pas"/>
         <DCCReference Include="Model\Caixa\Metodos\PDVUpdates.Model.Caixa.Metodos.Suprimento.pas"/>
         <DCCReference Include="Model\Caixa\Metodos\PDVUpdates.Model.Caixa.Metodos.Sangria.pas"/>
         <DCCReference Include="Model\Caixa\Metodos\PDVUpdates.Model.Caixa.Metodos.Factory.pas"/>
+        <DCCReference Include="Model\Caixa\Metodos\PDVUpdates.Model.Caixa.Metodos.TrocarOperador.pas"/>
+        <DCCReference Include="Model\Caixa\Metodos\PDVUpdates.Model.Caixa.Metodos.Bloquear.pas"/>
+        <DCCReference Include="Model\Caixa\State\PDVUpdates.Model.Caixa.State.Aberto.pas"/>
+        <DCCReference Include="Model\Caixa\State\PDVUpdates.Model.Caixa.State.Fechado.pas"/>
+        <DCCReference Include="Model\Caixa\State\PDVUpdates.Model.Caixa.State.Bloqueado.pas"/>
+        <DCCReference Include="Model\Caixa\Metodos\PDVUpdates.Model.Caixa.Metodos.Desbloquear.pas"/>
+        <DCCReference Include="Model\Caixa\State\PDVUpdates.Model.Caixa.State.Interfaces.pas"/>
+        <DCCReference Include="Model\Caixa\State\PDVUpdates.Model.Caixa.State.Factory.pas"/>
+        <DCCReference Include="Controller\Caixa\PDVUpdates.Controller.Caixa.Interfaces.pas"/>
+        <DCCReference Include="Controller\Caixa\PDVUpdates.Controller.Caixa.pas"/>
+        <DCCReference Include="Controller\Caixa\PDVUpdates.Controller.Caixa.Factory.pas"/>
+        <DCCReference Include="Controller\Caixa\PDVUpdates.Controller.Caixa.Metodos.pas"/>
+        <DCCReference Include="Model\PDVUpdates.Model.Interfaces.pas"/>
+        <DCCReference Include="Model\PDVUpdates.Model.Facade.pas"/>
+        <DCCReference Include="Model\Caixa\PDVUpdates.Model.Caixa.Factory.pas"/>
+        <DCCReference Include="Model\Usuario\PDVUpdates.Model.Usuario.Factory.Interfaces.pas"/>
+        <DCCReference Include="View\Dialog\PDVUpdates.View.Dialog.CapturaValor.pas">
+            <Form>FrmCapturaValor</Form>
+            <FormType>fmx</FormType>
+        </DCCReference>
+        <DCCReference Include="Controller\Usuario\Operacoes\PDVUpdates.Controller.Usuario.Operacoes.Factory.pas"/>
+        <DCCReference Include="Controller\Usuario\Operacoes\PDVUpdates.Controller.Usuario.Operacoes.CapturaValor.pas"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>
@@ -366,7 +387,7 @@
                     <Source Name="MainSource">PDVUpdates.dpr</Source>
                 </Source>
             </Delphi.Personality>
-            <Deployment Version="4">
+            <Deployment Version="5">
                 <DeployFile LocalName="$(BDS)\Redist\iossimulator\libcgunwind.1.0.dylib" Class="DependencyModule">
                     <Platform Name="iOSSimulator">
                         <Overwrite>true</Overwrite>
@@ -400,16 +421,6 @@
                         <Operation>0</Operation>
                     </Platform>
                 </DeployClass>
-                <DeployClass Name="AndroidClasses">
-                    <Platform Name="Android">
-                        <RemoteDir>classes</RemoteDir>
-                        <Operation>64</Operation>
-                    </Platform>
-                    <Platform Name="Android64">
-                        <RemoteDir>classes</RemoteDir>
-                        <Operation>64</Operation>
-                    </Platform>
-                </DeployClass>
                 <DeployClass Name="AndroidFileProvider">
                     <Platform Name="Android">
                         <RemoteDir>res\xml</RemoteDir>
@@ -417,12 +428,6 @@
                     </Platform>
                     <Platform Name="Android64">
                         <RemoteDir>res\xml</RemoteDir>
-                        <Operation>1</Operation>
-                    </Platform>
-                </DeployClass>
-                <DeployClass Name="AndroidGDBServer">
-                    <Platform Name="Android">
-                        <RemoteDir>library\lib\armeabi-v7a</RemoteDir>
                         <Operation>1</Operation>
                     </Platform>
                 </DeployClass>
@@ -1046,6 +1051,9 @@
                         <Operation>1</Operation>
                     </Platform>
                     <Platform Name="Win64">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="Win64x">
                         <Operation>1</Operation>
                     </Platform>
                 </DeployClass>

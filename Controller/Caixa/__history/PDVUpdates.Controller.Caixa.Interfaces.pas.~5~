@@ -1,0 +1,30 @@
+unit PDVUpdates.Controller.Caixa.Interfaces;
+
+interface
+
+type
+
+  iControllerCaixa = interface
+    ['{7042ABD9-A8BA-4B4B-B351-7DA47E598242}']
+  end;
+
+  iControllerCaixaMetodos = interface
+    ['{85FDA629-5D18-42B9-8C72-CB3CF3B931D4}']
+    function Abrir: iControllerCaixaMetodos;
+    function Fechar: iControllerCaixaMetodos;
+    function Suprimento: iControllerCaixaMetodos;
+    function Sangria: iControllerCaixaMetodos;
+    function TrocarOperador: iControllerCaixaMetodos;
+    function BloquearCaixa: iControllerCaixaMetodos;
+    function DesbloquearCaixa: iControllerCaixaMetodos;
+    function &EndMetodos: iControllerCaixa;
+  end;
+
+  iControllerCaixaFactory = interface
+    ['{865F7194-7BA4-4592-A20A-596E901CC137}']
+    function Caixa: iControllerCaixa;
+  end;
+
+implementation
+
+end.

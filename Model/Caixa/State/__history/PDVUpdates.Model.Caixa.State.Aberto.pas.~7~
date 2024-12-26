@@ -1,0 +1,91 @@
+unit PDVUpdates.Model.Caixa.State.Aberto;
+
+interface
+
+uses
+  PDVUpdates.Model.Caixa.Interfaces;
+
+type
+
+  iModelCaixaStateAberto = class(TInterfacedObject, iModelCaixaMetodos)
+  private
+
+  public
+    constructor Create;
+    destructor Destroy; override;
+    class function New: iModelCaixaMetodos;
+    function Abrir: iModelCaixaMetodosAbrir;
+    function Fechar: iModelCaixaMetodosFechar;
+    function Suprimento: iModelCaixaMetodosSuprimento;
+    function Sangria: iModelCaixaMetodosSangria;
+    function TrocarOperador: iModelCaixaMetodosTrocarOperador;
+    function BloquearCaixa: iModelCaixaMetodosBloquear;
+    function &EndMetodos: iModelCaixa;
+    function DesbloquearCaixa: iModelCaixaMetodosDesbloquear;
+  end;
+
+implementation
+
+uses
+  System.SysUtils;
+
+{ iModelCaixaStateAberto }
+
+function iModelCaixaStateAberto.Abrir: iModelCaixaMetodosAbrir;
+begin
+  raise Exception.Create('O caixa esta aberto');
+end;
+
+function iModelCaixaStateAberto.BloquearCaixa: iModelCaixaMetodosBloquear;
+begin
+
+end;
+
+constructor iModelCaixaStateAberto.Create;
+begin
+
+end;
+
+function iModelCaixaStateAberto.DesbloquearCaixa: iModelCaixaMetodosDesbloquear;
+begin
+  raise Exception.Create('O caixa esta aberto');
+end;
+
+destructor iModelCaixaStateAberto.Destroy;
+begin
+
+  inherited;
+end;
+
+function iModelCaixaStateAberto.EndMetodos: iModelCaixa;
+begin
+
+end;
+
+function iModelCaixaStateAberto.Fechar: iModelCaixaMetodosFechar;
+begin
+
+end;
+
+class function iModelCaixaStateAberto.New: iModelCaixaMetodos;
+begin
+  Result := Self.Create;
+end;
+
+function iModelCaixaStateAberto.Sangria: iModelCaixaMetodosSangria;
+begin
+
+end;
+
+function iModelCaixaStateAberto.Suprimento: iModelCaixaMetodosSuprimento;
+begin
+
+end;
+
+function iModelCaixaStateAberto.TrocarOperador
+  : iModelCaixaMetodosTrocarOperador;
+begin
+
+end;
+
+end.

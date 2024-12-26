@@ -3,23 +3,20 @@ unit PDVUpdates.Model.Caixa;
 interface
 
 uses
-  PDVUpdates.Model.Caixa.Interfaces, PDVUpdates.Model.Usuario.Interfaces;
+  PDVUpdates.Model.Caixa.Interfaces, PDVUpdates.Model.Usuario.Interfaces,
+  PDVUpdates.Model.Caixa.Metodos.Interfaces;
 
 type
 
-  TModelCaixa = class(TInterfacedObject, iModelCaixa, iModelCaixaMetodos,
-    iModelCaixaMetodosAbrir, iModelCaixaMetodosFechar,
-    iModelCaixaMetodosSuprimento, iModelCaixaMetodosSangria,
-    iModelCaixaMetodosTrocarOperador, iModelCaixaMetodosBloquearCaixa)
+  TModelCaixa = class(TInterfacedObject, iModelCaixa, iModelCaixaMetodos)
   private
-    FMetodos: iModelCaixaMetodos;
-    FValor: Currency;
-    FUsuario: iModelUsuario;
+    FMetodosFactory: iModelCaixaMetodosFactory;
+    FState: iModelCaixaMetodos;
   public
     constructor Create;
     destructor Destroy; override;
     class function New: iModelCaixa;
-    function Metodos(Value: iModelCaixaMetodos): iModelCaixaMetodos;
+    function Metodos: iModelCaixaMetodos;
 
     // ModelCaixaMetodos
     function Abrir: iModelCaixaMetodosAbrir;
@@ -27,62 +24,46 @@ type
     function Suprimento: iModelCaixaMetodosSuprimento;
     function Sangria: iModelCaixaMetodosSangria;
     function TrocarOperador: iModelCaixaMetodosTrocarOperador;
-    function BloquearCaixa: iModelCaixaMetodosBloquearCaixa;
+    function BloquearCaixa: iModelCaixaMetodosBloquear;
+    function DesbloquearCaixa: iModelCaixaMetodosDesbloquear;
     function &EndMetodos: iModelCaixa;
-
-    // ModelCaixaMetodosAbrir
-    function SetValorAbertuta(Value: Currency): iModelCaixaMetodosAbrir;
-    function SetOperador(Value: iModelUsuario): iModelCaixaMetodosAbrir;
-    function &EndAbrir: iModelCaixaMetodos;
-
-    // ModelCaixaMetodosFechar
-    function SetValorFechamento(Value: Currency): iModelCaixaMetodosFechar;
-    function SetFiscal(Value: iModelUsuario): iModelCaixaMetodosFechar;
-    function &EndFechar: iModelCaixaMetodos;
-
-    // ModelCaixaMetodosSuprimento
-    Function SetValorSuprimento(Value: Currency): iModelCaixaMetodosSuprimento;
-    function SetAutorizadorSuprimento(Value: iModelUsuario)
-      : iModelCaixaMetodosSuprimento;
-    function &EndSuprimento: iModelCaixaMetodos;
-
-    // ModelCaixaMetodosSangria
-    Function SetValorSangria(Value: Currency): iModelCaixaMetodosSangria;
-    function SetAutorizadorSangria(Value: iModelUsuario)
-      : iModelCaixaMetodosSangria;
-    function &EndSangria: iModelCaixaMetodos;
-
-    // ModelCaixaMetodosTrocarOperador
-    function SetTrocaOperador(Value: iModelUsuario)
-      : iModelCaixaMetodosTrocarOperador;
-    function SetAutorizadorTroca(Value: iModelUsuario)
-      : iModelCaixaMetodosTrocarOperador;
-    function &EndTrocarOperador: iModelCaixaMetodos;
-
-    // ModelCaixaMetodosBloquearCaixa
-    function SetAutorizadorBloqueio(Value: iModelUsuario)
-      : iModelCaixaMetodosBloquearCaixa;
-    function &EndBloquear: iModelCaixaMetodos;
 
   end;
 
 implementation
 
+uses
+  PDVUpdates.Model.Caixa.Metodos.Abrir, PDVUpdates.Model.Caixa.Metodos.Factory,
+  PDVUpdates.Model.Caixa.State.Factory;
+
 { TModelCaixa }
 
 function TModelCaixa.Abrir: iModelCaixaMetodosAbrir;
 begin
-  Result := Self;
+  FState.Abrir;
+  Result := FMetodosFactory.Abrir(Self);
+  FState := TModelCaixaStateFactory.New.Aberto;
 end;
 
-function TModelCaixa.BloquearCaixa: iModelCaixaMetodosBloquearCaixa;
+function TModelCaixa.BloquearCaixa: iModelCaixaMetodosBloquear;
 begin
-  Result := Self;
+  FState.BloquearCaixa;
+  Result := FMetodosFactory.BloquearCaixa(Self);
+  FState := TModelCaixaStateFactory.New.Bloqueado;
 end;
 
 constructor TModelCaixa.Create;
 begin
+  FMetodosFactory := TModelCaixaMetodosFactory.New;
+  FState := TModelCaixaStateFactory.New.Fechado;
+  // TODO: Verificar estado do ultimo caixa
+end;
 
+function TModelCaixa.DesbloquearCaixa: iModelCaixaMetodosDesbloquear;
+begin
+  FState.DesbloquearCaixa;
+  Result := FMetodosFactory.DesbloquearCaixa(Self);
+  FState := TModelCaixaStateFactory.New.Aberto;
 end;
 
 destructor TModelCaixa.Destroy;
@@ -91,51 +72,21 @@ begin
   inherited;
 end;
 
-function TModelCaixa.EndAbrir: iModelCaixaMetodos;
-begin
-  Result := Self;
-end;
-
-function TModelCaixa.EndBloquear: iModelCaixaMetodos;
-begin
-  Result := Self;
-
-end;
-
-function TModelCaixa.EndFechar: iModelCaixaMetodos;
-begin
-  Result := Self;
-end;
-
 function TModelCaixa.EndMetodos: iModelCaixa;
-begin
-  Result := Self;
-end;
-
-function TModelCaixa.EndSangria: iModelCaixaMetodos;
-begin
-  Result := Self;
-end;
-
-function TModelCaixa.EndSuprimento: iModelCaixaMetodos;
-begin
-  Result := Self;
-end;
-
-function TModelCaixa.EndTrocarOperador: iModelCaixaMetodos;
 begin
   Result := Self;
 end;
 
 function TModelCaixa.Fechar: iModelCaixaMetodosFechar;
 begin
-  Result := Self;
+  FState.Fechar;
+  Result := FMetodosFactory.Fechar(Self);
+  FState := TModelCaixaStateFactory.New.Fechado;
 end;
 
-function TModelCaixa.Metodos(Value: iModelCaixaMetodos): iModelCaixaMetodos;
+function TModelCaixa.Metodos: iModelCaixaMetodos;
 begin
-  FMetodos := Value;
-  Result := FMetodos;
+  Result := Self;
 end;
 
 class function TModelCaixa.New: iModelCaixa;
@@ -145,91 +96,20 @@ end;
 
 function TModelCaixa.Sangria: iModelCaixaMetodosSangria;
 begin
-  Result := Self;
-end;
-
-function TModelCaixa.SetAutorizadorBloqueio(Value: iModelUsuario)
-  : iModelCaixaMetodosBloquearCaixa;
-begin
-  Result := Self;
-  FUsuario := Value;
-end;
-
-function TModelCaixa.SetAutorizadorSangria(Value: iModelUsuario)
-  : iModelCaixaMetodosSangria;
-begin
-  Result := Self;
-  FUsuario := Value;
-end;
-
-function TModelCaixa.SetAutorizadorSuprimento(Value: iModelUsuario)
-  : iModelCaixaMetodosSuprimento;
-begin
-  Result := Self;
-  FUsuario := Value;
-end;
-
-function TModelCaixa.SetAutorizadorTroca(Value: iModelUsuario)
-  : iModelCaixaMetodosTrocarOperador;
-begin
-  Result := Self;
-  FUsuario := Value;
-end;
-
-function TModelCaixa.SetFiscal(Value: iModelUsuario): iModelCaixaMetodosFechar;
-begin
-  Result := Self;
-  FUsuario := Value;
-end;
-
-function TModelCaixa.SetOperador(Value: iModelUsuario): iModelCaixaMetodosAbrir;
-begin
-  Result := Self;
-  FUsuario := Value;
-end;
-
-function TModelCaixa.SetTrocaOperador(Value: iModelUsuario)
-  : iModelCaixaMetodosTrocarOperador;
-begin
-  Result := Self;
-  FUsuario := Value;
-end;
-
-function TModelCaixa.SetValorAbertuta(Value: Currency): iModelCaixaMetodosAbrir;
-begin
-  Result := Self;
-  FValor := Value;
-end;
-
-function TModelCaixa.SetValorFechamento(Value: Currency)
-  : iModelCaixaMetodosFechar;
-begin
-  Result := Self;
-  FValor := Value;
-end;
-
-function TModelCaixa.SetValorSangria(Value: Currency)
-  : iModelCaixaMetodosSangria;
-begin
-  Result := Self;
-  FValor := Value;
-end;
-
-function TModelCaixa.SetValorSuprimento(Value: Currency)
-  : iModelCaixaMetodosSuprimento;
-begin
-  Result := Self;
-  FValor := Value;
+  FState.Sangria;
+  Result := FMetodosFactory.Sangria(Self);
 end;
 
 function TModelCaixa.Suprimento: iModelCaixaMetodosSuprimento;
 begin
-  Result := Self;
+  FState.Suprimento;
+  Result := FMetodosFactory.Suprimento(Self);
 end;
 
 function TModelCaixa.TrocarOperador: iModelCaixaMetodosTrocarOperador;
 begin
-  Result := Self;
+  FState.TrocarOperador;
+  Result := FMetodosFactory.TrocarOperador(Self);
 end;
 
 end.

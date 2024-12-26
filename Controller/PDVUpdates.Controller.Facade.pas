@@ -3,7 +3,8 @@ unit PDVUpdates.Controller.Facade;
 interface
 
 uses
-  PDVUpdates.Controller.Interfaces, PDVUpdates.Controller.Usuario.Interfaces;
+  PDVUpdates.Controller.Interfaces, PDVUpdates.Controller.Usuario.Interfaces,
+  PDVUpdates.Controller.Caixa.Interfaces;
 
 type
 
@@ -14,14 +15,20 @@ type
     constructor Create;
     destructor Destroy; override;
     class function New: iControllerFacade;
-    function Usuario: iControllerUsuario;
+    function Usuario: iControllerUsuarioFactory;
+    function Caixa: iControllerCaixaFactory;
   end;
 
 implementation
 
 { TControllerFacade }
 
-uses PDVUpdates.Controller.Usuario.Factory;
+uses PDVUpdates.Controller.Usuario.Factory, PDVUpdates.Controller.Caixa.Factory;
+
+function TControllerFacade.Caixa: iControllerCaixaFactory;
+begin
+  Result := TControllerCaixaFactory.New;
+end;
 
 constructor TControllerFacade.Create;
 begin
@@ -39,9 +46,9 @@ begin
   Result := Self.Create;
 end;
 
-function TControllerFacade.Usuario: iControllerUsuario;
+function TControllerFacade.Usuario: iControllerUsuarioFactory;
 begin
-  Result := TControllerUsuarioFactory.New.Usuario;
+  Result := TControllerUsuarioFactory.New;
 end;
 
 end.
