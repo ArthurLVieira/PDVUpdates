@@ -32,6 +32,8 @@ type
     function DevolucaoItem: iModelUsuarioMetodos;
     function BloquearCaixa: iModelUsuarioMetodos;
     function DesbloquearCaixa: iModelUsuarioMetodos;
+    function Sangria: iModelUsuarioMetodos;
+    function Suprimento: iModelUsuarioMetodos;
     function &End: iModelUsuario;
 
   end;
@@ -119,11 +121,21 @@ begin
   Result := Self.Create(Value, NextResponsability);
 end;
 
+function TModelUsuarioTipoPadrao.Sangria: iModelUsuarioMetodos;
+begin
+  Result := Self;
+end;
+
 function TModelUsuarioTipoPadrao.SetOperacao
   (Value: iControllerUsuarioOperacoesFactory): iModelUsuarioMetodos;
 begin
   Result := Self;
   FOperacoes := Value;
+end;
+
+function TModelUsuarioTipoPadrao.Suprimento: iModelUsuarioMetodos;
+begin
+  Result := Self;
 end;
 
 class function TModelUsuarioTipoPadrao.New(Value: iModelUsuario)

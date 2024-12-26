@@ -1,0 +1,52 @@
+unit PDVUpdates.Model.Usuario.Interfaces;
+
+interface
+
+uses
+  System.Generics.Collections, PDVUpdates.Model.Entity.Usuario,
+  PDVUpdates.Controller.Usuario.Operacoes.Interfaces;
+
+type
+
+  iModelUsuarioMetodos = interface;
+  iModelUsuarioIterator = interface;
+
+  iModelUsuario = interface
+    ['{52C8A07B-20F9-4550-87B0-092CE39CC668}']
+    function Metodos(Value: iModelUsuarioMetodos): iModelUsuarioMetodos;
+    function Iterator: iModelUsuarioIterator;
+    function Entity: TModelEntityUsuario;
+
+  end;
+
+  iModelUsuarioMetodos = interface
+    ['{77C0D186-442E-4B6D-BFCD-65DB95C50C76}']
+    function SetOperacao(Value: iControllerUsuarioOperacoesFactory)
+      : iModelUsuarioMetodos;
+    function AbrirCaixa: iModelUsuarioMetodos;
+    function FecharCaixa: iModelUsuarioMetodos;
+    function Desconto: iModelUsuarioMetodos;
+    function Acrescimo: iModelUsuarioMetodos;
+    function DevolucaoCupom: iModelUsuarioMetodos;
+    function CancelamentoCupom: iModelUsuarioMetodos;
+    function CancelamentoItem: iModelUsuarioMetodos;
+    function DevolucaoItem: iModelUsuarioMetodos;
+    function BloquearCaixa: iModelUsuarioMetodos;
+    function DesbloquearCaixa: iModelUsuarioMetodos;
+    function Sangria: iModelUsuarioMetodos function Suprimento
+      : iModelUsuarioMetodos;
+    function &End: iModelUsuario;
+  end;
+
+  iModelUsuarioIterator = interface
+    ['{57FFFF48-4559-4817-BA61-4A614DB256A5}']
+    function hasNext: Boolean;
+    function Next: iModelUsuario;
+    function Add(Value: iModelUsuario): iModelUsuarioIterator;
+    function Lista: TList<iModelUsuario>;
+    function &End: iModelUsuario;
+  end;
+
+implementation
+
+end.

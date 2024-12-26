@@ -92,7 +92,7 @@ begin
   Result := Self;
   FModel.Metodos.Sangria.SetValorSangria(TFrmCapturaValor.Create(nil)
     .ExibirForm('Valor da Sangria', 'OK', 'Cancelar')).SetAutorizadorSangria
-    (TControllerFacade.New.Usuario.Usuario.Caixa.FecharCaixa.&End).EndSangria;
+    (TControllerFacade.New.Usuario.Usuario.Caixa.Sangria.&End).EndSangria;
 end;
 
 function TControllerCaixaMetodos.Suprimento: iControllerCaixaMetodos;
@@ -101,7 +101,7 @@ begin
   FModel.Metodos.Suprimento.SetValorSuprimento(TFrmCapturaValor.Create(nil)
     .ExibirForm('Valor do fechamento', 'OK', 'Cancelar'))
     .SetAutorizadorSuprimento(TControllerFacade.New.Usuario.Usuario.Caixa.
-    FecharCaixa.&End);
+    Suprimento.&End);
 
 end;
 

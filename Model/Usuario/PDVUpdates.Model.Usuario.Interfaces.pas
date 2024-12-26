@@ -33,6 +33,8 @@ type
     function DevolucaoItem: iModelUsuarioMetodos;
     function BloquearCaixa: iModelUsuarioMetodos;
     function DesbloquearCaixa: iModelUsuarioMetodos;
+    function Sangria: iModelUsuarioMetodos;
+    function Suprimento: iModelUsuarioMetodos;
     function &End: iModelUsuario;
   end;
 

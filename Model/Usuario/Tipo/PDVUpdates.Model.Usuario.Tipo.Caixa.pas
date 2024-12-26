@@ -31,9 +31,12 @@ type
     function CancelamentoCupom: iModelUsuarioMetodos;
     function CancelamentoItem: iModelUsuarioMetodos;
     function DevolucaoItem: iModelUsuarioMetodos;
-    function &End: iModelUsuario;
     function BloquearCaixa: iModelUsuarioMetodos;
     function DesbloquearCaixa: iModelUsuarioMetodos;
+    function Sangria: iModelUsuarioMetodos;
+    function Suprimento: iModelUsuarioMetodos;
+    function &End: iModelUsuario;
+
   end;
 
 implementation
@@ -126,11 +129,23 @@ begin
   Result := Self.Create(Value, NextResponsability);
 end;
 
+function TModelUsuarioTipoCAixa.Sangria: iModelUsuarioMetodos;
+begin
+  Result := Self;
+  FResponsability.Sangria;
+end;
+
 function TModelUsuarioTipoCAixa.SetOperacao
   (Value: iControllerUsuarioOperacoesFactory): iModelUsuarioMetodos;
 begin
   Result := Self;
   FOperacoes := Value;
+end;
+
+function TModelUsuarioTipoCAixa.Suprimento: iModelUsuarioMetodos;
+begin
+  Result := Self;
+  FResponsability.Suprimento;
 end;
 
 class function TModelUsuarioTipoCAixa.New(Value: iModelUsuario)
