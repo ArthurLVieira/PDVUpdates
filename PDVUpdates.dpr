@@ -3,7 +3,6 @@ program PDVUpdates;
 uses
   System.StartUpCopy,
   FMX.Forms,
-  PDVUpdates.View.Principal in 'View\PDVUpdates.View.Principal.pas' {Form1},
   PDVUpdates.Model.Usuario.Interfaces in 'Model\Usuario\PDVUpdates.Model.Usuario.Interfaces.pas',
   PDVUpdates.Model.Usuario in 'Model\Usuario\PDVUpdates.Model.Usuario.pas',
   PDVUpdates.Model.Usuario.Factory in 'Model\Usuario\PDVUpdates.Model.Usuario.Factory.pas',
@@ -53,7 +52,8 @@ uses
   PDVUpdates.Model.Usuario.Factory.Interfaces in 'Model\Usuario\PDVUpdates.Model.Usuario.Factory.Interfaces.pas',
   PDVUpdates.View.Dialog.CapturaValor in 'View\Dialog\PDVUpdates.View.Dialog.CapturaValor.pas' {FrmCapturaValor},
   PDVUpdates.Controller.Usuario.Operacoes.Factory in 'Controller\Usuario\Operacoes\PDVUpdates.Controller.Usuario.Operacoes.Factory.pas',
-  PDVUpdates.Controller.Usuario.Operacoes.CapturaValor in 'Controller\Usuario\Operacoes\PDVUpdates.Controller.Usuario.Operacoes.CapturaValor.pas';
+  PDVUpdates.Controller.Usuario.Operacoes.CapturaValor in 'Controller\Usuario\Operacoes\PDVUpdates.Controller.Usuario.Operacoes.CapturaValor.pas',
+  PDVUpdates.View.Principal in 'View\PDVUpdates.View.Principal.pas' {Form1};
 
 {$R *.res}
 

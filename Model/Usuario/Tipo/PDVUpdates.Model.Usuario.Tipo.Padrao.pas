@@ -30,6 +30,8 @@ type
     function CancelamentoCupom: iModelUsuarioMetodos;
     function CancelamentoItem: iModelUsuarioMetodos;
     function DevolucaoItem: iModelUsuarioMetodos;
+    function BloquearCaixa: iModelUsuarioMetodos;
+    function DesbloquearCaixa: iModelUsuarioMetodos;
     function &End: iModelUsuario;
 
   end;
@@ -46,7 +48,6 @@ end;
 function TModelUsuarioTipoPadrao.AbrirCaixa: iModelUsuarioMetodos;
 begin
   Result := Self;
-  FResponsability.AbrirCaixa;
 end;
 
 function TModelUsuarioTipoPadrao.Acrescimo: iModelUsuarioMetodos;
@@ -54,9 +55,14 @@ begin
   Result := Self;
 end;
 
+function TModelUsuarioTipoPadrao.BloquearCaixa: iModelUsuarioMetodos;
+begin
+  Result := Self;
+end;
+
 function TModelUsuarioTipoPadrao.CancelamentoCupom: iModelUsuarioMetodos;
 begin
-
+  Result := Self;
 end;
 
 function TModelUsuarioTipoPadrao.CancelamentoItem: iModelUsuarioMetodos;
@@ -74,6 +80,11 @@ end;
 constructor TModelUsuarioTipoPadrao.Create(Value: iModelUsuario);
 begin
   FParent := Value;
+end;
+
+function TModelUsuarioTipoPadrao.DesbloquearCaixa: iModelUsuarioMetodos;
+begin
+  Result := Self;
 end;
 
 function TModelUsuarioTipoPadrao.Desconto: iModelUsuarioMetodos;
@@ -108,8 +119,8 @@ begin
   Result := Self.Create(Value, NextResponsability);
 end;
 
-function TModelUsuarioTipoPadrao.SetOperacao(Value: iControllerUsuarioOperacoesFactory)
-  : iModelUsuarioMetodos;
+function TModelUsuarioTipoPadrao.SetOperacao
+  (Value: iControllerUsuarioOperacoesFactory): iModelUsuarioMetodos;
 begin
   Result := Self;
   FOperacoes := Value;

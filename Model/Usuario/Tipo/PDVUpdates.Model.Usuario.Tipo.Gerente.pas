@@ -30,6 +30,8 @@ type
     function CancelamentoCupom: iModelUsuarioMetodos;
     function CancelamentoItem: iModelUsuarioMetodos;
     function DevolucaoItem: iModelUsuarioMetodos;
+    function BloquearCaixa: iModelUsuarioMetodos;
+    function DesbloquearCaixa: iModelUsuarioMetodos;
     function &End: iModelUsuario;
 
   end;
@@ -55,6 +57,11 @@ begin
   FResponsability.Acrescimo;
 end;
 
+function TModelUsuarioTipoGerente.BloquearCaixa: iModelUsuarioMetodos;
+begin
+  Result := Self;
+end;
+
 function TModelUsuarioTipoGerente.CancelamentoCupom: iModelUsuarioMetodos;
 begin
   Result := Self;
@@ -77,6 +84,11 @@ end;
 constructor TModelUsuarioTipoGerente.Create(Value: iModelUsuario);
 begin
   FParent := Value;
+end;
+
+function TModelUsuarioTipoGerente.DesbloquearCaixa: iModelUsuarioMetodos;
+begin
+  Result := Self;
 end;
 
 function TModelUsuarioTipoGerente.Desconto: iModelUsuarioMetodos;

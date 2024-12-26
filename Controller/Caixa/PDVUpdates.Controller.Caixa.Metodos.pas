@@ -44,8 +44,8 @@ end;
 function TControllerCaixaMetodos.BloquearCaixa: iControllerCaixaMetodos;
 begin
   Result := Self;
-  FModel.Metodos.BloquearCaixa.SetAutorizadorBloqueio(TControllerFacade.New
-  .Usuario.Usuario.Caixa.);
+  FModel.Metodos.BloquearCaixa.SetAutorizadorBloqueio
+    (TControllerFacade.New.Usuario.Usuario.Caixa.BloquearCaixa.&End);
 end;
 
 function TControllerCaixaMetodos.&End: iControllerCaixa;
@@ -62,6 +62,8 @@ end;
 function TControllerCaixaMetodos.DesbloquearCaixa: iControllerCaixaMetodos;
 begin
   Result := Self;
+  FModel.Metodos.DesbloquearCaixa.SetAutorizadorDesbloqueio
+    (TControllerFacade.New.Usuario.Usuario.Caixa.DesbloquearCaixa.&End)
 end;
 
 destructor TControllerCaixaMetodos.Destroy;
@@ -96,12 +98,20 @@ end;
 function TControllerCaixaMetodos.Suprimento: iControllerCaixaMetodos;
 begin
   Result := Self;
+  FModel.Metodos.Suprimento.SetValorSuprimento(TFrmCapturaValor.Create(nil)
+    .ExibirForm('Valor do fechamento', 'OK', 'Cancelar'))
+    .SetAutorizadorSuprimento(TControllerFacade.New.Usuario.Usuario.Caixa.
+    FecharCaixa.&End);
 
 end;
 
 function TControllerCaixaMetodos.TrocarOperador: iControllerCaixaMetodos;
 begin
-
+  Result := Self;
+  FModel.Metodos.TrocarOperador.SetTrocaOperador
+    (TControllerFacade.New.Usuario.Usuario.Caixa.FecharCaixa.&End)
+    .SetAutorizadorTroca(TControllerFacade.New.Usuario.Usuario.Caixa.
+    FecharCaixa.&End).EndTrocarOperador;
 end;
 
 end.

@@ -31,6 +31,8 @@ type
     function CancelamentoCupom: iModelUsuarioMetodos;
     function CancelamentoItem: iModelUsuarioMetodos;
     function DevolucaoItem: iModelUsuarioMetodos;
+    function BloquearCaixa: iModelUsuarioMetodos;
+    function DesbloquearCaixa: iModelUsuarioMetodos;
     function &End: iModelUsuario;
   end;
 

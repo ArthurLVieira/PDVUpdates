@@ -32,6 +32,8 @@ type
     function CancelamentoCupom: iModelUsuarioMetodos;
     function CancelamentoItem: iModelUsuarioMetodos;
     function DevolucaoItem: iModelUsuarioMetodos;
+    function BloquearCaixa: iModelUsuarioMetodos;
+    function DesbloquearCaixa: iModelUsuarioMetodos;
     function &End: iModelUsuario;
 
   end;
@@ -64,6 +66,11 @@ begin
   FResponsability.Acrescimo;
 end;
 
+function TModelUsuarioTipoFiscal.BloquearCaixa: iModelUsuarioMetodos;
+begin
+  Result := Self;
+end;
+
 function TModelUsuarioTipoFiscal.CancelamentoCupom: iModelUsuarioMetodos;
 begin
   Result := Self;
@@ -86,6 +93,11 @@ end;
 constructor TModelUsuarioTipoFiscal.Create(Value: iModelUsuario);
 begin
   FParent := Value;
+end;
+
+function TModelUsuarioTipoFiscal.DesbloquearCaixa: iModelUsuarioMetodos;
+begin
+  Result := Self;
 end;
 
 function TModelUsuarioTipoFiscal.Desconto: iModelUsuarioMetodos;
@@ -133,8 +145,8 @@ begin
   raise Exception.Create('Confirmar');
 end;
 
-function TModelUsuarioTipoFiscal.SetOperacao(Value: iControllerUsuarioOperacoesFactory)
-  : iModelUsuarioMetodos;
+function TModelUsuarioTipoFiscal.SetOperacao
+  (Value: iControllerUsuarioOperacoesFactory): iModelUsuarioMetodos;
 begin
   Result := Self;
   FOperacoes := Value;

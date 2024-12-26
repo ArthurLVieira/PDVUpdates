@@ -1,0 +1,42 @@
+unit PDVUpdates.View.Principal;
+
+interface
+
+uses
+  System.SysUtils, System.Types, System.UITypes, System.Classes,
+  System.Variants,
+  FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs,
+  PDVUpdates.Controller.Interfaces, PDVUpdates.Controller.Caixa.Interfaces,
+  PDVUpdates.Controller.Facade, FMX.ListBox, FMX.Layouts;
+
+type
+  TForm1 = class(TForm)
+    ListBox1: TListBox;
+    ListBoxItem1: TListBoxItem;
+    procedure FormCreate(Sender: TObject);
+    procedure ListBoxItem1Click(Sender: TObject);
+  private
+    FCaixa: iControllerCaixa;
+    { Private declarations }
+  public
+    { Public declarations }
+
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+procedure TForm1.FormCreate(Sender: TObject);
+begin
+  TControllerFacade.New.Usuario.Usuario.Caixa.AbrirCaixa;
+  FCaixa := TControllerFacade.New.Caixa.Caixa;
+end;
+
+procedure TForm1.ListBoxItem1Click(Sender: TObject);
+begin
+  FCaixa.Metodos.Abrir;
+end;
+
+end.

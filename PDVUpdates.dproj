@@ -286,6 +286,8 @@
     <PropertyGroup Condition="'$(Cfg_1_Win32)'!=''">
         <DCC_RemoteDebug>false</DCC_RemoteDebug>
         <AppDPIAwarenessMode>PerMonitorV2</AppDPIAwarenessMode>
+        <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+        <VerInfo_Locale>1033</VerInfo_Locale>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_1_Win64)'!=''">
         <AppDPIAwarenessMode>PerMonitorV2</AppDPIAwarenessMode>
@@ -306,10 +308,6 @@
         <DelphiCompile Include="$(MainSource)">
             <MainSource>MainSource</MainSource>
         </DelphiCompile>
-        <DCCReference Include="View\PDVUpdates.View.Principal.pas">
-            <Form>Form1</Form>
-            <FormType>fmx</FormType>
-        </DCCReference>
         <DCCReference Include="Model\Usuario\PDVUpdates.Model.Usuario.Interfaces.pas"/>
         <DCCReference Include="Model\Usuario\PDVUpdates.Model.Usuario.pas"/>
         <DCCReference Include="Model\Usuario\PDVUpdates.Model.Usuario.Factory.pas"/>
@@ -366,6 +364,10 @@
         </DCCReference>
         <DCCReference Include="Controller\Usuario\Operacoes\PDVUpdates.Controller.Usuario.Operacoes.Factory.pas"/>
         <DCCReference Include="Controller\Usuario\Operacoes\PDVUpdates.Controller.Usuario.Operacoes.CapturaValor.pas"/>
+        <DCCReference Include="View\PDVUpdates.View.Principal.pas">
+            <Form>Form1</Form>
+            <FormType>fmx</FormType>
+        </DCCReference>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>
@@ -386,6 +388,10 @@
                 <Source>
                     <Source Name="MainSource">PDVUpdates.dpr</Source>
                 </Source>
+                <Excluded_Packages>
+                    <Excluded_Packages Name="$(BDSBIN)\dcloffice2k290.bpl">Microsoft Office 2000 Sample Automation Server Wrapper Components</Excluded_Packages>
+                    <Excluded_Packages Name="$(BDSBIN)\dclofficexp290.bpl">Microsoft Office XP Sample Automation Server Wrapper Components</Excluded_Packages>
+                </Excluded_Packages>
             </Delphi.Personality>
             <Deployment Version="5">
                 <DeployFile LocalName="$(BDS)\Redist\iossimulator\libcgunwind.1.0.dylib" Class="DependencyModule">
