@@ -3,7 +3,8 @@ unit PDVUpdates.Controller.Usuario.Operacoes.PedirSenha;
 interface
 
 uses
-  PDVUpdates.Controller.Usuario.Operacoes.Interfaces, System.Classes;
+  PDVUpdates.Controller.Usuario.Operacoes.Interfaces, System.Classes,
+  System.Generics.Collections, PDVUpdates.Controller.Types;
 
 type
 
@@ -11,8 +12,10 @@ type
     iControllerUsuarioOperacoesPedirSenha)
   private
     FParent: iControllerUsuarioOperacoesFactory;
-    FTitle, FTextConfirm, FTextCancel: string;
     FClickConfirm, FClickCancel: TNotifyEvent;
+    Flista: TList<TRecordSenha>;
+    FResult: TRecordSenha;
+    FTitle, FTextConfirm, FTextCancel: string;
   public
     constructor Create(Value: iControllerUsuarioOperacoesFactory);
     destructor Destroy; override;
@@ -27,6 +30,9 @@ type
       : iControllerUsuarioOperacoesPedirSenha;
     function SetOnClickCancel(Value: TNotifyEvent)
       : iControllerUsuarioOperacoesPedirSenha;
+    function Lista(Value: TList<TRecordSenha>)
+      : iControllerUsuarioOperacoesPedirSenha;
+    function Result(Value: TRecordSenha): iControllerUsuarioOperacoesPedirSenha;
     function &End: iControllerUsuarioOperacoesFactory;
   end;
 
@@ -41,7 +47,14 @@ function TControllerUsuarioOperacoesPedirSenha.&End
 begin
   Result := FParent;
   TFrmSenhaUsuario.Create(nil).ExibirForm(FTitle, FTextConfirm, FTextCancel,
-    FClickConfirm, FClickCancel);
+    Flista, FResult);
+end;
+
+function TControllerUsuarioOperacoesPedirSenha.Lista(Value: TList<TRecordSenha>)
+  : iControllerUsuarioOperacoesPedirSenha;
+begin
+  Result := Self;
+  Flista := Value;
 end;
 
 constructor TControllerUsuarioOperacoesPedirSenha.Create
@@ -64,6 +77,13 @@ class function TControllerUsuarioOperacoesPedirSenha.New
   : iControllerUsuarioOperacoesPedirSenha;
 begin
   Result := Self.Create(Value);
+end;
+
+function TControllerUsuarioOperacoesPedirSenha.Result(Value: TRecordSenha)
+  : iControllerUsuarioOperacoesPedirSenha;
+begin
+  Result := Self;
+  FResult := Value;
 end;
 
 function TControllerUsuarioOperacoesPedirSenha.SetOnClickCancel

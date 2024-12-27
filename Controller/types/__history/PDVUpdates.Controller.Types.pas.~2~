@@ -1,0 +1,13 @@
+unit PDVUpdates.Controller.Types;
+
+interface
+
+type
+
+  TRecordSenha = record
+
+  end;
+
+implementation
+
+end.

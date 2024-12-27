@@ -3,12 +3,15 @@ unit PDVUpdates.Model.Usuario.Tipo.Fiscal;
 interface
 
 uses PDVUpdates.Model.Usuario.Interfaces,
-  PDVUpdates.Controller.Usuario.Operacoes.Interfaces;
+  PDVUpdates.Controller.Usuario.Operacoes.Interfaces,
+  System.Generics.Collections, PDVUpdates.Controller.Types;
 
 type
 
   TModelUsuarioTipoFiscal = class(TInterfacedObject, iModelUsuarioMetodos)
   private
+    Flista: TList<TRecordSenha>;
+    FRetorno: TRecordSenha;
     FParent: iModelUsuario;
     FResponsability: iModelUsuarioMetodos;
     FOperacoes: iControllerUsuarioOperacoesFactory;
@@ -56,8 +59,8 @@ function TModelUsuarioTipoFiscal.AbrirCaixa: iModelUsuarioMetodos;
 begin
   Result := Self;
   FOperacoes.PedirSenha.SetTitle('Entre com a senha do Fiscal')
-    .SetTextConfirm('OK').SetTextCancel('Cancelar')
-    .SetOnClickConfirm(OnConfirmSenha).SetOnClickCancel(OnCancelSenha).&End;
+    .SetTextConfirm('OK').SetTextCancel('Cancelar').Lista(Flista)
+    .Result(FRetorno).&End;
 
   // FResponsability.AbrirCaixa;
 end;
@@ -87,14 +90,30 @@ end;
 
 constructor TModelUsuarioTipoFiscal.Create(Value: iModelUsuario;
   NextResponsability: iModelUsuarioMetodos);
+var
+  Usuario: TRecordSenha;
 begin
   FParent := Value;
   FResponsability := NextResponsability;
+
+  Flista := TList<TRecordSenha>.Create;
+
+  Usuario.User := 'Arthur';
+  Usuario.Password := '123';
+  Flista.Add(Usuario);
 end;
 
 constructor TModelUsuarioTipoFiscal.Create(Value: iModelUsuario);
+var
+  Usuario: TRecordSenha;
 begin
   FParent := Value;
+
+  Flista := TList<TRecordSenha>.Create;
+
+  Usuario.User := 'Arthur';
+  Usuario.Password := '123';
+  Flista.Add(Usuario);
 end;
 
 function TModelUsuarioTipoFiscal.DesbloquearCaixa: iModelUsuarioMetodos;
@@ -109,6 +128,7 @@ end;
 
 destructor TModelUsuarioTipoFiscal.Destroy;
 begin
+  FreeAndNil(Flista);
 
   inherited;
 end;

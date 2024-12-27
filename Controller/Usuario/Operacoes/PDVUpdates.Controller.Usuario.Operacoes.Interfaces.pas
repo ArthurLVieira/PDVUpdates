@@ -3,7 +3,7 @@ unit PDVUpdates.Controller.Usuario.Operacoes.Interfaces;
 interface
 
 uses
-  System.Classes;
+  System.Classes, System.Generics.Collections, PDVUpdates.Controller.Types;
 
 type
 
@@ -27,6 +27,9 @@ type
       : iControllerUsuarioOperacoesPedirSenha;
     function SetOnClickCancel(Value: TNotifyEvent)
       : iControllerUsuarioOperacoesPedirSenha;
+    function Lista(Value: TList<TRecordSenha>)
+      : iControllerUsuarioOperacoesPedirSenha;
+    function Result(Value: TRecordSenha): iControllerUsuarioOperacoesPedirSenha;
     function &End: iControllerUsuarioOperacoesFactory;
   end;
 

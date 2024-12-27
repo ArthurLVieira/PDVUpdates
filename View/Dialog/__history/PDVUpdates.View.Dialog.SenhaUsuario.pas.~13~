@@ -1,0 +1,60 @@
+unit PDVUpdates.View.Dialog.SenhaUsuario;
+
+interface
+
+uses
+  System.SysUtils, System.Types, System.Classes,
+  System.Variants,
+  FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.Edit,
+  FMX.ListBox, FMX.Controls.Presentation, FMX.StdCtrls, FMX.Layouts;
+
+type
+  TFrmSenhaUsuario = class(TForm)
+    Layout1: TLayout;
+    ToolBar1: TToolBar;
+    ToolBar2: TToolBar;
+    ComboBox1: TComboBox;
+    Edit1: TEdit;
+    Label1: TLabel;
+    Layout2: TLayout;
+    Button1: TButton;
+    Button2: TButton;
+    procedure Button1Click(Sender: TObject);
+    procedure Button2Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+    procedure ExibirForm(Title, TextConfirm, TextCancel: string);
+  end;
+
+var
+  FrmSenhaUsuario: TFrmSenhaUsuario;
+
+implementation
+
+uses
+  System.UITypes;
+
+{$R *.fmx}
+{ TFrmSenhaUsuario }
+
+procedure TFrmSenhaUsuario.Button1Click(Sender: TObject);
+begin
+  ModalResult := mrOk;
+end;
+
+procedure TFrmSenhaUsuario.Button2Click(Sender: TObject);
+begin
+  ModalResult := mrCancel;
+end;
+
+procedure TFrmSenhaUsuario.ExibirForm(Title, TextConfirm, TextCancel: string);
+begin
+  Label1.Text := Title;
+  Button1.Text := TextConfirm;
+  Button2.Text := TextCancel;
+  Self.ShowModal;
+end;
+
+end.

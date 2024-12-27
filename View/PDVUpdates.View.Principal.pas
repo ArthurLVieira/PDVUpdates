@@ -13,7 +13,6 @@ type
     ListBoxItem1: TListBoxItem;
     ListBoxItem2: TListBoxItem;
     ListBoxItem3: TListBoxItem;
-    V: TListBox;
     ListBoxItem4: TListBoxItem;
     procedure FormCreate(Sender: TObject);
     procedure ListBoxItem1Click(Sender: TObject);
@@ -38,7 +37,7 @@ uses PDVUpdates.Controller.Interfaces, PDVUpdates.Controller.Facade;
 
 procedure TForm1.FormCreate(Sender: TObject);
 begin
-  TControllerFacade.New.Usuario.Usuario.Caixa.AbrirCaixa;
+//  TControllerFacade.New.Usuario.Usuario.Caixa.AbrirCaixa;
   FCaixa := TControllerFacade.New.Caixa.Caixa;
 end;
 

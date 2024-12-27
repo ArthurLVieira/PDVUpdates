@@ -53,7 +53,8 @@ uses
   PDVUpdates.View.Dialog.CapturaValor in 'View\Dialog\PDVUpdates.View.Dialog.CapturaValor.pas' {FrmCapturaValor},
   PDVUpdates.Controller.Usuario.Operacoes.Factory in 'Controller\Usuario\Operacoes\PDVUpdates.Controller.Usuario.Operacoes.Factory.pas',
   PDVUpdates.Controller.Usuario.Operacoes.CapturaValor in 'Controller\Usuario\Operacoes\PDVUpdates.Controller.Usuario.Operacoes.CapturaValor.pas',
-  PDVUpdates.View.Principal in 'View\PDVUpdates.View.Principal.pas' {Form1};
+  PDVUpdates.View.Principal in 'View\PDVUpdates.View.Principal.pas' {Form1},
+  PDVUpdates.Controller.Types in 'Controller\types\PDVUpdates.Controller.Types.pas';
 
 {$R *.res}
 
