@@ -1,0 +1,11 @@
+unit PDVUpdates.Model.Produto.Metodos.Cadastrar;
+
+interface
+
+type
+
+  TModelProdutoMetodosCadastrar = class(tinter
+
+implementation
+
+end.

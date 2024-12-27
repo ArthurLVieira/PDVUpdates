@@ -1,0 +1,19 @@
+unit PDVUpdates.Model.Produto.Metodos.Cadastrar;
+
+interface
+
+uses PDVUpdates.Model.Produto.Interfaces;
+
+type
+
+  TModelProdutoMetodosCadastrar = class(TInterfacedObject, iModelProdutoMetodosCadastrar)
+    private
+    public
+    constructor Create(Value: iModelprodutoMetodos);
+        destructor Destroy; override;
+     class function New(Value: imode)
+  end;
+
+implementation
+
+end.

@@ -1,0 +1,42 @@
+unit PDVUpdates.Model.Produto.State.Bloqueado;
+
+interface
+
+uses PDVUpdates.Model.Produto.Interfaces;
+
+type
+
+  TModelProdutoStateBloqueado = class(TInterfacedObject, iModelprodutoMetodos)
+  private
+  public
+    constructor Create;
+    destructor Destroy; override;
+    class function New: iModelprodutoMetodos;
+    function Cadastrar: iModelprodutoMetodos;
+    function Excluir: iModelprodutoMetodos;
+    function Editar: iModelprodutoMetodos;
+    function Bloquear: iModelprodutoMetodos;
+    function Desbloquer: iModelprodutoMetodos;
+  end;
+
+implementation
+
+{ TModelProdutoStateBloqueado }
+
+constructor TModelProdutoStateBloqueado.Create;
+begin
+
+end;
+
+destructor TModelProdutoStateBloqueado.Destroy;
+begin
+
+  inherited;
+end;
+
+class function TModelProdutoStateBloqueado.New: iModelprodutoMetodos;
+begin
+  Result := Self.Create;
+end;
+
+end.

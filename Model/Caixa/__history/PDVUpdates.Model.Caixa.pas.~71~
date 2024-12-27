@@ -40,12 +40,16 @@ uses
 
 function TModelCaixa.Abrir: iModelCaixaMetodosAbrir;
 begin
+  FState.Abrir;
   Result := FMetodosFactory.Abrir(Self);
+  FState := TModelCaixaStateFactory.New.Aberto;
 end;
 
 function TModelCaixa.BloquearCaixa: iModelCaixaMetodosBloquear;
 begin
+  FState.BloquearCaixa;
   Result := FMetodosFactory.BloquearCaixa(Self);
+  FState := TModelCaixaStateFactory.New.Bloqueado;
 end;
 
 constructor TModelCaixa.Create;
@@ -57,7 +61,9 @@ end;
 
 function TModelCaixa.DesbloquearCaixa: iModelCaixaMetodosDesbloquear;
 begin
+  FState.DesbloquearCaixa;
   Result := FMetodosFactory.DesbloquearCaixa(Self);
+  FState := TModelCaixaStateFactory.New.Aberto;
 end;
 
 destructor TModelCaixa.Destroy;
@@ -73,7 +79,9 @@ end;
 
 function TModelCaixa.Fechar: iModelCaixaMetodosFechar;
 begin
+  FState.Fechar;
   Result := FMetodosFactory.Fechar(Self);
+  FState := TModelCaixaStateFactory.New.Fechado;
 end;
 
 function TModelCaixa.Metodos: iModelCaixaMetodos;
@@ -88,16 +96,19 @@ end;
 
 function TModelCaixa.Sangria: iModelCaixaMetodosSangria;
 begin
+  FState.Sangria;
   Result := FMetodosFactory.Sangria(Self);
 end;
 
 function TModelCaixa.Suprimento: iModelCaixaMetodosSuprimento;
 begin
+  FState.Suprimento;
   Result := FMetodosFactory.Suprimento(Self);
 end;
 
 function TModelCaixa.TrocarOperador: iModelCaixaMetodosTrocarOperador;
 begin
+  FState.TrocarOperador;
   Result := FMetodosFactory.TrocarOperador(Self);
 end;
 

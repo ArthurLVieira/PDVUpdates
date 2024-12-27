@@ -1,0 +1,18 @@
+unit PDVUpdates.Model.Produto.State.Desbloqueado;
+
+interface
+
+uses PDVUpdates.Model.Produto.Interfaces;
+
+type
+
+  TModelProdutoStateDesbloqueado = class(TInterfacedObject, iModelprodutoMetodos)
+    private
+    public
+    constructor Create;
+    des
+  end;
+
+implementation
+
+end.

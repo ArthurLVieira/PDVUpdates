@@ -1,0 +1,14 @@
+unit PDVUpdates.Model.Produto.Metodos.Interfaces;
+
+interface
+
+type
+
+  iModelprodutoMetodos = interface
+    ['{2A0E4DCE-029A-4C7F-975E-B6CBDF97FFFE}']
+    function Cadastro: iModelprodutoMetodos;
+  end;
+
+implementation
+
+end.

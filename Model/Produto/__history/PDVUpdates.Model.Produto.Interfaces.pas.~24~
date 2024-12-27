@@ -1,0 +1,29 @@
+unit PDVUpdates.Model.Produto.Interfaces;
+
+interface
+
+type
+
+  iModelprodutoMetodos = interface;
+
+  iModelProduto = interface
+    ['{CD7D5688-C539-4793-BF37-B757E743BDB1}']
+    function Metodos(Value: iModelProduto): iModelprodutoMetodos;
+  end;
+
+  iModelProdutoMetodos = interface
+    ['{2A0E4DCE-029A-4C7F-975E-B6CBDF97FFFE}']
+    function Cadastrar: iModelprodutoMetodos;
+    function Excluir: iModelprodutoMetodos;
+    function Editar: iModelprodutoMetodos;
+    function Bloquear: iModelprodutoMetodos;
+    function Desbloquer: iModelprodutoMetodos;
+  end;
+
+  iModelProdutoMetodosCadastrar = interface
+    ['{786C3D01-11A5-4AE4-8192-689106231D2B}']
+  end;
+
+implementation
+
+end.

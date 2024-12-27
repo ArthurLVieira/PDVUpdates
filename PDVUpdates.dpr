@@ -54,7 +54,15 @@ uses
   PDVUpdates.Controller.Usuario.Operacoes.Factory in 'Controller\Usuario\Operacoes\PDVUpdates.Controller.Usuario.Operacoes.Factory.pas',
   PDVUpdates.Controller.Usuario.Operacoes.CapturaValor in 'Controller\Usuario\Operacoes\PDVUpdates.Controller.Usuario.Operacoes.CapturaValor.pas',
   PDVUpdates.View.Principal in 'View\PDVUpdates.View.Principal.pas' {Form1},
-  PDVUpdates.Controller.Types in 'Controller\types\PDVUpdates.Controller.Types.pas';
+  PDVUpdates.Controller.Types in 'Controller\types\PDVUpdates.Controller.Types.pas',
+  PDVUpdates.Model.Produto.Interfaces in 'Model\Produto\PDVUpdates.Model.Produto.Interfaces.pas',
+  PDVUpdates.Model.Produto in 'Model\Produto\PDVUpdates.Model.Produto.pas',
+  PDVUpdates.Model.Produto.factory in 'Model\Produto\PDVUpdates.Model.Produto.factory.pas',
+  PDVUpdates.Model.Produto.State.Interfaces in 'Model\Produto\State\PDVUpdates.Model.Produto.State.Interfaces.pas',
+  PDVUpdates.Model.Produto.Metodos.Interfaces in 'Model\Produto\Metodos\PDVUpdates.Model.Produto.Metodos.Interfaces.pas',
+  PDVUpdates.Model.Produto.Metodos.Cadastrar in 'Model\Produto\Metodos\PDVUpdates.Model.Produto.Metodos.Cadastrar.pas',
+  PDVUpdates.Model.Produto.State.Bloqueado in 'Model\Produto\State\PDVUpdates.Model.Produto.State.Bloqueado.pas',
+  PDVUpdates.Model.Produto.State.Desbloqueado in 'Model\Produto\State\PDVUpdates.Model.Produto.State.Desbloqueado.pas';
 
 {$R *.res}
 

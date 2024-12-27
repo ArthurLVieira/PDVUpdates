@@ -1,0 +1,11 @@
+unit PDVUpdates.Model.Produto.State.Desbloqueado;
+
+interface
+
+type
+
+  TModelProdutoStateDesbloqueado = class(tinter
+
+implementation
+
+end.

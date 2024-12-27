@@ -1,0 +1,11 @@
+unit PDVUpdates.Model.Produto.State.Interfaces;
+
+interface
+
+type
+
+  iModelProduto
+
+implementation
+
+end.

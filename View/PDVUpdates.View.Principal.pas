@@ -6,7 +6,8 @@ uses
   System.SysUtils, System.Types, System.UITypes, System.Classes,
   System.Variants,
   FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.ListBox,
-  FMX.Layouts, PDVUpdates.Controller.Caixa.Interfaces;
+  FMX.Layouts, PDVUpdates.Controller.Caixa.Interfaces,
+  FMX.Controls.Presentation, FMX.StdCtrls;
 
 type
   TForm1 = class(TForm)
@@ -14,6 +15,7 @@ type
     ListBoxItem2: TListBoxItem;
     ListBoxItem3: TListBoxItem;
     ListBoxItem4: TListBoxItem;
+    ToolBar1: TToolBar;
     procedure FormCreate(Sender: TObject);
     procedure ListBoxItem1Click(Sender: TObject);
     procedure ListBoxItem2Click(Sender: TObject);
@@ -37,7 +39,7 @@ uses PDVUpdates.Controller.Interfaces, PDVUpdates.Controller.Facade;
 
 procedure TForm1.FormCreate(Sender: TObject);
 begin
-//  TControllerFacade.New.Usuario.Usuario.Caixa.AbrirCaixa;
+  TControllerFacade.New.Usuario.Usuario.Caixa.AbrirCaixa;
   FCaixa := TControllerFacade.New.Caixa.Caixa;
 end;
 
