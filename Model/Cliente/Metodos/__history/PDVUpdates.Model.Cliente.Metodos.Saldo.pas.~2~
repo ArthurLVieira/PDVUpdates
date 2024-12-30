@@ -1,0 +1,40 @@
+unit PDVUpdates.Model.Cliente.Metodos.Saldo;
+
+interface
+
+uses
+  PDVUpdates.Model.Cliente.Interfaces;
+
+type
+
+  TModelClienteMetodosSaldo = class(TInterfacedObject,
+    iModelClienteMetodosSaldo)
+  private
+
+  public
+    constructor Create(Value: iModelClienteMetodos);
+    destructor Destroy; override;
+    class function New(Value: iModelClienteMetodos): iModelClienteMetodosSaldo;
+  end;
+
+implementation
+
+{ TModelClienteMetodosSaldo }
+
+constructor TModelClienteMetodosSaldo.Create;
+begin
+
+end;
+
+destructor TModelClienteMetodosSaldo.Destroy;
+begin
+
+  inherited;
+end;
+
+class function TModelClienteMetodosSaldo.New: iModelClienteMetodosSaldo;
+begin
+  Result := Self.Create;
+end;
+
+end.

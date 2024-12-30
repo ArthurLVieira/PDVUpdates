@@ -31,6 +31,8 @@ type
 
   iModelProdutoMetodosCadastrar = interface
     ['{786C3D01-11A5-4AE4-8192-689106231D2B}']
+    function SetID(Value: Integer): iModelProdutoMetodosCadastrar;
+    function GetID: Integer;
   end;
 
   iModelProdutoMetodosExcluir = interface

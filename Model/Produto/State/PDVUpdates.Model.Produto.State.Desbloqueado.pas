@@ -24,6 +24,9 @@ type
 
 implementation
 
+uses
+  System.SysUtils;
+
 { TModelProdutoStateDesbloqueado }
 
 function TModelProdutoStateDesbloqueado.Bloquear: iModelProdutoMetodosBloquear;
@@ -31,14 +34,15 @@ begin
 
 end;
 
-function TModelProdutoStateDesbloqueado.Cadastrar: iModelProdutoMetodosCadastrar;
+function TModelProdutoStateDesbloqueado.Cadastrar
+  : iModelProdutoMetodosCadastrar;
 begin
 
 end;
 
 function TModelProdutoStateDesbloqueado.&End: iModelProduto;
 begin
-
+  
 end;
 
 constructor TModelProdutoStateDesbloqueado.Create;
@@ -46,9 +50,10 @@ begin
 
 end;
 
-function TModelProdutoStateDesbloqueado.Desbloquer: iModelProdutoMetodosDesbloquear;
+function TModelProdutoStateDesbloqueado.Desbloquer
+  : iModelProdutoMetodosDesbloquear;
 begin
-
+  raise Exception.Create('Produto Desbloqueado');
 end;
 
 destructor TModelProdutoStateDesbloqueado.Destroy;

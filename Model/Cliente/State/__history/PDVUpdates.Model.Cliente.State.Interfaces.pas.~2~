@@ -1,0 +1,18 @@
+unit PDVUpdates.Model.Cliente.State.Interfaces;
+
+interface
+
+uses
+  PDVUpdates.Model.Cliente.Interfaces;
+
+type
+
+  iModelClienteStateFactory = interface
+    ['{0C962AB3-142F-48D3-AD75-1A3869CF0B42}']
+    function Bloqueado: iModelClienteMetodos;
+    function Ativo: iModelClienteMetodos;
+  end;
+
+implementation
+
+end.

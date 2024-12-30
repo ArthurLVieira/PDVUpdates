@@ -369,6 +369,19 @@
         <DCCReference Include="Model\Produto\Metodos\PDVUpdates.Model.Produto.Metodos.Cadastrar.pas"/>
         <DCCReference Include="Model\Produto\State\PDVUpdates.Model.Produto.State.Bloqueado.pas"/>
         <DCCReference Include="Model\Produto\State\PDVUpdates.Model.Produto.State.Desbloqueado.pas"/>
+        <DCCReference Include="Model\Cliente\PDVUpdates.Model.Cliente.Interfaces.pas"/>
+        <DCCReference Include="Model\Cliente\PDVUpdates.Model.Cliente.pas"/>
+        <DCCReference Include="Model\Cliente\PDVUpdates.Model.Cliente.Factory.pas"/>
+        <DCCReference Include="Model\Cliente\Metodos\PDVUpdates.Model.Cliente.Metodos.Interfaces.pas"/>
+        <DCCReference Include="Model\Cliente\Metodos\PDVUpdates.Model.Cliente.Metodos.Buscar.pas"/>
+        <DCCReference Include="Model\Cliente\Metodos\PDVUpdates.Model.Cliente.Metodos.Saldo.pas"/>
+        <DCCReference Include="Model\Cliente\Metodos\PDVUpdates.Model.Cliente.Metodos.Factory.pas"/>
+        <DCCReference Include="Model\Cliente\state\PDVUpdates.Model.Cliente.State.Interfaces.pas"/>
+        <DCCReference Include="Model\Cliente\state\PDVUpdates.Model.Cliente.State.Bloqueado.pas"/>
+        <DCCReference Include="Model\Cliente\State\PDVUpdates.Model.Cliente.State.Desbloqueado.pas"/>
+        <DCCReference Include="Model\Cliente\State\PDVUpdates.Model.Cliente.State.Ativo.pas"/>
+        <DCCReference Include="Model\Cliente\State\PDVUpdates.Model.Cliente.State.Inativo.pas"/>
+        <DCCReference Include="Model\Cliente\State\PDVUpdates.Model.Cliente.State.Factory.pas"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>
@@ -394,7 +407,7 @@
                     <Excluded_Packages Name="$(BDSBIN)\dclofficexp290.bpl">Microsoft Office XP Sample Automation Server Wrapper Components</Excluded_Packages>
                 </Excluded_Packages>
             </Delphi.Personality>
-            <Deployment Version="4">
+            <Deployment Version="5">
                 <DeployFile LocalName="$(BDS)\Redist\iossimulator\libcgunwind.1.0.dylib" Class="DependencyModule">
                     <Platform Name="iOSSimulator">
                         <Overwrite>true</Overwrite>
@@ -410,6 +423,7 @@
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
+                <DeployFile LocalName="Win32\Debug\PDVUpdates.exe" Configuration="Debug" Class="ProjectOutput"/>
                 <DeployFile LocalName="Win32\Debug\PDVUpdates.exe" Configuration="Debug" Class="ProjectOutput">
                     <Platform Name="Win32">
                         <RemoteName>PDVUpdates.exe</RemoteName>
@@ -428,16 +442,6 @@
                         <Operation>0</Operation>
                     </Platform>
                 </DeployClass>
-                <DeployClass Name="AndroidClasses">
-                    <Platform Name="Android">
-                        <RemoteDir>classes</RemoteDir>
-                        <Operation>64</Operation>
-                    </Platform>
-                    <Platform Name="Android64">
-                        <RemoteDir>classes</RemoteDir>
-                        <Operation>64</Operation>
-                    </Platform>
-                </DeployClass>
                 <DeployClass Name="AndroidFileProvider">
                     <Platform Name="Android">
                         <RemoteDir>res\xml</RemoteDir>
@@ -445,12 +449,6 @@
                     </Platform>
                     <Platform Name="Android64">
                         <RemoteDir>res\xml</RemoteDir>
-                        <Operation>1</Operation>
-                    </Platform>
-                </DeployClass>
-                <DeployClass Name="AndroidGDBServer">
-                    <Platform Name="Android">
-                        <RemoteDir>library\lib\armeabi-v7a</RemoteDir>
                         <Operation>1</Operation>
                     </Platform>
                 </DeployClass>
@@ -1076,6 +1074,9 @@
                     <Platform Name="Win64">
                         <Operation>1</Operation>
                     </Platform>
+                    <Platform Name="Win64x">
+                        <Operation>1</Operation>
+                    </Platform>
                 </DeployClass>
                 <DeployClass Name="ProjectiOSDeviceDebug">
                     <Platform Name="iOSDevice32">
@@ -1375,6 +1376,7 @@
                 <Platform value="Android64">True</Platform>
                 <Platform value="iOSDevice64">True</Platform>
                 <Platform value="iOSSimARM64">True</Platform>
+                <Platform value="Linux64">False</Platform>
                 <Platform value="OSX64">True</Platform>
                 <Platform value="OSXARM64">True</Platform>
                 <Platform value="Win32">True</Platform>

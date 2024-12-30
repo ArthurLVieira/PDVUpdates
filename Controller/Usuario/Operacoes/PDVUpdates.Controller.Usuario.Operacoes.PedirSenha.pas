@@ -16,6 +16,7 @@ type
     Flista: TList<TRecordSenha>;
     FResult: TRecordSenha;
     FTitle, FTextConfirm, FTextCancel: string;
+    procedure validarSenha;
   public
     constructor Create(Value: iControllerUsuarioOperacoesFactory);
     destructor Destroy; override;
@@ -40,7 +41,7 @@ implementation
 
 { TControllerUsuarioOperacoesPedirSenha }
 
-uses PDVUpdates.View.Dialog.SenhaUsuario;
+uses PDVUpdates.View.Dialog.SenhaUsuario, System.SysUtils;
 
 function TControllerUsuarioOperacoesPedirSenha.&End
   : iControllerUsuarioOperacoesFactory;
@@ -48,6 +49,7 @@ begin
   Result := FParent;
   TFrmSenhaUsuario.Create(nil).ExibirForm(FTitle, FTextConfirm, FTextCancel,
     Flista, FResult);
+  validarSenha;
 end;
 
 function TControllerUsuarioOperacoesPedirSenha.Lista(Value: TList<TRecordSenha>)
@@ -119,6 +121,17 @@ function TControllerUsuarioOperacoesPedirSenha.SetTitle(Value: string)
 begin
   Result := Self;
   FTitle := Value;
+end;
+
+procedure TControllerUsuarioOperacoesPedirSenha.validarSenha;
+var
+  I: Integer;
+begin
+  for I := 0 to Pred(Flista.Count) do
+    if (Flista.Items[I].User = FResult.User) and
+      (Flista.Items[I].Password <> FResult.Password) then
+       raise Exception.Create('Senha Invalida');
+
 end;
 
 end.

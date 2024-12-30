@@ -1,0 +1,7 @@
+unit PDVUpdates.Model.Cliente.State.Inativo;
+
+interface
+
+implementation
+
+end.

@@ -1,0 +1,13 @@
+unit PDVUpdates.Model.Cliente.Metodos.Interfaces;
+
+interface
+
+type
+
+  iModelClienteMetodosFactory = interface
+    ['{0E869C01-3B15-4154-B7B0-843D7AEA2640}']
+  end;
+
+implementation
+
+end.
