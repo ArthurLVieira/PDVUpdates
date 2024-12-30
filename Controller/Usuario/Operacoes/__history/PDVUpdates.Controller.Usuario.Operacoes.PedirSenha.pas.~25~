@@ -41,7 +41,7 @@ implementation
 
 { TControllerUsuarioOperacoesPedirSenha }
 
-uses PDVUpdates.View.Dialog.SenhaUsuario, System.SysUtils;
+uses PDVUpdates.View.Dialog.SenhaUsuario;
 
 function TControllerUsuarioOperacoesPedirSenha.&End
   : iControllerUsuarioOperacoesFactory;
@@ -124,13 +124,7 @@ begin
 end;
 
 procedure TControllerUsuarioOperacoesPedirSenha.validarSenha;
-var
-  I: Integer;
 begin
-  for I := 0 to Pred(Flista.Count) do
-    if (Flista.Items[I].User = FResult.User) and
-      (Flista.Items[I].Password <> FResult.Password) then
-       raise Exception.Create('Senha Invalida');
 
 end;
 

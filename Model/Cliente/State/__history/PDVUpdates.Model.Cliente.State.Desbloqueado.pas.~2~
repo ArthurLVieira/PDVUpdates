@@ -1,0 +1,40 @@
+unit PDVUpdates.Model.Cliente.State.Desbloqueado;
+
+interface
+
+uses
+  PDVUpdates.Model.Cliente.Interfaces;
+
+type
+
+  TModelClienteStateDesbloqueado = class(TInterfacedObject,
+    iModelClienteMetodos)
+  private
+
+  public
+    constructor Create;
+    destructor Destroy; override;
+    class function New: iModelClienteMetodos;
+  end;
+
+implementation
+
+{ TModelClienteStateDesbloqueado }
+
+constructor TModelClienteStateDesbloqueado.Create;
+begin
+
+end;
+
+destructor TModelClienteStateDesbloqueado.Destroy;
+begin
+
+  inherited;
+end;
+
+class function TModelClienteStateDesbloqueado.New: iModelClienteMetodos;
+begin
+  Result := Self.Create;
+end;
+
+end.

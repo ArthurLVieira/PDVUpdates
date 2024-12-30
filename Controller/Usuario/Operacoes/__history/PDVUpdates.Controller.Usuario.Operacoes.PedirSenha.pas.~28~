@@ -128,8 +128,8 @@ var
   I: Integer;
 begin
   for I := 0 to Pred(Flista.Count) do
-    if (Flista.Items[I].User = FResult.User) and
-      (Flista.Items[I].Password <> FResult.Password) then
+    if (FResult.User = Flista.Items[I].User) and
+      (FResult.Password <> Flista.Items[I].Password) then
        raise Exception.Create('Senha Invalida');
 
 end;

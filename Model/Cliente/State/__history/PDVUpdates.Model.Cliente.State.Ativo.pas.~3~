@@ -1,0 +1,42 @@
+unit PDVUpdates.Model.Cliente.State.Ativo;
+
+interface
+
+uses
+  PDVUpdates.Model.Cliente.Interfaces;
+
+type
+
+  TModelClienteStateAtivo = class(TInterfacedObject, iModelClienteMetodos)
+  private
+
+  public
+    constructor Create;
+    destructor Destroy; override;
+    class function New: iModelClienteMetodos;
+    function Saldo: iModelClienteMetodosSaldo;
+    function Buscar: iModelClienteMetodosBuscar;
+    function &End: iModelCliente;
+  end;
+
+implementation
+
+{ TModelClienteStateAtivo }
+
+constructor TModelClienteStateAtivo.Create;
+begin
+
+end;
+
+destructor TModelClienteStateAtivo.Destroy;
+begin
+
+  inherited;
+end;
+
+class function TModelClienteStateAtivo.New: iModelClienteMetodos;
+begin
+  Result := Self.Create;
+end;
+
+end.

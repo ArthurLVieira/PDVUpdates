@@ -1,0 +1,40 @@
+unit PDVUpdates.Model.Cliente.State.Factory;
+
+interface
+
+uses
+  PDVUpdates.Model.Cliente.State.Interfaces;
+
+type
+
+  TModelClienteStateFactory = class(TInterfacedObject,
+    iModelClienteStateFactory)
+  private
+
+  public
+    constructor Create;
+    destructor Destroy; override;
+    class function New: iModelClienteStateFactory;
+  end;
+
+implementation
+
+{ TModelClienteStateFactory }
+
+constructor TModelClienteStateFactory.Create;
+begin
+
+end;
+
+destructor TModelClienteStateFactory.Destroy;
+begin
+
+  inherited;
+end;
+
+class function TModelClienteStateFactory.New: iModelClienteStateFactory;
+begin
+  Result := Self.Create;
+end;
+
+end.
