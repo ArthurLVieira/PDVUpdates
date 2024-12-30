@@ -1,7 +1,0 @@
-unit PDVUpdates.Model.Produto.State.Desbloqueado;
-
-interface
-
-implementation
-
-end.
