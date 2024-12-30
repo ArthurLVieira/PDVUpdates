@@ -77,6 +77,9 @@
     <Transaction>2024/12/29 18:33:17.909,C:\Users\user\Documents\GitHub\PDVUpdates\Model\Cliente\State\PDVUpdates.Model.Cliente.State.Inativo.pas=C:\Users\user\Documents\GitHub\PDVUpdates\Unit1.pas</Transaction>
     <Transaction>2024/12/29 18:37:05.860,=C:\Users\user\Documents\GitHub\PDVUpdates\Unit1.pas</Transaction>
     <Transaction>2024/12/29 18:37:45.083,C:\Users\user\Documents\GitHub\PDVUpdates\Model\Cliente\State\PDVUpdates.Model.Cliente.State.Factory.pas=C:\Users\user\Documents\GitHub\PDVUpdates\Unit1.pas</Transaction>
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
   </Transactions>
 	<ProjectSortOrder AutoSort="0" SortType="0">
