@@ -1,0 +1,39 @@
+unit PDVUpdates.Model.Item.State.Ativo;
+
+interface
+
+uses
+  PDVUpdates.Model.Item.Interfaces;
+
+type
+
+  TModelItemStateAtivo = class(TInterfacedObject, iModelItemMetodos)
+  private
+
+  public
+    constructor Create;
+    destructor Destroy; override;
+    class function New: iModelItemMetodos;
+  end;
+
+implementation
+
+{ TModelItemStateAtivo }
+
+constructor TModelItemStateAtivo.Create;
+begin
+
+end;
+
+destructor TModelItemStateAtivo.Destroy;
+begin
+
+  inherited;
+end;
+
+class function TModelItemStateAtivo.New: iModelItemMetodos;
+begin
+  Result := Self.Create;
+end;
+
+end.

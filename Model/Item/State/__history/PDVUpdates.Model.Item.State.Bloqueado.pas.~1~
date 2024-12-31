@@ -1,0 +1,7 @@
+unit PDVUpdates.Model.Item.State.Bloqueado;
+
+interface
+
+implementation
+
+end.

@@ -1,0 +1,19 @@
+unit PDVUpdates.Model.Item.Factory;
+
+interface
+
+uses
+  PDVUpdates.Model.Item.Factory.Interfaces;
+
+type
+
+  TModelItemFactory = class(TInterfacedObject, iModelItemFactory)
+  private
+  public
+  constructor Create;
+  des
+  end;
+
+implementation
+
+end.

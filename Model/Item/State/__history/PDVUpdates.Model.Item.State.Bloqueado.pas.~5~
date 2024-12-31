@@ -1,0 +1,76 @@
+unit PDVUpdates.Model.Item.State.Bloqueado;
+
+interface
+
+uses PDVUpdates.Model.Item.Interfaces;
+
+type
+
+  TModelItemStateBloqueado = class(TInterfacedObject, iModelItemMetodos)
+  private
+  public
+    constructor Create;
+    destructor Destroy; override;
+    class function New: iModelItemMetodos;
+    function Vender: iModelItemMetodosVender;
+    function Cancelar: iModelItemMetodosCancelar;
+    function Desconto: iModelItemMetodosDesconto;
+    function Acrescimo: iModelItemMetodosAcrescimo;
+    function Repetir: iModelItemMetodosRepetir;
+    function &End: iModelItem;
+  end;
+
+implementation
+
+uses
+  System.SysUtils;
+
+{ TModelItemStateBloqueado }
+
+function TModelItemStateBloqueado.Acrescimo: iModelItemMetodosAcrescimo;
+begin
+  raise Exception.Create('Iem Bloqueado');
+end;
+
+function TModelItemStateBloqueado.Cancelar: iModelItemMetodosCancelar;
+begin
+
+end;
+
+function TModelItemStateBloqueado.&End: iModelItem;
+begin
+
+end;
+
+constructor TModelItemStateBloqueado.Create;
+begin
+
+end;
+
+function TModelItemStateBloqueado.Desconto: iModelItemMetodosDesconto;
+begin
+
+end;
+
+destructor TModelItemStateBloqueado.Destroy;
+begin
+
+  inherited;
+end;
+
+class function TModelItemStateBloqueado.New: iModelItemMetodos;
+begin
+  Result := Self.Create;
+end;
+
+function TModelItemStateBloqueado.Repetir: iModelItemMetodosRepetir;
+begin
+
+end;
+
+function TModelItemStateBloqueado.Vender: iModelItemMetodosVender;
+begin
+
+end;
+
+end.

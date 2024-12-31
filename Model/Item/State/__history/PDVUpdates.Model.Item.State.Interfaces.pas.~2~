@@ -1,0 +1,17 @@
+unit PDVUpdates.Model.Item.State.Interfaces;
+
+interface
+
+uses
+  PDVUpdates.Model.Item.Interfaces;
+
+type
+
+  iModelItemStateFactory = interface
+    ['{A4405905-E76E-442E-9729-EA196CF36D3E}']
+    function Bloqueado: iModelItemMetodos;
+  end;
+
+implementation
+
+end.

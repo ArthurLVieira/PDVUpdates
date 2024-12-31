@@ -1,0 +1,19 @@
+unit PDVUpdates.Model.Item.State.Bloqueado;
+
+interface
+
+uses PDVUpdates.Model.Item.Interfaces;
+
+type
+
+  TModelItemStateBloqueado = class(TInterfacedObject, iModelItemMetodos)
+  private
+  public
+    constructor Create;
+    destructor Destroy; override;
+    class function New: iModelItemMetodos;
+  end;
+
+implementation
+
+end.

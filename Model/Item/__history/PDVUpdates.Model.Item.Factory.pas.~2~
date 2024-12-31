@@ -1,0 +1,12 @@
+unit PDVUpdates.Model.Item.Factory;
+
+interface
+
+type
+
+  TModelItemFactory = class(tin
+  end;
+
+implementation
+
+end.

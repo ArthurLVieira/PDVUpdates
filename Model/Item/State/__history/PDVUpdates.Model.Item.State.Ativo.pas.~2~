@@ -1,0 +1,36 @@
+unit PDVUpdates.Model.Item.State.Ativo;
+
+interface
+
+type
+
+  TClassePadrao = class(TInterfacedObject, iClassePadrao)
+  private
+
+  public
+    constructor Create;
+    destructor Destroy; override;
+    class function New: iClassePadrao;
+  end;
+
+implementation
+
+{ TClassePadrao }
+
+constructor TClassePadrao.Create;
+begin
+
+end;
+
+destructor TClassePadrao.Destroy;
+begin
+
+  inherited;
+end;
+
+class function TClassePadrao.New: iClassePadrao;
+begin
+  Result := Self.Create;
+end;
+
+end.

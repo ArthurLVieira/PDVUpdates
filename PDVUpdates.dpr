@@ -77,7 +77,14 @@ uses
   PDVUpdates.Model.Cliente.State.Inativo in 'Model\Cliente\State\PDVUpdates.Model.Cliente.State.Inativo.pas',
   PDVUpdates.Model.Cliente.State.Factory in 'Model\Cliente\State\PDVUpdates.Model.Cliente.State.Factory.pas',
   PDVUpdates.Model.Item in 'Model\Item\PDVUpdates.Model.Item.pas',
-  PDVUpdates.Model.Item.Interfaces in 'Model\Item\PDVUpdates.Model.Item.Interfaces.pas';
+  PDVUpdates.Model.Item.Interfaces in 'Model\Item\PDVUpdates.Model.Item.Interfaces.pas',
+  PDVUpdates.Model.Item.Factory in 'Model\Item\PDVUpdates.Model.Item.Factory.pas',
+  PDVUpdates.Model.Item.Factory.Interfaces in 'Model\Item\PDVUpdates.Model.Item.Factory.Interfaces.pas',
+  PDVUpdates.Model.Item.State in 'Model\Item\State\PDVUpdates.Model.Item.State.pas',
+  PDVUpdates.Model.Item.State.Interfaces in 'Model\Item\State\PDVUpdates.Model.Item.State.Interfaces.pas',
+  PDVUpdates.Model.Item.State.Desbloqueado in 'Model\Item\State\PDVUpdates.Model.Item.State.Desbloqueado.pas',
+  PDVUpdates.Model.Item.State.Bloqueado in 'Model\Item\State\PDVUpdates.Model.Item.State.Bloqueado.pas',
+  PDVUpdates.Model.Item.State.Ativo in 'Model\Item\State\PDVUpdates.Model.Item.State.Ativo.pas';
 
 {$R *.res}
 
