@@ -369,6 +369,7 @@
         <DCCReference Include="Model\Produto\Metodos\PDVUpdates.Model.Produto.Metodos.Cadastrar.pas"/>
         <DCCReference Include="Model\Produto\State\PDVUpdates.Model.Produto.State.Bloqueado.pas"/>
         <DCCReference Include="Model\Produto\State\PDVUpdates.Model.Produto.State.Desbloqueado.pas"/>
+        <DCCReference Include="Model\Produto\State\PDVUpdates.Model.Produto.State.Inativo.pas"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>

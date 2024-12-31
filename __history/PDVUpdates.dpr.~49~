@@ -3,7 +3,6 @@ program PDVUpdates;
 uses
   System.StartUpCopy,
   FMX.Forms,
-  PDVUpdates.View.Principal in 'View\PDVUpdates.View.Principal.pas' {Form1},
   PDVUpdates.Model.Usuario.Interfaces in 'Model\Usuario\PDVUpdates.Model.Usuario.Interfaces.pas',
   PDVUpdates.Model.Usuario in 'Model\Usuario\PDVUpdates.Model.Usuario.pas',
   PDVUpdates.Model.Usuario.Factory in 'Model\Usuario\PDVUpdates.Model.Usuario.Factory.pas',
@@ -25,7 +24,7 @@ uses
   PDVUpdates.View.Dialog.SenhaUsuario in 'View\Dialog\PDVUpdates.View.Dialog.SenhaUsuario.pas' {FrmSenhaUsuario},
   PDVUpdates.Controller.Dialog.SenhaUsuario in 'Controller\Dialog\PDVUpdates.Controller.Dialog.SenhaUsuario.pas',
   PDVUpdates.Controller.Dialog.SenhaUsuario.Interfaces in 'Controller\Dialog\PDVUpdates.Controller.Dialog.SenhaUsuario.Interfaces.pas',
-  PDVUpdates.Controller.Usuario.Operacoes in 'Controller\Usuario\Operacoes\PDVUpdates.Controller.Usuario.Operacoes.pas',
+  PDVUpdates.Controller.Usuario.Operacoes.PedirSenha in 'Controller\Usuario\Operacoes\PDVUpdates.Controller.Usuario.Operacoes.PedirSenha.pas',
   PDVUpdates.Controller.Usuario.Operacoes.Interfaces in 'Controller\Usuario\Operacoes\PDVUpdates.Controller.Usuario.Operacoes.Interfaces.pas',
   PDVUpdates.Model.Caixa.Interfaces in 'Model\Caixa\PDVUpdates.Model.Caixa.Interfaces.pas',
   PDVUpdates.Model.Caixa in 'Model\Caixa\PDVUpdates.Model.Caixa.pas',
@@ -50,7 +49,20 @@ uses
   PDVUpdates.Model.Interfaces in 'Model\PDVUpdates.Model.Interfaces.pas',
   PDVUpdates.Model.Facade in 'Model\PDVUpdates.Model.Facade.pas',
   PDVUpdates.Model.Caixa.Factory in 'Model\Caixa\PDVUpdates.Model.Caixa.Factory.pas',
-  PDVUpdates.Model.Usuario.Factory.Interfaces in 'Model\Usuario\PDVUpdates.Model.Usuario.Factory.Interfaces.pas';
+  PDVUpdates.Model.Usuario.Factory.Interfaces in 'Model\Usuario\PDVUpdates.Model.Usuario.Factory.Interfaces.pas',
+  PDVUpdates.View.Dialog.CapturaValor in 'View\Dialog\PDVUpdates.View.Dialog.CapturaValor.pas' {FrmCapturaValor},
+  PDVUpdates.Controller.Usuario.Operacoes.Factory in 'Controller\Usuario\Operacoes\PDVUpdates.Controller.Usuario.Operacoes.Factory.pas',
+  PDVUpdates.Controller.Usuario.Operacoes.CapturaValor in 'Controller\Usuario\Operacoes\PDVUpdates.Controller.Usuario.Operacoes.CapturaValor.pas',
+  PDVUpdates.View.Principal in 'View\PDVUpdates.View.Principal.pas' {Form1},
+  PDVUpdates.Controller.Types in 'Controller\types\PDVUpdates.Controller.Types.pas',
+  PDVUpdates.Model.Produto.Interfaces in 'Model\Produto\PDVUpdates.Model.Produto.Interfaces.pas',
+  PDVUpdates.Model.Produto in 'Model\Produto\PDVUpdates.Model.Produto.pas',
+  PDVUpdates.Model.Produto.factory in 'Model\Produto\PDVUpdates.Model.Produto.factory.pas',
+  PDVUpdates.Model.Produto.State.Interfaces in 'Model\Produto\State\PDVUpdates.Model.Produto.State.Interfaces.pas',
+  PDVUpdates.Model.Produto.Metodos.Interfaces in 'Model\Produto\Metodos\PDVUpdates.Model.Produto.Metodos.Interfaces.pas',
+  PDVUpdates.Model.Produto.Metodos.Cadastrar in 'Model\Produto\Metodos\PDVUpdates.Model.Produto.Metodos.Cadastrar.pas',
+  PDVUpdates.Model.Produto.State.Bloqueado in 'Model\Produto\State\PDVUpdates.Model.Produto.State.Bloqueado.pas',
+  PDVUpdates.Model.Produto.State.Desbloqueado in 'Model\Produto\State\PDVUpdates.Model.Produto.State.Desbloqueado.pas';
 
 {$R *.res}
 
@@ -58,5 +70,6 @@ begin
   Application.Initialize;
   Application.CreateForm(TForm1, Form1);
   Application.CreateForm(TFrmSenhaUsuario, FrmSenhaUsuario);
+  Application.CreateForm(TFrmCapturaValor, FrmCapturaValor);
   Application.Run;
 end.

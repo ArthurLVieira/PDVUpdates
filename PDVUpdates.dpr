@@ -62,7 +62,8 @@ uses
   PDVUpdates.Model.Produto.Metodos.Interfaces in 'Model\Produto\Metodos\PDVUpdates.Model.Produto.Metodos.Interfaces.pas',
   PDVUpdates.Model.Produto.Metodos.Cadastrar in 'Model\Produto\Metodos\PDVUpdates.Model.Produto.Metodos.Cadastrar.pas',
   PDVUpdates.Model.Produto.State.Bloqueado in 'Model\Produto\State\PDVUpdates.Model.Produto.State.Bloqueado.pas',
-  PDVUpdates.Model.Produto.State.Desbloqueado in 'Model\Produto\State\PDVUpdates.Model.Produto.State.Desbloqueado.pas';
+  PDVUpdates.Model.Produto.State.Desbloqueado in 'Model\Produto\State\PDVUpdates.Model.Produto.State.Desbloqueado.pas',
+  PDVUpdates.Model.Produto.State.Inativo in 'Model\Produto\State\PDVUpdates.Model.Produto.State.Inativo.pas';
 
 {$R *.res}
 

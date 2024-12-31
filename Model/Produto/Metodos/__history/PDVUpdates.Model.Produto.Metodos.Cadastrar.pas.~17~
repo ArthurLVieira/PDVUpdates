@@ -23,6 +23,8 @@ implementation
 
 { TModelProdutoMetodosCadastrar }
 
+//teste
+
 constructor TModelProdutoMetodosCadastrar.Create(Value: iModelProdutoMetodos);
 begin
   FParent := Value;
