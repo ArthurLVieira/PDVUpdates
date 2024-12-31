@@ -382,6 +382,8 @@
         <DCCReference Include="Model\Cliente\State\PDVUpdates.Model.Cliente.State.Ativo.pas"/>
         <DCCReference Include="Model\Cliente\State\PDVUpdates.Model.Cliente.State.Inativo.pas"/>
         <DCCReference Include="Model\Cliente\State\PDVUpdates.Model.Cliente.State.Factory.pas"/>
+        <DCCReference Include="Model\Item\PDVUpdates.Model.Item.pas"/>
+        <DCCReference Include="Model\Item\PDVUpdates.Model.Item.Interfaces.pas"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>
