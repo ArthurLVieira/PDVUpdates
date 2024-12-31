@@ -18,7 +18,6 @@ type
     function SetState(Value: iModelItemMetodos): iModelItem;
     function Iterator: iModelItemIterator;
 
-
   end;
 
   iModelItemMetodos = interface

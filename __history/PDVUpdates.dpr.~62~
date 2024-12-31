@@ -59,7 +59,23 @@ uses
   PDVUpdates.Model.Produto in 'Model\Produto\PDVUpdates.Model.Produto.pas',
   PDVUpdates.Model.Produto.factory in 'Model\Produto\PDVUpdates.Model.Produto.factory.pas',
   PDVUpdates.Model.Produto.State.Interfaces in 'Model\Produto\State\PDVUpdates.Model.Produto.State.Interfaces.pas',
-  PDVUpdates.Model.Produto.Metodos.Interfaces in 'Model\Produto\Metodos\PDVUpdates.Model.Produto.Metodos.Interfaces.pas';
+  PDVUpdates.Model.Produto.Metodos.Interfaces in 'Model\Produto\Metodos\PDVUpdates.Model.Produto.Metodos.Interfaces.pas',
+  PDVUpdates.Model.Produto.Metodos.Cadastrar in 'Model\Produto\Metodos\PDVUpdates.Model.Produto.Metodos.Cadastrar.pas',
+  PDVUpdates.Model.Produto.State.Bloqueado in 'Model\Produto\State\PDVUpdates.Model.Produto.State.Bloqueado.pas',
+  PDVUpdates.Model.Produto.State.Desbloqueado in 'Model\Produto\State\PDVUpdates.Model.Produto.State.Desbloqueado.pas',
+  PDVUpdates.Model.Cliente.Interfaces in 'Model\Cliente\PDVUpdates.Model.Cliente.Interfaces.pas',
+  PDVUpdates.Model.Cliente in 'Model\Cliente\PDVUpdates.Model.Cliente.pas',
+  PDVUpdates.Model.Cliente.Factory in 'Model\Cliente\PDVUpdates.Model.Cliente.Factory.pas',
+  PDVUpdates.Model.Cliente.Metodos.Interfaces in 'Model\Cliente\Metodos\PDVUpdates.Model.Cliente.Metodos.Interfaces.pas',
+  PDVUpdates.Model.Cliente.Metodos.Buscar in 'Model\Cliente\Metodos\PDVUpdates.Model.Cliente.Metodos.Buscar.pas',
+  PDVUpdates.Model.Cliente.Metodos.Saldo in 'Model\Cliente\Metodos\PDVUpdates.Model.Cliente.Metodos.Saldo.pas',
+  PDVUpdates.Model.Cliente.Metodos.Factory in 'Model\Cliente\Metodos\PDVUpdates.Model.Cliente.Metodos.Factory.pas',
+  PDVUpdates.Model.Cliente.State.Interfaces in 'Model\Cliente\state\PDVUpdates.Model.Cliente.State.Interfaces.pas',
+  PDVUpdates.Model.Cliente.State.Bloqueado in 'Model\Cliente\state\PDVUpdates.Model.Cliente.State.Bloqueado.pas',
+  PDVUpdates.Model.Cliente.State.Desbloqueado in 'Model\Cliente\State\PDVUpdates.Model.Cliente.State.Desbloqueado.pas',
+  PDVUpdates.Model.Cliente.State.Ativo in 'Model\Cliente\State\PDVUpdates.Model.Cliente.State.Ativo.pas',
+  PDVUpdates.Model.Cliente.State.Inativo in 'Model\Cliente\State\PDVUpdates.Model.Cliente.State.Inativo.pas',
+  PDVUpdates.Model.Cliente.State.Factory in 'Model\Cliente\State\PDVUpdates.Model.Cliente.State.Factory.pas';
 
 {$R *.res}
 

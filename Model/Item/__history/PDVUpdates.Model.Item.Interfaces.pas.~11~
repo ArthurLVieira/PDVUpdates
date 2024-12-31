@@ -16,8 +16,6 @@ type
     ['{46356C71-FDE0-4E64-A36D-70AE837C8827}']
     function Metodos: iModelItemMetodos;
     function SetState(Value: iModelItemMetodos): iModelItem;
-    function Iterator: iModelItemIterator;
-
 
   end;
 

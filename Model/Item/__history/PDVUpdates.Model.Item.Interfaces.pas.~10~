@@ -9,11 +9,14 @@ type
   iModelItemMetodosDesconto = interface;
   iModelItemMetodosAcrescimo = interface;
   iModelItemMetodosRepetir = interface;
+  iModelItemMetodos = interface;
 
   iModelItem = interface
     ['{46356C71-FDE0-4E64-A36D-70AE837C8827}']
-  end;
+    function Metodos: iModelItemMetodos;
+    function SetState(Value: iModelItemMetodos): iModelItem;
 
+  end;
 
   iModelItemMetodos = interface
     ['{FDD0C411-DBB2-4C04-964E-660C97D74B5C}']
@@ -21,7 +24,7 @@ type
     function Cancelar: iModelItemMetodosCancelar;
     function Desconto: iModelItemMetodosDesconto;
     function Acrescimo: iModelItemMetodosAcrescimo;
-
+    function Repetir: iModelItemMetodosRepetir;
     function &End: iModelItem;
   end;
 
@@ -57,6 +60,14 @@ type
     ['{5C38A093-6710-4A10-8B12-ED40A41C5BFD}']
     function SetItem(Value: Integer): iModelItemMetodosRepetir;
     function &End: iModelItemMetodos;
+  end;
+
+  iModelItemIterator = interface
+    ['{6062B395-17A7-4721-8842-D6B582759BCF}']
+    function hasNext: Boolean;
+    function Next: iModelItem;
+    function Add(Value: iModelItem): iModelItemIterator;
+    function &End: iModelItem;
   end;
 
 implementation

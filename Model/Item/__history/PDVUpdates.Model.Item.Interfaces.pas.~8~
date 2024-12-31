@@ -10,14 +10,11 @@ type
   iModelItemMetodosAcrescimo = interface;
   iModelItemMetodosRepetir = interface;
   iModelItemMetodos = interface;
-  iModelItemIterator = interface;
 
   iModelItem = interface
     ['{46356C71-FDE0-4E64-A36D-70AE837C8827}']
     function Metodos: iModelItemMetodos;
     function SetState(Value: iModelItemMetodos): iModelItem;
-    function Iterator: iModelItemIterator;
-
 
   end;
 
@@ -69,8 +66,6 @@ type
     ['{6062B395-17A7-4721-8842-D6B582759BCF}']
     function hasNext: Boolean;
     function Next: iModelItem;
-    function Add(Value: iModelItem): iModelItemIterator;
-    function &End: iModelItem;
   end;
 
 implementation

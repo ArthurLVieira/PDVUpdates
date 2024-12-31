@@ -75,7 +75,9 @@ uses
   PDVUpdates.Model.Cliente.State.Desbloqueado in 'Model\Cliente\State\PDVUpdates.Model.Cliente.State.Desbloqueado.pas',
   PDVUpdates.Model.Cliente.State.Ativo in 'Model\Cliente\State\PDVUpdates.Model.Cliente.State.Ativo.pas',
   PDVUpdates.Model.Cliente.State.Inativo in 'Model\Cliente\State\PDVUpdates.Model.Cliente.State.Inativo.pas',
-  PDVUpdates.Model.Cliente.State.Factory in 'Model\Cliente\State\PDVUpdates.Model.Cliente.State.Factory.pas';
+  PDVUpdates.Model.Cliente.State.Factory in 'Model\Cliente\State\PDVUpdates.Model.Cliente.State.Factory.pas',
+  PDVUpdates.Model.Item in 'Model\Item\PDVUpdates.Model.Item.pas',
+  PDVUpdates.Model.Item.Interfaces in 'Model\Item\PDVUpdates.Model.Item.Interfaces.pas';
 
 {$R *.res}
 
