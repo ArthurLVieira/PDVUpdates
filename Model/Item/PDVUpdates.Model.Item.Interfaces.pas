@@ -14,7 +14,6 @@ type
     ['{46356C71-FDE0-4E64-A36D-70AE837C8827}']
   end;
 
-
   iModelItemMetodos = interface
     ['{FDD0C411-DBB2-4C04-964E-660C97D74B5C}']
     function Vender: iModelItemMetodosVender;
