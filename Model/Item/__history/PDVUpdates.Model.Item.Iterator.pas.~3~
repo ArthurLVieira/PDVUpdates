@@ -1,0 +1,45 @@
+unit PDVUpdates.Model.Item.Iterator;
+
+interface
+
+uses
+  PDVUpdates.Model.Item.Interfaces, System.Generics.Collections;
+
+type
+
+  TModelItemIterator = class(TInterfacedObject, iModelItemIterator)
+  private
+    FLista: TList<iModelItem>;
+    Fparent: iModelItem;
+    FCount: Integer;
+  public
+    constructor Create;
+    destructor Destroy; override;
+    class function New: iModelItemIterator;
+    function hasNext: Boolean;
+    function Next: iModelItem;
+    function Add(Value: iModelItem): iModelItemIterator;
+    function &End: iModelItem;
+  end;
+
+implementation
+
+{ TModelItemIterator }
+
+constructor TModelItemIterator.Create;
+begin
+
+end;
+
+destructor TModelItemIterator.Destroy;
+begin
+
+  inherited;
+end;
+
+class function TModelItemIterator.New: iModelItemIterator;
+begin
+  Result := Self.Create;
+end;
+
+end.

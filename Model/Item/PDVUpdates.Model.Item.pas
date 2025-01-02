@@ -17,6 +17,8 @@ type
     function Metodos: iModelItemMetodos;
     function SetState(Value: iModelItemMetodos): iModelItem;
     function Iterator: iModelItemIterator;
+
+    //Item Metodos
     function Vender: iModelItemMetodosVender;
     function Cancelar: iModelItemMetodosCancelar;
     function Desconto: iModelItemMetodosDesconto;

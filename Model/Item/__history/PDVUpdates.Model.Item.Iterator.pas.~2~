@@ -1,0 +1,39 @@
+unit PDVUpdates.Model.Item.Iterator;
+
+interface
+
+uses
+  PDVUpdates.Model.Item.Interfaces;
+
+type
+
+  TModelItemIterator = class(TInterfacedObject, iModelItemIterator)
+  private
+
+  public
+    constructor Create;
+    destructor Destroy; override;
+    class function New: iModelItemIterator;
+  end;
+
+implementation
+
+{ TModelItemIterator }
+
+constructor TModelItemIterator.Create;
+begin
+
+end;
+
+destructor TModelItemIterator.Destroy;
+begin
+
+  inherited;
+end;
+
+class function TModelItemIterator.New: iModelItemIterator;
+begin
+  Result := Self.Create;
+end;
+
+end.

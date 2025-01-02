@@ -1,0 +1,40 @@
+unit PDVUpdates.Model.Item.Metodos.Acrescimo;
+
+interface
+
+uses
+  PDVUpdates.Model.Item.Interfaces;
+
+type
+
+  TModelItemMetodosAcrescimo = class(TInterfacedObject,
+    iModelItemMetodosAcrescimo)
+  private
+
+  public
+    constructor Create;
+    destructor Destroy; override;
+    class function New: iModelItemMetodosAcrescimo;
+  end;
+
+implementation
+
+{ TModelItemMetodosAcrescimo }
+
+constructor TModelItemMetodosAcrescimo.Create;
+begin
+
+end;
+
+destructor TModelItemMetodosAcrescimo.Destroy;
+begin
+
+  inherited;
+end;
+
+class function TModelItemMetodosAcrescimo.New: iModelItemMetodosAcrescimo;
+begin
+  Result := Self.Create;
+end;
+
+end.

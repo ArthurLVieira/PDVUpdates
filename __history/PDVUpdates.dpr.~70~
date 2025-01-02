@@ -68,7 +68,23 @@ uses
   PDVUpdates.Model.Cliente.Factory in 'Model\Cliente\PDVUpdates.Model.Cliente.Factory.pas',
   PDVUpdates.Model.Cliente.Metodos.Interfaces in 'Model\Cliente\Metodos\PDVUpdates.Model.Cliente.Metodos.Interfaces.pas',
   PDVUpdates.Model.Cliente.Metodos.Buscar in 'Model\Cliente\Metodos\PDVUpdates.Model.Cliente.Metodos.Buscar.pas',
-  PDVUpdates.Model.Cliente.Metodos.Saldo in 'Model\Cliente\Metodos\PDVUpdates.Model.Cliente.Metodos.Saldo.pas';
+  PDVUpdates.Model.Cliente.Metodos.Saldo in 'Model\Cliente\Metodos\PDVUpdates.Model.Cliente.Metodos.Saldo.pas',
+  PDVUpdates.Model.Cliente.Metodos.Factory in 'Model\Cliente\Metodos\PDVUpdates.Model.Cliente.Metodos.Factory.pas',
+  PDVUpdates.Model.Cliente.State.Interfaces in 'Model\Cliente\state\PDVUpdates.Model.Cliente.State.Interfaces.pas',
+  PDVUpdates.Model.Cliente.State.Bloqueado in 'Model\Cliente\state\PDVUpdates.Model.Cliente.State.Bloqueado.pas',
+  PDVUpdates.Model.Cliente.State.Desbloqueado in 'Model\Cliente\State\PDVUpdates.Model.Cliente.State.Desbloqueado.pas',
+  PDVUpdates.Model.Cliente.State.Ativo in 'Model\Cliente\State\PDVUpdates.Model.Cliente.State.Ativo.pas',
+  PDVUpdates.Model.Cliente.State.Inativo in 'Model\Cliente\State\PDVUpdates.Model.Cliente.State.Inativo.pas',
+  PDVUpdates.Model.Cliente.State.Factory in 'Model\Cliente\State\PDVUpdates.Model.Cliente.State.Factory.pas',
+  PDVUpdates.Model.Item in 'Model\Item\PDVUpdates.Model.Item.pas',
+  PDVUpdates.Model.Item.Interfaces in 'Model\Item\PDVUpdates.Model.Item.Interfaces.pas',
+  PDVUpdates.Model.Item.Factory in 'Model\Item\PDVUpdates.Model.Item.Factory.pas',
+  PDVUpdates.Model.Item.Factory.Interfaces in 'Model\Item\PDVUpdates.Model.Item.Factory.Interfaces.pas',
+  PDVUpdates.Model.Item.State in 'Model\Item\State\PDVUpdates.Model.Item.State.pas',
+  PDVUpdates.Model.Item.State.Interfaces in 'Model\Item\State\PDVUpdates.Model.Item.State.Interfaces.pas',
+  PDVUpdates.Model.Item.State.Desbloqueado in 'Model\Item\State\PDVUpdates.Model.Item.State.Desbloqueado.pas',
+  PDVUpdates.Model.Item.State.Bloqueado in 'Model\Item\State\PDVUpdates.Model.Item.State.Bloqueado.pas',
+  PDVUpdates.Model.Item.State.Ativo in 'Model\Item\State\PDVUpdates.Model.Item.State.Ativo.pas';
 
 {$R *.res}
 

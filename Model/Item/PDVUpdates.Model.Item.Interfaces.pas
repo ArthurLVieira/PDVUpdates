@@ -53,6 +53,7 @@ type
 
   iModelItemMetodosAcrescimo = interface
     ['{E141B25B-B89B-443B-A35C-4048461CD6AB}']
+    function SetItem(Value: Integer): iModelItemMetodosAcrescimo;
     function SetValor(Value: Currency): iModelItemMetodosAcrescimo;
     function SetPercentual(Value: Currency): iModelItemMetodosAcrescimo;
     function &End: iModelItemMetodos;
