@@ -1,0 +1,39 @@
+unit PDVUpdates.Model.Item.State;
+
+interface
+
+uses
+  PDVUpdates.Model.Item.State.Interfaces;
+
+type
+
+  TModelItemStateFactory = class(TInterfacedObject, iModelItemStateFactory)
+  private
+
+  public
+    constructor Create;
+    destructor Destroy; override;
+    class function New: iModelItemStateFactory;
+  end;
+
+implementation
+
+{ TModelItemStateFactory }
+
+constructor TModelItemStateFactory.Create;
+begin
+
+end;
+
+destructor TModelItemStateFactory.Destroy;
+begin
+
+  inherited;
+end;
+
+class function TModelItemStateFactory.New: iModelItemStateFactory;
+begin
+  Result := Self.Create;
+end;
+
+end.

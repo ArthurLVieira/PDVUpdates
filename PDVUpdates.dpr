@@ -86,7 +86,9 @@ uses
   PDVUpdates.Model.Item.State.Bloqueado in 'Model\Item\State\PDVUpdates.Model.Item.State.Bloqueado.pas',
   PDVUpdates.Model.Item.State.Ativo in 'Model\Item\State\PDVUpdates.Model.Item.State.Ativo.pas',
   PDVUpdates.Model.Item.Iterator in 'Model\Item\PDVUpdates.Model.Item.Iterator.pas',
-  PDVUpdates.Model.Item.Metodos.Acrescimo in 'Model\Item\Metodos\PDVUpdates.Model.Item.Metodos.Acrescimo.pas';
+  PDVUpdates.Model.Item.Metodos.Acrescimo in 'Model\Item\Metodos\PDVUpdates.Model.Item.Metodos.Acrescimo.pas',
+  PDVUpdates.Model.Item.State.Inativo in 'Model\Item\State\PDVUpdates.Model.Item.State.Inativo.pas',
+  PDVUpdates.Model.Item.Metodos.Desconto in 'Model\Item\Metodos\PDVUpdates.Model.Item.Metodos.Desconto.pas';
 
 {$R *.res}
 

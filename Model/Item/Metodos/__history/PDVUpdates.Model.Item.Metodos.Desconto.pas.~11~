@@ -1,0 +1,70 @@
+unit PDVUpdates.Model.Item.Metodos.Desconto;
+
+interface
+
+uses
+  PDVUpdates.Model.Item.Interfaces;
+
+type
+
+  TModelItemMetodosDesconto = class(TInterfacedObject,
+    iModelItemMetodosDesconto)
+  private
+    FParent: iModelItem;
+    FItem: Integer;
+    FValor, FPercentual: Currency;
+  public
+    constructor Create(Value: iModelItem);
+    destructor Destroy; override;
+    class function New(Value: iModelItem): iModelItemMetodosDesconto;
+    function SetItem(Value: Integer): iModelItemMetodosDesconto;
+    function SetValor(Value: Currency): iModelItemMetodosDesconto;
+    function SetPercentual(Value: Currency): iModelItemMetodosDesconto;
+    function &End: iModelItemMetodos;
+  end;
+
+implementation
+
+{ TModelItemMetodosDesconto }
+
+function TModelItemMetodosDesconto.&End: iModelItemMetodos;
+begin
+
+end;
+
+constructor TModelItemMetodosDesconto.Create(Value: iModelItem);
+begin
+  FParent := Value;
+end;
+
+destructor TModelItemMetodosDesconto.Destroy;
+begin
+
+  inherited;
+end;
+
+class function TModelItemMetodosDesconto.New(Value: iModelItem)
+  : iModelItemMetodosDesconto;
+begin
+  Result := Self.Create(Value);
+end;
+
+function TModelItemMetodosDesconto.SetItem(Value: Integer)
+  : iModelItemMetodosDesconto;
+begin
+
+end;
+
+function TModelItemMetodosDesconto.SetPercentual(Value: Currency)
+  : iModelItemMetodosDesconto;
+begin
+
+end;
+
+function TModelItemMetodosDesconto.SetValor(Value: Currency)
+  : iModelItemMetodosDesconto;
+begin
+
+end;
+
+end.

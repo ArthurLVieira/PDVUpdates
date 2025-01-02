@@ -1,0 +1,66 @@
+unit PDVUpdates.Model.Item.State;
+
+interface
+
+uses
+  PDVUpdates.Model.Item.State.Interfaces, PDVUpdates.Model.Item.Interfaces;
+
+type
+
+  TModelItemStateFactory = class(TInterfacedObject, iModelItemStateFactory)
+  private
+
+  public
+    constructor Create;
+    destructor Destroy; override;
+    class function New: iModelItemStateFactory;
+    function Bloqueado: iModelItemMetodos;
+    function Desbloqueado: iModelItemMetodos;
+    function Ativo: iModelItemMetodos;
+    function Inativo: iModelItemMetodos;
+  end;
+
+implementation
+
+uses
+  PDVUpdates.Model.Item.State.Ativo, PDVUpdates.Model.Item.State.Bloqueado;
+
+{ TModelItemStateFactory }
+
+function TModelItemStateFactory.Ativo: iModelItemMetodos;
+begin
+  Result := TModelItemStateAtivo.New;
+end;
+
+function TModelItemStateFactory.Bloqueado: iModelItemMetodos;
+begin
+  Result := TModelItemStateBloqueado.New;
+end;
+
+constructor TModelItemStateFactory.Create;
+begin
+
+end;
+
+function TModelItemStateFactory.Desbloqueado: iModelItemMetodos;
+begin
+
+end;
+
+destructor TModelItemStateFactory.Destroy;
+begin
+
+  inherited;
+end;
+
+function TModelItemStateFactory.Inativo: iModelItemMetodos;
+begin
+
+end;
+
+class function TModelItemStateFactory.New: iModelItemStateFactory;
+begin
+  Result := Self.Create;
+end;
+
+end.

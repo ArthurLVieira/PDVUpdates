@@ -7,7 +7,7 @@ uses
 
 type
 
-  iModelItemStateFactory = interface
+  iModelItemState = interface
     ['{A4405905-E76E-442E-9729-EA196CF36D3E}']
     function Bloqueado: iModelItemMetodos;
     function Desbloqueado: iModelItemMetodos;
