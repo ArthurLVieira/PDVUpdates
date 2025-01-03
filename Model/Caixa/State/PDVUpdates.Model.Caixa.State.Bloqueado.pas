@@ -34,12 +34,12 @@ uses
 
 function TModelCaixaStateBloqueado.Abrir: iModelCaixaMetodosAbrir;
 begin
-  raise Exception.Create('O caixa esta Bloquedo');
+
 end;
 
 function TModelCaixaStateBloqueado.BloquearCaixa: iModelCaixaMetodosBloquear;
 begin
-  raise Exception.Create('O caixa esta Bloquedo');
+  raise Exception.Create('O caixa esta Fechado');
 end;
 
 constructor TModelCaixaStateBloqueado.Create;
@@ -66,7 +66,7 @@ end;
 
 function TModelCaixaStateBloqueado.Fechar: iModelCaixaMetodosFechar;
 begin
-  raise Exception.Create('O caixa esta Bloquedo');
+  raise Exception.Create('O caixa esta Fechado');
 end;
 
 class function TModelCaixaStateBloqueado.New: iModelCaixaMetodos;
@@ -76,18 +76,18 @@ end;
 
 function TModelCaixaStateBloqueado.Sangria: iModelCaixaMetodosSangria;
 begin
-  raise Exception.Create('O caixa esta Bloquedo');
+  raise Exception.Create('O caixa esta Fechado');
 end;
 
 function TModelCaixaStateBloqueado.Suprimento: iModelCaixaMetodosSuprimento;
 begin
-  raise Exception.Create('O caixa esta Bloquedo');
+  raise Exception.Create('O caixa esta Fechado');
 end;
 
 function TModelCaixaStateBloqueado.TrocarOperador
   : iModelCaixaMetodosTrocarOperador;
 begin
-  raise Exception.Create('O caixa esta Bloquedo');
+  raise Exception.Create('O caixa esta Fechado');
 end;
 
 end.

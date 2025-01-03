@@ -16,11 +16,15 @@ type
     ListBoxItem3: TListBoxItem;
     ListBoxItem4: TListBoxItem;
     ToolBar1: TToolBar;
+    ListBoxItem5: TListBoxItem;
+    ListBoxItem6: TListBoxItem;
     procedure FormCreate(Sender: TObject);
     procedure ListBoxItem1Click(Sender: TObject);
     procedure ListBoxItem2Click(Sender: TObject);
     procedure ListBoxItem3Click(Sender: TObject);
     procedure ListBoxItem4Click(Sender: TObject);
+    procedure ListBoxItem5Click(Sender: TObject);
+    procedure ListBoxItem6Click(Sender: TObject);
   private
     { Private declarations }
     FCaixa: iControllerCaixa;
@@ -61,6 +65,16 @@ end;
 procedure TForm1.ListBoxItem4Click(Sender: TObject);
 begin
   FCaixa.Metodos.Suprimento;
+end;
+
+procedure TForm1.ListBoxItem5Click(Sender: TObject);
+begin
+  FCaixa.Metodos.DesbloquearCaixa;
+end;
+
+procedure TForm1.ListBoxItem6Click(Sender: TObject);
+begin
+  FCaixa.Metodos.BloquearCaixa;
 end;
 
 end.

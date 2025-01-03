@@ -1,0 +1,103 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 480
+  ClientWidth = 640
+  WindowState = wsMaximized
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  DesignerMasterStyle = 0
+  object TLsitBox: TListBox
+    Align = Left
+    Size.Width = 200.000000000000000000
+    Size.Height = 456.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    DisableFocusEffect = True
+    DefaultItemStyles.ItemStyle = ''
+    DefaultItemStyles.GroupHeaderStyle = ''
+    DefaultItemStyles.GroupFooterStyle = ''
+    Viewport.Width = 196.000000000000000000
+    Viewport.Height = 452.000000000000000000
+    object ListBoxItem1: TListBoxItem
+      TextSettings.Font.Size = 14.000000000000000000
+      TextSettings.HorzAlign = Center
+      StyledSettings = [Family, Style, FontColor]
+      Size.Width = 196.000000000000000000
+      Size.Height = 50.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Text = 'Abrir Caixa'
+      OnClick = ListBoxItem1Click
+    end
+    object ListBoxItem2: TListBoxItem
+      TextSettings.Font.Size = 14.000000000000000000
+      TextSettings.HorzAlign = Center
+      StyledSettings = [Family, Style, FontColor]
+      Position.Y = 50.000000000000000000
+      Size.Width = 196.000000000000000000
+      Size.Height = 50.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      Text = 'Fechar Caixa'
+      OnClick = ListBoxItem2Click
+    end
+    object ListBoxItem3: TListBoxItem
+      TextSettings.Font.Size = 14.000000000000000000
+      TextSettings.HorzAlign = Center
+      StyledSettings = [Family, Style, FontColor]
+      Position.Y = 100.000000000000000000
+      Size.Width = 196.000000000000000000
+      Size.Height = 50.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 2
+      Text = 'Sangria'
+      OnClick = ListBoxItem3Click
+    end
+    object ListBoxItem4: TListBoxItem
+      TextSettings.Font.Size = 14.000000000000000000
+      TextSettings.HorzAlign = Center
+      StyledSettings = [Family, Style, FontColor]
+      Position.Y = 150.000000000000000000
+      Size.Width = 196.000000000000000000
+      Size.Height = 50.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 3
+      Text = 'Suprimento'
+      OnClick = ListBoxItem4Click
+    end
+    object ListBoxItem5: TListBoxItem
+      TextSettings.Font.Size = 14.000000000000000000
+      TextSettings.HorzAlign = Center
+      StyledSettings = [Family, Style, FontColor]
+      Position.Y = 200.000000000000000000
+      Size.Width = 196.000000000000000000
+      Size.Height = 50.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 4
+      Text = 'Desbloquear'
+    end
+    object ListBoxItem6: TListBoxItem
+      TextSettings.Font.Size = 14.000000000000000000
+      TextSettings.HorzAlign = Center
+      StyledSettings = [Family, Style, FontColor]
+      Position.Y = 250.000000000000000000
+      Size.Width = 196.000000000000000000
+      Size.Height = 50.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 5
+      Text = 'Bloquear'
+    end
+  end
+  object ToolBar1: TToolBar
+    Align = Bottom
+    Position.Y = 456.000000000000000000
+    Size.Width = 640.000000000000000000
+    Size.Height = 24.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+  end
+end
