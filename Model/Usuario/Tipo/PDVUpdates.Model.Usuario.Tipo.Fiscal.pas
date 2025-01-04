@@ -148,7 +148,9 @@ end;
 function TModelUsuarioTipoFiscal.FecharCaixa: iModelUsuarioMetodos;
 begin
   Result := Self;
-  FResponsability.FecharCaixa;
+  FOperacoes.PedirSenha.SetTitle('Entre com a senha do Fiscal')
+    .SetTextConfirm('OK').SetTextCancel('Cancelar').Lista(Flista)
+    .Result(FRetorno).&End;
 end;
 
 class function TModelUsuarioTipoFiscal.New(Value: iModelUsuario;
@@ -170,6 +172,9 @@ end;
 function TModelUsuarioTipoFiscal.Sangria: iModelUsuarioMetodos;
 begin
   Result := Self;
+  FOperacoes.PedirSenha.SetTitle('Entre com a senha do Fiscal')
+    .SetTextConfirm('OK').SetTextCancel('Cancelar').Lista(Flista)
+    .Result(FRetorno).&End;
 end;
 
 function TModelUsuarioTipoFiscal.SetOperacao
@@ -182,6 +187,9 @@ end;
 function TModelUsuarioTipoFiscal.Suprimento: iModelUsuarioMetodos;
 begin
   Result := Self;
+  FOperacoes.PedirSenha.SetTitle('Entre com a senha do Fiscal')
+    .SetTextConfirm('OK').SetTextCancel('Cancelar').Lista(Flista)
+    .Result(FRetorno).&End;
 end;
 
 class function TModelUsuarioTipoFiscal.New(Value: iModelUsuario)

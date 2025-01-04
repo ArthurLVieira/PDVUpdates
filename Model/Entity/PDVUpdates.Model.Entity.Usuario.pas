@@ -11,8 +11,8 @@ type
   TModelEntityUsuario = class
   private
     FID: Integer;
-    FNOME: string;
     FPASSWORD: string;
+    FNOME: string;
   public
     [Restrictions([NoUpdate, NotNull])]
     [Colunn('ID', tfInteger)]

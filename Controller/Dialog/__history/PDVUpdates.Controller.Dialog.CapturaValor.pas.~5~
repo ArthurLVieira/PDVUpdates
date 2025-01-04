@@ -1,0 +1,50 @@
+unit PDVUpdates.Controller.Dialog.CapturaValor;
+
+interface
+
+uses
+  PDVUpdates.Controller.Dialog.Interfaces;
+
+type
+
+  TControllerDialogCapturaValor = class(TInterfacedObject,
+    iControllerDialogCapturarValor)
+  private
+
+  public
+    constructor Create;
+    destructor Destroy; override;
+    class function New: iControllerDialogCapturarValor;
+    function SetTitle(Value: string): iControllerDialogCapturarValor;
+    function SetTextConfirm(Value: string): iControllerDialogCapturarValor;
+    function SetTextCancel(Value: string): iControllerDialogCapturarValor;
+    function SetOnClickConfirm(Value: TNotifyEvent)
+      : iControllerDialogCapturarValor;
+    function SetOnClickCancel(Value: TNotifyEvent)
+      : iControllerDialogCapturarValor;
+    function GetValor: Currency;
+    function ExibirValor: Currency;
+  end;
+
+implementation
+
+{ TControllerDialogCapturaValor }
+
+constructor TControllerDialogCapturaValor.Create;
+begin
+
+end;
+
+destructor TControllerDialogCapturaValor.Destroy;
+begin
+
+  inherited;
+end;
+
+class function TControllerDialogCapturaValor.New
+  : iControllerDialogCapturarValor;
+begin
+  Result := Self.Create;
+end;
+
+end.

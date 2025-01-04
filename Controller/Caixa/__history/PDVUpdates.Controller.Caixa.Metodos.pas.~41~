@@ -38,7 +38,8 @@ begin
   FModel.Metodos.Abrir.SetValorAbertuta
     (TControllerFacade.New.Usuario.Operacoes.CapturaValor.SetTitle
     ('Valor de Abertura').SetTextConfirm('OK').SetTextCancel('Cancelar')
-    .GetValor).SetOperador(nil).EndAbrir;
+    .GetValor).SetOperador(TControllerFacade.New.Usuario.Usuario.Fiscal.
+    FecharCaixa.&End).EndAbrir;
 end;
 
 function TControllerCaixaMetodos.BloquearCaixa: iControllerCaixaMetodos;
@@ -92,7 +93,7 @@ begin
   Result := Self;
   FModel.Metodos.Sangria.SetValorSangria(TFrmCapturaValor.Create(nil)
     .ExibirForm('Valor da Sangria', 'OK', 'Cancelar')).SetAutorizadorSangria
-    (TControllerFacade.New.Usuario.Usuario.Caixa.FecharCaixa.&End).EndSangria;
+    (TControllerFacade.New.Usuario.Usuario.Caixa.Sangria.&End).EndSangria;
 end;
 
 function TControllerCaixaMetodos.Suprimento: iControllerCaixaMetodos;
@@ -101,7 +102,7 @@ begin
   FModel.Metodos.Suprimento.SetValorSuprimento(TFrmCapturaValor.Create(nil)
     .ExibirForm('Valor do fechamento', 'OK', 'Cancelar'))
     .SetAutorizadorSuprimento(TControllerFacade.New.Usuario.Usuario.Caixa.
-    FecharCaixa.&End);
+    Suprimento.&End);
 
 end;
 

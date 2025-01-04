@@ -89,7 +89,8 @@ uses
   PDVUpdates.Model.Item.Metodos.Acrescimo in 'Model\Item\Metodos\PDVUpdates.Model.Item.Metodos.Acrescimo.pas',
   PDVUpdates.Model.Item.State.Inativo in 'Model\Item\State\PDVUpdates.Model.Item.State.Inativo.pas',
   PDVUpdates.Model.Item.Metodos.Desconto in 'Model\Item\Metodos\PDVUpdates.Model.Item.Metodos.Desconto.pas',
-  PDVUpdates.Controller.Dialog.Factory in 'Controller\Dialog\PDVUpdates.Controller.Dialog.Factory.pas';
+  PDVUpdates.Controller.Dialog.Factory in 'Controller\Dialog\PDVUpdates.Controller.Dialog.Factory.pas',
+  PDVUpdates.Controller.Dialog.CapturaValor in 'Controller\Dialog\PDVUpdates.Controller.Dialog.CapturaValor.pas';
 
 {$R *.res}
 

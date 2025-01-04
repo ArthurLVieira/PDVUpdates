@@ -1,22 +1,17 @@
-unit PDVUpdates.Model.Usuario.Tipo.Fiscal;
+unit PDVUpdates.Model.Usuario.Tipo.Gerente;
 
 interface
 
 uses PDVUpdates.Model.Usuario.Interfaces,
-  PDVUpdates.Controller.Usuario.Operacoes.Interfaces,
-  System.Generics.Collections, PDVUpdates.Controller.Types;
+  PDVUpdates.Controller.Usuario.Operacoes.Interfaces;
 
 type
 
-  TModelUsuarioTipoFiscal = class(TInterfacedObject, iModelUsuarioMetodos)
+  TModelUsuarioTipoGerente = class(TInterfacedObject, iModelUsuarioMetodos)
   private
-    Flista: TList<TRecordSenha>;
-    Usuario: TRecordSenha;
     FParent: iModelUsuario;
     FResponsability: iModelUsuarioMetodos;
     FOperacoes: iControllerUsuarioOperacoesFactory;
-    procedure OnConfirmSenha(Sender: TObject);
-    procedure OnCancelSenha(Sender: TObject);
   public
     constructor Create(Value: iModelUsuario); overload;
     constructor Create(Value: iModelUsuario;
@@ -45,137 +40,112 @@ type
 
 implementation
 
-uses
-  System.SysUtils;
+{ TModelUsuarioTipoGerente }
 
-{ TModelUsuarioTipoFiscal }
-
-function TModelUsuarioTipoFiscal.&End: iModelUsuario;
+function TModelUsuarioTipoGerente.&End: iModelUsuario;
 begin
   Result := FParent;
 end;
 
-function TModelUsuarioTipoFiscal.AbrirCaixa: iModelUsuarioMetodos;
+function TModelUsuarioTipoGerente.AbrirCaixa: iModelUsuarioMetodos;
 begin
-  Usuario.User := 'Arthur';
-  Usuario.Password := '123';
-
-  Flista.Add(Usuario);
-
   Result := Self;
-  FOperacoes.PedirSenha.SetTitle('Entre com a senha do Fiscal')
-    .SetTextConfirm('OK').SetTextCancel('Cancelar').Lista(Flista)
-    .Result(Usuario).&End;
-
-  // FResponsability.AbrirCaixa;
+  FResponsability.AbrirCaixa;
 end;
 
-function TModelUsuarioTipoFiscal.Acrescimo: iModelUsuarioMetodos;
+function TModelUsuarioTipoGerente.Acrescimo: iModelUsuarioMetodos;
 begin
   Result := Self;
   FResponsability.Acrescimo;
 end;
 
-function TModelUsuarioTipoFiscal.BloquearCaixa: iModelUsuarioMetodos;
+function TModelUsuarioTipoGerente.BloquearCaixa: iModelUsuarioMetodos;
 begin
   Result := Self;
 end;
 
-function TModelUsuarioTipoFiscal.CancelamentoCupom: iModelUsuarioMetodos;
+function TModelUsuarioTipoGerente.CancelamentoCupom: iModelUsuarioMetodos;
 begin
   Result := Self;
   FResponsability.CancelamentoCupom;
 end;
 
-function TModelUsuarioTipoFiscal.CancelamentoItem: iModelUsuarioMetodos;
+function TModelUsuarioTipoGerente.CancelamentoItem: iModelUsuarioMetodos;
 begin
   Result := Self;
   FResponsability.CancelamentoItem;
 end;
 
-constructor TModelUsuarioTipoFiscal.Create(Value: iModelUsuario;
+constructor TModelUsuarioTipoGerente.Create(Value: iModelUsuario;
   NextResponsability: iModelUsuarioMetodos);
 begin
-  Flista := TList<TRecordSenha>.Create;
   FParent := Value;
   FResponsability := NextResponsability;
 end;
 
-constructor TModelUsuarioTipoFiscal.Create(Value: iModelUsuario);
+constructor TModelUsuarioTipoGerente.Create(Value: iModelUsuario);
 begin
-  Flista := TList<TRecordSenha>.Create;
   FParent := Value;
 end;
 
-function TModelUsuarioTipoFiscal.DesbloquearCaixa: iModelUsuarioMetodos;
+function TModelUsuarioTipoGerente.DesbloquearCaixa: iModelUsuarioMetodos;
 begin
   Result := Self;
 end;
 
-function TModelUsuarioTipoFiscal.Desconto: iModelUsuarioMetodos;
+function TModelUsuarioTipoGerente.Desconto: iModelUsuarioMetodos;
 begin
   Result := Self;
 end;
 
-destructor TModelUsuarioTipoFiscal.Destroy;
+destructor TModelUsuarioTipoGerente.Destroy;
 begin
-  FreeAndNil(Flista);
 
   inherited;
 end;
 
-function TModelUsuarioTipoFiscal.DevolucaoCupom: iModelUsuarioMetodos;
+function TModelUsuarioTipoGerente.DevolucaoCupom: iModelUsuarioMetodos;
 begin
   Result := Self;
   FResponsability.DevolucaoCupom;
 end;
 
-function TModelUsuarioTipoFiscal.DevolucaoItem: iModelUsuarioMetodos;
+function TModelUsuarioTipoGerente.DevolucaoItem: iModelUsuarioMetodos;
 begin
   Result := Self;
   FResponsability.DevolucaoItem;
 end;
 
-function TModelUsuarioTipoFiscal.FecharCaixa: iModelUsuarioMetodos;
+function TModelUsuarioTipoGerente.FecharCaixa: iModelUsuarioMetodos;
 begin
   Result := Self;
   FResponsability.FecharCaixa;
 end;
 
-class function TModelUsuarioTipoFiscal.New(Value: iModelUsuario;
+class function TModelUsuarioTipoGerente.New(Value: iModelUsuario;
   NextResponsability: iModelUsuarioMetodos): iModelUsuarioMetodos;
 begin
   Result := Self.Create(Value, NextResponsability);
 end;
 
-procedure TModelUsuarioTipoFiscal.OnCancelSenha(Sender: TObject);
-begin
-  raise Exception.Create('Cancelar');
-end;
-
-procedure TModelUsuarioTipoFiscal.OnConfirmSenha(Sender: TObject);
-begin
-  raise Exception.Create('Confirmar');
-end;
-
-function TModelUsuarioTipoFiscal.Sangria: iModelUsuarioMetodos;
+function TModelUsuarioTipoGerente.Sangria: iModelUsuarioMetodos;
 begin
   Result := Self;
 end;
 
-function TModelUsuarioTipoFiscal.SetOperacao
+function TModelUsuarioTipoGerente.SetOperacao
   (Value: iControllerUsuarioOperacoesFactory): iModelUsuarioMetodos;
 begin
   Result := Self;
   FOperacoes := Value;
 end;
 
-function TModelUsuarioTipoFiscal.Suprimento: iModelUsuarioMetodos;
+function TModelUsuarioTipoGerente.Suprimento: iModelUsuarioMetodos;
 begin
   Result := Self;
 end;
 
-class function TModelUsuarioTipoFiscal.New(Value: iModelUsuario)
+class function TModelUsuarioTipoGerente.New(Value: iModelUsuario)
   : iModelUsuarioMetodos;
 begin
   Result := Self.Create(Value);

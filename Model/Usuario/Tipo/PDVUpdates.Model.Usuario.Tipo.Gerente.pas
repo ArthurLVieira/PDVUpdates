@@ -119,7 +119,6 @@ end;
 function TModelUsuarioTipoGerente.FecharCaixa: iModelUsuarioMetodos;
 begin
   Result := Self;
-  FResponsability.FecharCaixa;
 end;
 
 class function TModelUsuarioTipoGerente.New(Value: iModelUsuario;

@@ -1,3 +1,4 @@
+
 unit PDVUpdates.Controller.Caixa.Metodos;
 
 interface
@@ -43,9 +44,9 @@ end;
 
 function TControllerCaixaMetodos.BloquearCaixa: iControllerCaixaMetodos;
 begin
-  // Result := Self;
-  // FModel.Metodos.BloquearCaixa.SetAutorizadorBloqueio
-  // (TControllerFacade.New.Usuario.Usuario.Caixa.);
+  Result := Self;
+  FModel.Metodos.BloquearCaixa.SetAutorizadorBloqueio
+    (TControllerFacade.New.Usuario.Usuario.Caixa.BloquearCaixa.&End);
 end;
 
 function TControllerCaixaMetodos.&End: iControllerCaixa;
@@ -62,6 +63,8 @@ end;
 function TControllerCaixaMetodos.DesbloquearCaixa: iControllerCaixaMetodos;
 begin
   Result := Self;
+  FModel.Metodos.DesbloquearCaixa.SetAutorizadorDesbloqueio
+    (TControllerFacade.New.Usuario.Usuario.Caixa.DesbloquearCaixa.&End)
 end;
 
 destructor TControllerCaixaMetodos.Destroy;
@@ -90,7 +93,7 @@ begin
   Result := Self;
   FModel.Metodos.Sangria.SetValorSangria(TFrmCapturaValor.Create(nil)
     .ExibirForm('Valor da Sangria', 'OK', 'Cancelar')).SetAutorizadorSangria
-    (TControllerFacade.New.Usuario.Usuario.Caixa.FecharCaixa.&End).EndSangria;
+    (TControllerFacade.New.Usuario.Usuario.Caixa.Sangria.&End).EndSangria;
 end;
 
 function TControllerCaixaMetodos.Suprimento: iControllerCaixaMetodos;
@@ -99,7 +102,7 @@ begin
   FModel.Metodos.Suprimento.SetValorSuprimento(TFrmCapturaValor.Create(nil)
     .ExibirForm('Valor do fechamento', 'OK', 'Cancelar'))
     .SetAutorizadorSuprimento(TControllerFacade.New.Usuario.Usuario.Caixa.
-    FecharCaixa.&End);
+    Suprimento.&End);
 
 end;
 

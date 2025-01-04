@@ -32,6 +32,7 @@ type
     function SetOnClickCancel(Value: TNotifyEvent)
       : iControllerDialogCapturarValor;
     function GetValor: Currency;
+    function ExibirValor: Currency;
   end;
 
   iControllerDialogFactory = interface

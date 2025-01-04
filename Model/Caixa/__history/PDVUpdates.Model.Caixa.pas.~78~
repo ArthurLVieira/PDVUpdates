@@ -4,14 +4,18 @@ interface
 
 uses
   PDVUpdates.Model.Caixa.Interfaces, PDVUpdates.Model.Usuario.Interfaces,
-  PDVUpdates.Model.Caixa.Metodos.Interfaces;
+  PDVUpdates.Model.Caixa.Metodos.Interfaces,
+  PDVUpdates.Model.Caixa.State.Factory,
+  PDVUpdates.Model.Caixa.State.Interfaces;
 
 type
 
   TModelCaixa = class(TInterfacedObject, iModelCaixa, iModelCaixaMetodos)
   private
     FMetodosFactory: iModelCaixaMetodosFactory;
-    FState: iModelCaixaMetodos;
+    FStateFactory: iModelCaixaStateFactory;
+    FState, FStateAberto, FStateFechado, FStateBloqeuado: iModelCaixaMetodos;
+
   public
     constructor Create;
     destructor Destroy; override;
@@ -33,8 +37,7 @@ type
 implementation
 
 uses
-  PDVUpdates.Model.Caixa.Metodos.Abrir, PDVUpdates.Model.Caixa.Metodos.Factory,
-  PDVUpdates.Model.Caixa.State.Factory;
+  PDVUpdates.Model.Caixa.Metodos.Abrir, PDVUpdates.Model.Caixa.Metodos.Factory;
 
 { TModelCaixa }
 
@@ -47,19 +50,29 @@ end;
 
 function TModelCaixa.BloquearCaixa: iModelCaixaMetodosBloquear;
 begin
+  FState.BloquearCaixa;
   Result := FMetodosFactory.BloquearCaixa(Self);
 end;
 
 constructor TModelCaixa.Create;
 begin
   FMetodosFactory := TModelCaixaMetodosFactory.New;
+  FStateFactory := TModelCaixaStateFactory.New;
+
+  FStateAberto := FStateFactory.Aberto;
+  FStateFechado := FStateFactory.Fechado;
+  FStateBloqeuado := FStateFactory.Bloqueado;
+
+
   FState := TModelCaixaStateFactory.New.Fechado;
   // TODO: Verificar estado do ultimo caixa
 end;
 
 function TModelCaixa.DesbloquearCaixa: iModelCaixaMetodosDesbloquear;
 begin
+  FState.DesbloquearCaixa;
   Result := FMetodosFactory.DesbloquearCaixa(Self);
+  FState := TModelCaixaStateFactory.New.Aberto;
 end;
 
 destructor TModelCaixa.Destroy;

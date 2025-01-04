@@ -1,0 +1,41 @@
+unit PDVUpdates.Controller.Dialog.CapturaValor;
+
+interface
+
+uses
+  PDVUpdates.Controller.Dialog.Interfaces;
+
+type
+
+  TControllerDialogCapturaValor = class(TInterfacedObject,
+    iControllerDialogCapturarValor)
+  private
+
+  public
+    constructor Create;
+    destructor Destroy; override;
+    class function New: iControllerDialogCapturarValor;
+  end;
+
+implementation
+
+{ TControllerDialogCapturaValor }
+
+constructor TControllerDialogCapturaValor.Create;
+begin
+
+end;
+
+destructor TControllerDialogCapturaValor.Destroy;
+begin
+
+  inherited;
+end;
+
+class function TControllerDialogCapturaValor.New
+  : iControllerDialogCapturarValor;
+begin
+  Result := Self.Create;
+end;
+
+end.
