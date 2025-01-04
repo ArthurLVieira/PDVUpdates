@@ -11,7 +11,7 @@ type
   TModelUsuarioTipoFiscal = class(TInterfacedObject, iModelUsuarioMetodos)
   private
     Flista: TList<TRecordSenha>;
-    Usuario: TRecordSenha;
+    FRetorno: TRecordSenha;
     FParent: iModelUsuario;
     FResponsability: iModelUsuarioMetodos;
     FOperacoes: iControllerUsuarioOperacoesFactory;
@@ -57,15 +57,10 @@ end;
 
 function TModelUsuarioTipoFiscal.AbrirCaixa: iModelUsuarioMetodos;
 begin
-  Usuario.User := 'Arthur';
-  Usuario.Password := '123';
-
-  Flista.Add(Usuario);
-
   Result := Self;
   FOperacoes.PedirSenha.SetTitle('Entre com a senha do Fiscal')
     .SetTextConfirm('OK').SetTextCancel('Cancelar').Lista(Flista)
-    .Result(Usuario).&End;
+    .Result(FRetorno).&End;
 
   // FResponsability.AbrirCaixa;
 end;
@@ -95,15 +90,30 @@ end;
 
 constructor TModelUsuarioTipoFiscal.Create(Value: iModelUsuario;
   NextResponsability: iModelUsuarioMetodos);
+var
+  Usuario: TRecordSenha;
 begin
-  Flista := TList<TRecordSenha>;
   FParent := Value;
   FResponsability := NextResponsability;
+
+  Flista := TList<TRecordSenha>.Create;
+
+  Usuario.User := 'Arthur';
+  Usuario.Password := '123';
+  Flista.Add(Usuario);
 end;
 
 constructor TModelUsuarioTipoFiscal.Create(Value: iModelUsuario);
+var
+  Usuario: TRecordSenha;
 begin
   FParent := Value;
+
+  Flista := TList<TRecordSenha>.Create;
+
+  Usuario.User := 'Arthur';
+  Usuario.Password := '123';
+  Flista.Add(Usuario);
 end;
 
 function TModelUsuarioTipoFiscal.DesbloquearCaixa: iModelUsuarioMetodos;

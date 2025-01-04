@@ -23,7 +23,7 @@ uses
   PDVUpdates.Controller.Usuario.Factory in 'Controller\Usuario\PDVUpdates.Controller.Usuario.Factory.pas',
   PDVUpdates.View.Dialog.SenhaUsuario in 'View\Dialog\PDVUpdates.View.Dialog.SenhaUsuario.pas' {FrmSenhaUsuario},
   PDVUpdates.Controller.Dialog.SenhaUsuario in 'Controller\Dialog\PDVUpdates.Controller.Dialog.SenhaUsuario.pas',
-  PDVUpdates.Controller.Dialog.SenhaUsuario.Interfaces in 'Controller\Dialog\PDVUpdates.Controller.Dialog.SenhaUsuario.Interfaces.pas',
+  PDVUpdates.Controller.Dialog.Interfaces in 'Controller\Dialog\PDVUpdates.Controller.Dialog.Interfaces.pas',
   PDVUpdates.Controller.Usuario.Operacoes.PedirSenha in 'Controller\Usuario\Operacoes\PDVUpdates.Controller.Usuario.Operacoes.PedirSenha.pas',
   PDVUpdates.Controller.Usuario.Operacoes.Interfaces in 'Controller\Usuario\Operacoes\PDVUpdates.Controller.Usuario.Operacoes.Interfaces.pas',
   PDVUpdates.Model.Caixa.Interfaces in 'Model\Caixa\PDVUpdates.Model.Caixa.Interfaces.pas',
@@ -88,7 +88,8 @@ uses
   PDVUpdates.Model.Item.Iterator in 'Model\Item\PDVUpdates.Model.Item.Iterator.pas',
   PDVUpdates.Model.Item.Metodos.Acrescimo in 'Model\Item\Metodos\PDVUpdates.Model.Item.Metodos.Acrescimo.pas',
   PDVUpdates.Model.Item.State.Inativo in 'Model\Item\State\PDVUpdates.Model.Item.State.Inativo.pas',
-  PDVUpdates.Model.Item.Metodos.Desconto in 'Model\Item\Metodos\PDVUpdates.Model.Item.Metodos.Desconto.pas';
+  PDVUpdates.Model.Item.Metodos.Desconto in 'Model\Item\Metodos\PDVUpdates.Model.Item.Metodos.Desconto.pas',
+  PDVUpdates.Controller.Dialog.Factory in 'Controller\Dialog\PDVUpdates.Controller.Dialog.Factory.pas';
 
 {$R *.res}
 

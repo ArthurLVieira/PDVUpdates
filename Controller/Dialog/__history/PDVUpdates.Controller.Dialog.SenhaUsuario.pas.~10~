@@ -28,13 +28,9 @@ type
       : iControllerDialogSenhaUsuario;
     function Lista(Value: TList<TRecordSenha>): iControllerDialogSenhaUsuario;
     function Result(Value: TRecordSenha): iControllerDialogSenhaUsuario;
-    procedure Exibir;
   end;
 
 implementation
-
-uses
-  PDVUpdates.View.Dialog.SenhaUsuario;
 
 { TControllerDialogSenhaUsuario }
 
@@ -47,12 +43,6 @@ destructor TControllerDialogSenhaUsuario.Destroy;
 begin
 
   inherited;
-end;
-
-procedure TControllerDialogSenhaUsuario.Exibir;
-begin
-  TFrmSenhaUsuario.Create(nil).ExibirForm(FTitle, FTextConfirm, FTextCancel,
-    Flista, FResult)
 end;
 
 function TControllerDialogSenhaUsuario.Lista(Value: TList<TRecordSenha>)
@@ -78,35 +68,30 @@ function TControllerDialogSenhaUsuario.SetOnClickCancel(Value: TNotifyEvent)
   : iControllerDialogSenhaUsuario;
 begin
   Result := Self;
-  FClickCancel := Value;
 end;
 
 function TControllerDialogSenhaUsuario.SetOnClickConfirm(Value: TNotifyEvent)
   : iControllerDialogSenhaUsuario;
 begin
-  Result := Self;
-  FClickConfirm := Value;
+
 end;
 
 function TControllerDialogSenhaUsuario.SetTextCancel(Value: string)
   : iControllerDialogSenhaUsuario;
 begin
-  Result := Self;
-  FTextCancel := Value;
+
 end;
 
 function TControllerDialogSenhaUsuario.SetTextConfirm(Value: string)
   : iControllerDialogSenhaUsuario;
 begin
-  Result := Self;
-  FTextConfirm := Value;
+
 end;
 
 function TControllerDialogSenhaUsuario.SetTitle(Value: string)
   : iControllerDialogSenhaUsuario;
 begin
-  Result := Self;
-  FTitle := Value;
+
 end;
 
 procedure TControllerDialogSenhaUsuario.validarSenha;

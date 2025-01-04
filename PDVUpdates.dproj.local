@@ -50,6 +50,9 @@
     <Transaction>2025/01/02 12:22:17.709,C:\Users\user\Documents\GitHub\PDVUpdates\Model\Item\PDVUpdates.Model.Item.Iterator.pas=C:\Users\user\Documents\GitHub\PDVUpdates\Unit1.pas</Transaction>
     <Transaction>2025/01/02 12:31:59.663,=C:\Users\user\Documents\GitHub\PDVUpdates\Unit1.pas</Transaction>
     <Transaction>2025/01/02 12:32:39.710,C:\Users\user\Documents\GitHub\PDVUpdates\Model\Item\Metodos\PDVUpdates.Model.Item.Metodos.Acrescimo.pas=C:\Users\user\Documents\GitHub\PDVUpdates\Unit1.pas</Transaction>
+    <Transaction>2025/01/03 22:19:23.205,C:\Users\user\Documents\GitHub\PDVUpdates\Controller\Dialog\PDVUpdates.Controller.Dialog.Interfaces.pas=C:\Users\user\Documents\GitHub\PDVUpdates\Controller\Dialog\PDVUpdates.Controller.Dialog.SenhaUsuario.Interfaces.pas</Transaction>
+    <Transaction>2025/01/03 22:19:28.587,=C:\Users\user\Documents\GitHub\PDVUpdates\Unit1.pas</Transaction>
+    <Transaction>2025/01/03 22:19:54.137,C:\Users\user\Documents\GitHub\PDVUpdates\Controller\Dialog\PDVUpdates.Controller.Dialog.Factory.pas=C:\Users\user\Documents\GitHub\PDVUpdates\Unit1.pas</Transaction>
   </Transactions>
 	<ProjectSortOrder AutoSort="0" SortType="0">
     <File Path="activity-1.7.2.dex.jar"/>
@@ -237,8 +240,9 @@
     <File Path="Controller\Caixa\PDVUpdates.Controller.Caixa.Metodos.pas"/>
     <File Path="Controller\Caixa\PDVUpdates.Controller.Caixa.pas"/>
     <File Path="Controller\Dialog"/>
-    <File Path="Controller\Dialog\PDVUpdates.Controller.Dialog.SenhaUsuario.Interfaces.pas"/>
+    <File Path="Controller\Dialog\PDVUpdates.Controller.Dialog.Interfaces.pas"/>
     <File Path="Controller\Dialog\PDVUpdates.Controller.Dialog.SenhaUsuario.pas"/>
+    <File Path="Controller\Dialog\PDVUpdates.Controller.Dialog.Factory.pas"/>
     <File Path="Controller\types"/>
     <File Path="Controller\types\PDVUpdates.Controller.Types.pas"/>
     <File Path="Controller\Usuario"/>
@@ -301,25 +305,25 @@
     <File Path="Model\Item\State\PDVUpdates.Model.Item.State.Ativo.pas"/>
     <File Path="Model\Item\State\PDVUpdates.Model.Item.State.Bloqueado.pas"/>
     <File Path="Model\Item\State\PDVUpdates.Model.Item.State.Desbloqueado.pas"/>
+    <File Path="Model\Item\State\PDVUpdates.Model.Item.State.Inativo.pas"/>
     <File Path="Model\Item\State\PDVUpdates.Model.Item.State.Interfaces.pas"/>
     <File Path="Model\Item\State\PDVUpdates.Model.Item.State.pas"/>
-    <File Path="Model\Item\State\PDVUpdates.Model.Item.State.Inativo.pas"/>
-    <File Path="Model\Item\PDVUpdates.Model.Item.pas"/>
-    <File Path="Model\Item\PDVUpdates.Model.Item.Interfaces.pas"/>
     <File Path="Model\Item\PDVUpdates.Model.Item.Factory.Interfaces.pas"/>
     <File Path="Model\Item\PDVUpdates.Model.Item.Factory.pas"/>
+    <File Path="Model\Item\PDVUpdates.Model.Item.Interfaces.pas"/>
     <File Path="Model\Item\PDVUpdates.Model.Item.Iterator.pas"/>
+    <File Path="Model\Item\PDVUpdates.Model.Item.pas"/>
     <File Path="Model\Produto"/>
     <File Path="Model\Produto\Metodos"/>
-    <File Path="Model\Produto\Metodos\PDVUpdates.Model.Produto.Metodos.Interfaces.pas"/>
     <File Path="Model\Produto\Metodos\PDVUpdates.Model.Produto.Metodos.Cadastrar.pas"/>
+    <File Path="Model\Produto\Metodos\PDVUpdates.Model.Produto.Metodos.Interfaces.pas"/>
     <File Path="Model\Produto\State"/>
-    <File Path="Model\Produto\State\PDVUpdates.Model.Produto.State.Interfaces.pas"/>
     <File Path="Model\Produto\State\PDVUpdates.Model.Produto.State.Bloqueado.pas"/>
     <File Path="Model\Produto\State\PDVUpdates.Model.Produto.State.Desbloqueado.pas"/>
+    <File Path="Model\Produto\State\PDVUpdates.Model.Produto.State.Interfaces.pas"/>
+    <File Path="Model\Produto\PDVUpdates.Model.Produto.factory.pas"/>
     <File Path="Model\Produto\PDVUpdates.Model.Produto.Interfaces.pas"/>
     <File Path="Model\Produto\PDVUpdates.Model.Produto.pas"/>
-    <File Path="Model\Produto\PDVUpdates.Model.Produto.factory.pas"/>
     <File Path="Model\Usuario"/>
     <File Path="Model\Usuario\Tipo"/>
     <File Path="Model\Usuario\Tipo\PDVUpdates.Model.Usuario.Tipo.Caixa.pas"/>
