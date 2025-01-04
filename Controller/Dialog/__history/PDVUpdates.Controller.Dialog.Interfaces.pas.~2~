@@ -1,0 +1,22 @@
+unit PDVUpdates.Controller.Dialog.Interfaces;
+
+interface
+
+type
+  iControllerDialogSenhaUsuario = interface
+    ['{797D8628-4EC9-473C-8843-F631B5842AAE}']
+    function SetTitle(Value: string): iControllerDialogSenhaUsuario;
+    function SetTextConfirm(Value: string): iControllerDialogSenhaUsuario;
+    function SetTextCancel(Value: string): iControllerDialogSenhaUsuario;
+    function SetOnClickConfirm(Value: TNotifyEvent)
+      : iControllerDialogSenhaUsuario;
+    function SetOnClickCancel(Value: TNotifyEvent)
+      : iControllerDialogSenhaUsuario;
+    function Lista(Value: TList<TRecordSenha>): iControllerDialogSenhaUsuario;
+    function Result(Value: TRecordSenha): iControllerDialogSenhaUsuario;
+    function &End: iControllerUsuarioOperacoesFactory;
+  end;
+
+implementation
+
+end.

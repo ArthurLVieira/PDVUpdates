@@ -25,7 +25,6 @@ type
 
 implementation
 
-
 { TModelItemMetodosAcrescimo }
 
 function TModelItemMetodosAcrescimo.&End: iModelItemMetodos;
