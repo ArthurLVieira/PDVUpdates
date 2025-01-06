@@ -11,13 +11,14 @@ type
 
   iModelUsuarioMetodos = interface;
   iModelUsuarioIterator = interface;
+  iModelUsuarioFuncoes = interface;
 
   iModelUsuario = interface
     ['{52C8A07B-20F9-4550-87B0-092CE39CC668}']
     function Metodos(Value: iModelUsuarioMetodos): iModelUsuarioMetodos;
     function Iterator: iModelUsuarioIterator;
     function Entity: TModelEntityUsuario;
-    function Funcoes: iModelUsarioFuncoesFactory;
+    function Funcoes: iModelUsuarioFuncoes;
   end;
 
   iModelUsuarioMetodos = interface
@@ -45,6 +46,12 @@ type
     function Next: iModelUsuario;
     function Add(Value: iModelUsuario): iModelUsuarioIterator;
     function Lista: TList<iModelUsuario>;
+    function &End: iModelUsuario;
+  end;
+
+  iModelUsuarioFuncoes = interface
+    ['{3E98281E-3782-456A-9246-FBC58BB710E5}']
+    function ListarUsuario: iModelUsuarioFuncoesListaUsuario;
     function &End: iModelUsuario;
   end;
 

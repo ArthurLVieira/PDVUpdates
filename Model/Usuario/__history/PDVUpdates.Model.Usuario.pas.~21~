@@ -2,30 +2,41 @@ unit PDVUpdates.Model.Usuario;
 
 interface
 
-uses PDVUpdates.Model.Usuario.Interfaces;
+uses PDVUpdates.Model.Usuario.Interfaces, PDVUpdates.Model.Entity.Usuario,
+  PDVUpdates.Model.Usuario.Funcoes.Interfaces;
 
 type
 
-  TModelUsuario = class(TInterfacedObject, iModelUsuario)
+  TModelUsuario = class(TInterfacedObject, iModelUsuario, iModelUsuarioFuncoes)
   private
     FTipoMetodo: iModelUsuarioMetodos;
     FIterator: iModelUsuarioIterator;
+    FEntity: TModelEntityUsuario;
   public
     constructor Create;
     destructor Destroy; override;
     class function New: iModelUsuario;
     function Metodos(Value: iModelUsuarioMetodos): iModelUsuarioMetodos;
     function Iterator: iModelUsuarioIterator;
+    function Entity: TModelEntityUsuario;
+    function Funcoes: iModelUsuarioFuncoes;
+
+    { Funcoes }
+    function ListarUsuario(Value: iModelUsuario)
+      : iModelUsuarioFuncoesListaUsuario;
+    function &End: iModelUsuario;
+
   end;
 
 implementation
 
 { TModelUsuario }
 
-uses PDVUpdates.Model.Usuario.Factory;
+uses PDVUpdates.Model.Usuario.Factory, PDVUpdates.Model.Entity.Factory;
 
 constructor TModelUsuario.Create;
 begin
+  FEntity := TModelEntityFactory.New.Usuario;
   FIterator := TModelUsuarioFactory.New.Iterator(Self);
 end;
 
@@ -33,6 +44,16 @@ destructor TModelUsuario.Destroy;
 begin
 
   inherited;
+end;
+
+function TModelUsuario.Entity: TModelEntityUsuario;
+begin
+  Result := FEntity;
+end;
+
+function TModelUsuario.Funcoes: iModelUsuarioFuncoes;
+begin
+  Result := Self;
 end;
 
 function TModelUsuario.Iterator: iModelUsuarioIterator;

@@ -95,7 +95,7 @@ uses
   PDVUpdates.Model.Usuario.Funcoes.ListaUsuario in 'Model\Usuario\Funcoes\PDVUpdates.Model.Usuario.Funcoes.ListaUsuario.pas',
   PDVUpdates.Model.Usuario.State.Interfaces in 'Model\Usuario\State\PDVUpdates.Model.Usuario.State.Interfaces.pas',
   PDVUpdates.Model.Usuario.Funcoes.Interfaces in 'Model\Usuario\Funcoes\PDVUpdates.Model.Usuario.Funcoes.Interfaces.pas',
-  PDVUpdates.Model.Usuario.Funcoes.Factory in 'Model\Usuario\Funcoes\PDVUpdates.Model.Usuario.Funcoes.Factory.pas';
+  PDVUpdates.Model.EntityTB_USUARIOS in 'Model\Entity\PDVUpdates.Model.EntityTB_USUARIOS.pas';
 
 {$R *.res}
 
