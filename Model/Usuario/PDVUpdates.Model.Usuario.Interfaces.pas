@@ -4,7 +4,8 @@ interface
 
 uses
   System.Generics.Collections, PDVUpdates.Model.Entity.Usuario,
-  PDVUpdates.Controller.Usuario.Operacoes.Interfaces;
+  PDVUpdates.Controller.Usuario.Operacoes.Interfaces,
+  PDVUpdates.Model.Usuario.Funcoes.Interfaces;
 
 type
 
@@ -16,7 +17,7 @@ type
     function Metodos(Value: iModelUsuarioMetodos): iModelUsuarioMetodos;
     function Iterator: iModelUsuarioIterator;
     function Entity: TModelEntityUsuario;
-
+    function Funcoes: iModelUsarioFuncoesFactory;
   end;
 
   iModelUsuarioMetodos = interface

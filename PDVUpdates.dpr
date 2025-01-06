@@ -90,7 +90,12 @@ uses
   PDVUpdates.Model.Item.State.Inativo in 'Model\Item\State\PDVUpdates.Model.Item.State.Inativo.pas',
   PDVUpdates.Model.Item.Metodos.Desconto in 'Model\Item\Metodos\PDVUpdates.Model.Item.Metodos.Desconto.pas',
   PDVUpdates.Controller.Dialog.Factory in 'Controller\Dialog\PDVUpdates.Controller.Dialog.Factory.pas',
-  PDVUpdates.Controller.Dialog.CapturaValor in 'Controller\Dialog\PDVUpdates.Controller.Dialog.CapturaValor.pas';
+  PDVUpdates.Controller.Dialog.CapturaValor in 'Controller\Dialog\PDVUpdates.Controller.Dialog.CapturaValor.pas',
+  PDVUpdates.Model.Conexao in 'Model\Conexao\PDVUpdates.Model.Conexao.pas' {DataModule1: TDataModule},
+  PDVUpdates.Model.Usuario.Funcoes.ListaUsuario in 'Model\Usuario\Funcoes\PDVUpdates.Model.Usuario.Funcoes.ListaUsuario.pas',
+  PDVUpdates.Model.Usuario.State.Interfaces in 'Model\Usuario\State\PDVUpdates.Model.Usuario.State.Interfaces.pas',
+  PDVUpdates.Model.Usuario.Funcoes.Interfaces in 'Model\Usuario\Funcoes\PDVUpdates.Model.Usuario.Funcoes.Interfaces.pas',
+  PDVUpdates.Model.Usuario.Funcoes.Factory in 'Model\Usuario\Funcoes\PDVUpdates.Model.Usuario.Funcoes.Factory.pas';
 
 {$R *.res}
 
@@ -99,5 +104,6 @@ begin
   Application.CreateForm(TForm1, Form1);
   Application.CreateForm(TFrmSenhaUsuario, FrmSenhaUsuario);
   Application.CreateForm(TFrmCapturaValor, FrmCapturaValor);
+  Application.CreateForm(TDataModule1, DataModule1);
   Application.Run;
 end.
