@@ -18,6 +18,7 @@ type
   iModelCaixa = interface
     ['{BFD9C7A1-1465-47C0-980D-A0DF7386DB4F}']
     function Metodos: iModelCaixaMetodos;
+    function SetState(Value: iModelCaixaMetodos): iModelCaixa;
     // function Entity: TCAIXA;
   end;
 

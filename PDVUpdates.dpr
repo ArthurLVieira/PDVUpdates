@@ -15,7 +15,6 @@ uses
   PDVUpdates.Model.Usuario.Iterator in 'Model\Usuario\PDVUpdates.Model.Usuario.Iterator.pas',
   PDVUpdates.Model.Entity.Interfaces in 'Model\Entity\PDVUpdates.Model.Entity.Interfaces.pas',
   PDVUpdates.Model.Entity.Factory in 'Model\Entity\PDVUpdates.Model.Entity.Factory.pas',
-  PDVUpdates.Model.Entity.Usuario in 'Model\Entity\PDVUpdates.Model.Entity.Usuario.pas',
   PDVUpdates.Controller.Usuario.Interfaces in 'Controller\Usuario\PDVUpdates.Controller.Usuario.Interfaces.pas',
   PDVUpdates.Controller.Usuario in 'Controller\Usuario\PDVUpdates.Controller.Usuario.pas',
   PDVUpdates.Controller.Interfaces in 'Controller\PDVUpdates.Controller.Interfaces.pas',
@@ -95,7 +94,11 @@ uses
   PDVUpdates.Model.Usuario.Funcoes.ListaUsuario in 'Model\Usuario\Funcoes\PDVUpdates.Model.Usuario.Funcoes.ListaUsuario.pas',
   PDVUpdates.Model.Usuario.State.Interfaces in 'Model\Usuario\State\PDVUpdates.Model.Usuario.State.Interfaces.pas',
   PDVUpdates.Model.Usuario.Funcoes.Interfaces in 'Model\Usuario\Funcoes\PDVUpdates.Model.Usuario.Funcoes.Interfaces.pas',
-  PDVUpdates.Model.EntityTB_USUARIOS in 'Model\Entity\PDVUpdates.Model.EntityTB_USUARIOS.pas';
+  PDVUpdates.Model.Entity.CAIXA in 'Model\Entity\PDVUpdates.Model.Entity.CAIXA.pas',
+  PDVUpdates.Model.Venda.Interfaces in 'Model\Venda\PDVUpdates.Model.Venda.Interfaces.pas',
+  PDVUpdates.Model.Entity.USUARIO in 'Model\Entity\PDVUpdates.Model.Entity.USUARIO.pas',
+  PDVUpdates.Model.Pagamento.Interfaces in 'Model\Pagamento\PDVUpdates.Model.Pagamento.Interfaces.pas',
+  PDVUpdates.Model.Pagamento.Iterator in 'Model\Pagamento\PDVUpdates.Model.Pagamento.Iterator.pas';
 
 {$R *.res}
 

@@ -1,0 +1,27 @@
+unit PDVUpdates.Model.Pagamento.Interfaces;
+
+interface
+
+type
+  iModelPagamentoMetodos = interface;
+  iModelPagamentoMetodosExecutar = interface;
+
+  iModelPagamento = interface
+    ['{B8315787-BD18-49A4-B94C-64CB9CC4A3F9}']
+    function Dinheiro: iModelPagamentoMetodos;
+  end;
+
+  iModelPagamentoMetodos = interface
+    ['{53DD160A-85F2-4FA5-AAE9-60799E621E01}']
+    function Executar: iModelPagamentoMetodosExecutar;
+  end;
+
+  iModelPagamentoMetodosExecutar = interface
+    ['{9CF3701B-C6C8-4033-96F9-D174C8CDEFFC}']
+    function SetValor(Value: Currency): iModelPagamentoMetodosExecutar;
+    function &End: iModelPagamento;
+  end;
+
+implementation
+
+end.

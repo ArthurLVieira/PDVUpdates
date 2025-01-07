@@ -1,0 +1,19 @@
+unit PDVUpdates.Model.Venda.Interfaces;
+
+interface
+
+type
+  iModelVendaMetodos = interface;
+
+  iModelVenda = interface
+    ['{4D88ED9E-7887-44B7-8C2A-05759CDAEE0A}']
+    function Metodos: iModelVendaMetodos;
+  end;
+
+  iModelVendaMetodos = interface
+    ['{299DFF57-078B-444E-8709-96195A94F6B5}']
+  end;
+
+implementation
+
+end.

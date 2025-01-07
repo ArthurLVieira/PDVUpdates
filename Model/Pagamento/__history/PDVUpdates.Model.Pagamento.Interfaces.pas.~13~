@@ -1,0 +1,47 @@
+unit PDVUpdates.Model.Pagamento.Interfaces;
+
+interface
+
+type
+  iModelPagamentoMetodos = interface;
+  iModelPagamentoMetodosExecutar = interface;
+  iModelPagamentoMetodosEstornar = interface;
+  iModelPagamentoIterator = interface;
+
+  iModelPagamento = interface
+    ['{B8315787-BD18-49A4-B94C-64CB9CC4A3F9}']
+    function Dinheiro: iModelPagamentoMetodos;
+    function CartaoCredito: iModelPagamentoMetodos;
+    function Iterator: iModelPagamentoIterator;
+  end;
+
+  iModelPagamentoMetodos = interface
+    ['{53DD160A-85F2-4FA5-AAE9-60799E621E01}']
+    function Executar: iModelPagamentoMetodosExecutar;
+    function Estornar: iModelPagamentoMetodosEstornar;
+    function &End: iModelPagamento;
+  end;
+
+  iModelPagamentoMetodosExecutar = interface
+    ['{9CF3701B-C6C8-4033-96F9-D174C8CDEFFC}']
+    function SetValor(Value: Currency): iModelPagamentoMetodosExecutar;
+    function &End: iModelPagamentoMetodos;
+  end;
+
+  iModelPagamentoMetodosEstornar = interface
+    ['{BE7C07CC-C9F2-43DE-BB04-2EF4152A3A93}']
+    function SetIndex(Value: Integer): iModelPagamentoMetodosEstornar;
+    function &End: iModelPagamentoMetodos;
+  end;
+
+  iModelPagamentoIterator = interface
+    ['{2087BDD9-B0E2-4ACD-8C0A-70132D5A1829}']
+    function hasNext: Boolean;
+    function Next: iModelPagamento;
+    function Add(Value: iModelPagamento): iModelPagamentoIterator;
+    function &End: iModelPagamento
+  end;
+
+implementation
+
+end.

@@ -13,14 +13,14 @@ type
   TModelCaixa = class(TInterfacedObject, iModelCaixa, iModelCaixaMetodos)
   private
     FMetodosFactory: iModelCaixaMetodosFactory;
-    FStateFactory: iModelCaixaStateFactory;
-    FState, FStateAberto, FStateFechado, FStateBloqeuado: iModelCaixaMetodos;
+    FState: iModelCaixaMetodos;
 
   public
     constructor Create;
     destructor Destroy; override;
     class function New: iModelCaixa;
     function Metodos: iModelCaixaMetodos;
+    function SetState(Value: iModelCaixaMetodos): iModelCaixa;
 
     // ModelCaixaMetodos
     function Abrir: iModelCaixaMetodosAbrir;
@@ -45,8 +45,6 @@ function TModelCaixa.Abrir: iModelCaixaMetodosAbrir;
 begin
   FState.Abrir;
   Result := FMetodosFactory.Abrir(Self);
-  FState := FStateAberto;
-  // FState := TModelCaixaStateFactory.New.Aberto;
 end;
 
 function TModelCaixa.BloquearCaixa: iModelCaixaMetodosBloquear;
@@ -58,24 +56,13 @@ end;
 constructor TModelCaixa.Create;
 begin
   FMetodosFactory := TModelCaixaMetodosFactory.New;
-  FStateFactory := TModelCaixaStateFactory.New;
-
-  FStateAberto := FStateFactory.Aberto;
-  FStateFechado := FStateFactory.Fechado;
-  FStateBloqeuado := FStateFactory.Bloqueado;
-
-  FState := FStateAberto;
-
-  // FState := TModelCaixaStateFactory.New.Fechado;
-  // TODO: Verificar estado do ultimo caixa
+  FState := TModelCaixaStateFactory.New.Fechado;
 end;
 
 function TModelCaixa.DesbloquearCaixa: iModelCaixaMetodosDesbloquear;
 begin
   FState.DesbloquearCaixa;
   Result := FMetodosFactory.DesbloquearCaixa(Self);
-  FState := FStateAberto;
-  // FState := TModelCaixaStateFactory.New.Aberto;
 end;
 
 destructor TModelCaixa.Destroy;
@@ -93,8 +80,6 @@ function TModelCaixa.Fechar: iModelCaixaMetodosFechar;
 begin
   FState.Fechar;
   Result := FMetodosFactory.Fechar(Self);
-  FState := FStateFechado;
-  // FState := TModelCaixaStateFactory.New.Fechado;
 end;
 
 function TModelCaixa.Metodos: iModelCaixaMetodos;
@@ -111,6 +96,12 @@ function TModelCaixa.Sangria: iModelCaixaMetodosSangria;
 begin
   FState.Sangria;
   Result := FMetodosFactory.Sangria(Self);
+end;
+
+function TModelCaixa.SetState(Value: iModelCaixaMetodos): iModelCaixa;
+begin
+  Result := Self;
+  FState := Value;
 end;
 
 function TModelCaixa.Suprimento: iModelCaixaMetodosSuprimento;

@@ -23,7 +23,7 @@ uses
   PDVUpdates.Controller.Usuario.Factory in 'Controller\Usuario\PDVUpdates.Controller.Usuario.Factory.pas',
   PDVUpdates.View.Dialog.SenhaUsuario in 'View\Dialog\PDVUpdates.View.Dialog.SenhaUsuario.pas' {FrmSenhaUsuario},
   PDVUpdates.Controller.Dialog.SenhaUsuario in 'Controller\Dialog\PDVUpdates.Controller.Dialog.SenhaUsuario.pas',
-  PDVUpdates.Controller.Dialog.SenhaUsuario.Interfaces in 'Controller\Dialog\PDVUpdates.Controller.Dialog.SenhaUsuario.Interfaces.pas',
+  PDVUpdates.Controller.Dialog.Interfaces in 'Controller\Dialog\PDVUpdates.Controller.Dialog.Interfaces.pas',
   PDVUpdates.Controller.Usuario.Operacoes.PedirSenha in 'Controller\Usuario\Operacoes\PDVUpdates.Controller.Usuario.Operacoes.PedirSenha.pas',
   PDVUpdates.Controller.Usuario.Operacoes.Interfaces in 'Controller\Usuario\Operacoes\PDVUpdates.Controller.Usuario.Operacoes.Interfaces.pas',
   PDVUpdates.Model.Caixa.Interfaces in 'Model\Caixa\PDVUpdates.Model.Caixa.Interfaces.pas',
@@ -81,7 +81,21 @@ uses
   PDVUpdates.Model.Item.Factory in 'Model\Item\PDVUpdates.Model.Item.Factory.pas',
   PDVUpdates.Model.Item.Factory.Interfaces in 'Model\Item\PDVUpdates.Model.Item.Factory.Interfaces.pas',
   PDVUpdates.Model.Item.State in 'Model\Item\State\PDVUpdates.Model.Item.State.pas',
-  PDVUpdates.Model.Item.State.Interfaces in 'Model\Item\State\PDVUpdates.Model.Item.State.Interfaces.pas';
+  PDVUpdates.Model.Item.State.Interfaces in 'Model\Item\State\PDVUpdates.Model.Item.State.Interfaces.pas',
+  PDVUpdates.Model.Item.State.Desbloqueado in 'Model\Item\State\PDVUpdates.Model.Item.State.Desbloqueado.pas',
+  PDVUpdates.Model.Item.State.Bloqueado in 'Model\Item\State\PDVUpdates.Model.Item.State.Bloqueado.pas',
+  PDVUpdates.Model.Item.State.Ativo in 'Model\Item\State\PDVUpdates.Model.Item.State.Ativo.pas',
+  PDVUpdates.Model.Item.Iterator in 'Model\Item\PDVUpdates.Model.Item.Iterator.pas',
+  PDVUpdates.Model.Item.Metodos.Acrescimo in 'Model\Item\Metodos\PDVUpdates.Model.Item.Metodos.Acrescimo.pas',
+  PDVUpdates.Model.Item.State.Inativo in 'Model\Item\State\PDVUpdates.Model.Item.State.Inativo.pas',
+  PDVUpdates.Model.Item.Metodos.Desconto in 'Model\Item\Metodos\PDVUpdates.Model.Item.Metodos.Desconto.pas',
+  PDVUpdates.Controller.Dialog.Factory in 'Controller\Dialog\PDVUpdates.Controller.Dialog.Factory.pas',
+  PDVUpdates.Controller.Dialog.CapturaValor in 'Controller\Dialog\PDVUpdates.Controller.Dialog.CapturaValor.pas',
+  PDVUpdates.Model.Conexao in 'Model\Conexao\PDVUpdates.Model.Conexao.pas' {DataModule1: TDataModule},
+  PDVUpdates.Model.Usuario.Funcoes.ListaUsuario in 'Model\Usuario\Funcoes\PDVUpdates.Model.Usuario.Funcoes.ListaUsuario.pas',
+  PDVUpdates.Model.Usuario.State.Interfaces in 'Model\Usuario\State\PDVUpdates.Model.Usuario.State.Interfaces.pas',
+  PDVUpdates.Model.Usuario.Funcoes.Interfaces in 'Model\Usuario\Funcoes\PDVUpdates.Model.Usuario.Funcoes.Interfaces.pas',
+  PDVUpdates.Model.EntityTB_USUARIOS in 'Model\Entity\PDVUpdates.Model.EntityTB_USUARIOS.pas';
 
 {$R *.res}
 
@@ -90,5 +104,6 @@ begin
   Application.CreateForm(TForm1, Form1);
   Application.CreateForm(TFrmSenhaUsuario, FrmSenhaUsuario);
   Application.CreateForm(TFrmCapturaValor, FrmCapturaValor);
+  Application.CreateForm(TDataModule1, DataModule1);
   Application.Run;
 end.

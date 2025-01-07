@@ -1,0 +1,46 @@
+unit PDVUpdates.Model.Pagamento.Iterator;
+
+interface
+
+uses
+  PDVUpdates.Model.Pagamento.Interfaces, System.Generics.Collections;
+
+type
+
+  TModelPagamentoIterator = class(TInterfacedObject, iModelPagamentoIterator)
+  private
+    FParent: iModelPagamento;
+    FLista: TList<iModelPagamento>;
+    FCount: Integer;
+  public
+    constructor Create(Value: iModelPagamento);
+    destructor Destroy; override;
+    class function New(Value: iModelPagamento): iModelPagamentoIterator;
+    function hasNext: Boolean;
+    function Next: iModelPagamento;
+    function Add(Value: iModelPagamento): iModelPagamentoIterator;
+    function &End: iModelPagamento;
+  end;
+
+implementation
+
+{ TModelPagamentoIterator }
+
+constructor TModelPagamentoIterator.Create(Value: iModelPagamento);
+begin
+  FParent := Value;
+end;
+
+destructor TModelPagamentoIterator.Destroy;
+begin
+
+  inherited;
+end;
+
+class function TModelPagamentoIterator.New(Value: iModelPagamento)
+  : iModelPagamentoIterator;
+begin
+  Result := Self.Create(Value);
+end;
+
+end.

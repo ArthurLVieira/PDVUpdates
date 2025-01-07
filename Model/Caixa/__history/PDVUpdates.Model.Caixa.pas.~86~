@@ -13,14 +13,14 @@ type
   TModelCaixa = class(TInterfacedObject, iModelCaixa, iModelCaixaMetodos)
   private
     FMetodosFactory: iModelCaixaMetodosFactory;
-    FStateFactory: iModelCaixaStateFactory;
-    FState, FStateAberto, FStateFechado, FStateBloqeuado: iModelCaixaMetodos;
+    FState: iModelCaixaMetodos;
 
   public
     constructor Create;
     destructor Destroy; override;
     class function New: iModelCaixa;
     function Metodos: iModelCaixaMetodos;
+    function SetState(Value: iModelCaixaMetodos): iModelCaixa;
 
     // ModelCaixaMetodos
     function Abrir: iModelCaixaMetodosAbrir;
@@ -45,7 +45,7 @@ function TModelCaixa.Abrir: iModelCaixaMetodosAbrir;
 begin
   FState.Abrir;
   Result := FMetodosFactory.Abrir(Self);
-  FState := TModelCaixaStateFactory.New.Aberto;
+  // FState := TModelCaixaStateFactory.New.Aberto;
 end;
 
 function TModelCaixa.BloquearCaixa: iModelCaixaMetodosBloquear;
@@ -57,9 +57,9 @@ end;
 constructor TModelCaixa.Create;
 begin
   FMetodosFactory := TModelCaixaMetodosFactory.New;
-  FStateFactory := TModelCaixaStateFactory.New;
+  FState := TModelCaixaStateFactory.New.Fechado;;
 
-  FState := TModelCaixaStateFactory.New.Fechado;
+  // FState := TModelCaixaStateFactory.New.Fechado;
   // TODO: Verificar estado do ultimo caixa
 end;
 
@@ -67,7 +67,7 @@ function TModelCaixa.DesbloquearCaixa: iModelCaixaMetodosDesbloquear;
 begin
   FState.DesbloquearCaixa;
   Result := FMetodosFactory.DesbloquearCaixa(Self);
-  FState := TModelCaixaStateFactory.New.Aberto;
+  // FState := TModelCaixaStateFactory.New.Aberto;
 end;
 
 destructor TModelCaixa.Destroy;
@@ -85,7 +85,7 @@ function TModelCaixa.Fechar: iModelCaixaMetodosFechar;
 begin
   FState.Fechar;
   Result := FMetodosFactory.Fechar(Self);
-  FState := TModelCaixaStateFactory.New.Fechado;
+  // FState := TModelCaixaStateFactory.New.Fechado;
 end;
 
 function TModelCaixa.Metodos: iModelCaixaMetodos;
