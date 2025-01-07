@@ -98,7 +98,11 @@ uses
   PDVUpdates.Model.Venda.Interfaces in 'Model\Venda\PDVUpdates.Model.Venda.Interfaces.pas',
   PDVUpdates.Model.Entity.USUARIO in 'Model\Entity\PDVUpdates.Model.Entity.USUARIO.pas',
   PDVUpdates.Model.Pagamento.Interfaces in 'Model\Pagamento\PDVUpdates.Model.Pagamento.Interfaces.pas',
-  PDVUpdates.Model.Pagamento.Iterator in 'Model\Pagamento\PDVUpdates.Model.Pagamento.Iterator.pas';
+  PDVUpdates.Model.Pagamento.Iterator in 'Model\Pagamento\PDVUpdates.Model.Pagamento.Iterator.pas',
+  PDVUpdates.Model.Pagamento.Tipos.Interfaces in 'Model\Pagamento\Tipos\PDVUpdates.Model.Pagamento.Tipos.Interfaces.pas',
+  PDVUpdates.Model.Pagamento.Tipos.Factory in 'Model\Pagamento\Tipos\PDVUpdates.Model.Pagamento.Tipos.Factory.pas',
+  PDVUpdates.Model.Pagamento.Tipos.CartaoCredito in 'Model\Pagamento\Tipos\CartaoCredito\PDVUpdates.Model.Pagamento.Tipos.CartaoCredito.pas',
+  PDVUpdates.Model.Pagamento.Tipos.CartaoCredito.Executar in 'Model\Pagamento\Tipos\CartaoCredito\PDVUpdates.Model.Pagamento.Tipos.CartaoCredito.Executar.pas';
 
 {$R *.res}
 

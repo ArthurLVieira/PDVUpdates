@@ -409,6 +409,10 @@
         <DCCReference Include="Model\Entity\PDVUpdates.Model.Entity.USUARIO.pas"/>
         <DCCReference Include="Model\Pagamento\PDVUpdates.Model.Pagamento.Interfaces.pas"/>
         <DCCReference Include="Model\Pagamento\PDVUpdates.Model.Pagamento.Iterator.pas"/>
+        <DCCReference Include="Model\Pagamento\Tipos\PDVUpdates.Model.Pagamento.Tipos.Interfaces.pas"/>
+        <DCCReference Include="Model\Pagamento\Tipos\PDVUpdates.Model.Pagamento.Tipos.Factory.pas"/>
+        <DCCReference Include="Model\Pagamento\Tipos\CartaoCredito\PDVUpdates.Model.Pagamento.Tipos.CartaoCredito.pas"/>
+        <DCCReference Include="Model\Pagamento\Tipos\CartaoCredito\PDVUpdates.Model.Pagamento.Tipos.CartaoCredito.Executar.pas"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>

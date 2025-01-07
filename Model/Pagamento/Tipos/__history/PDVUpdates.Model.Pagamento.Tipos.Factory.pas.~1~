@@ -1,0 +1,7 @@
+unit PDVUpdates.Model.Pagamento.Tipos.Factory;
+
+interface
+
+implementation
+
+end.

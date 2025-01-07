@@ -1,0 +1,7 @@
+unit PDVUpdates.Model.Pagamento.Tipos.CartaoCredito;
+
+interface
+
+implementation
+
+end.
