@@ -1,7 +1,0 @@
-unit PDVUpdates.Model.Pagamento.Tipos.CartaoCredito.Executar;
-
-interface
-
-implementation
-
-end.

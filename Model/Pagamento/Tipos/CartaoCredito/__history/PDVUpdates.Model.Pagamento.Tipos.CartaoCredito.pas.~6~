@@ -29,8 +29,7 @@ implementation
 constructor TModelPagamentoTipoCartaoCredito.Create(Parent: iModelPagamento;
   Venda: iModelVenda);
 begin
-  FParent := Parent;
-  Venda := FVenda;
+
 end;
 
 destructor TModelPagamentoTipoCartaoCredito.Destroy;
@@ -42,7 +41,7 @@ end;
 class function TModelPagamentoTipoCartaoCredito.New(Parent: iModelPagamento;
   Venda: iModelVenda): iModelPagamentoMetodos;
 begin
-  Result := Self.Create(Parent, Venda);
+  Result := Self.Create;
 end;
 
 end.

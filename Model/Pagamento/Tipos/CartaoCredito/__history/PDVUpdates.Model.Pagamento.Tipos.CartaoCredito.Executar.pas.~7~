@@ -3,22 +3,18 @@ unit PDVUpdates.Model.Pagamento.Tipos.CartaoCredito.Executar;
 interface
 
 uses
-  PDVUpdates.Model.Pagamento.Interfaces, PDVUpdates.Model.Venda.Interfaces;
+  PDVUpdates.Model.Pagamento.Interfaces;
 
 type
 
   TModelPagamentoTipoCartaoCreditoExecultar = class(TInterfacedObject,
     iModelPagamentoMetodosExecutar)
   private
-    FValor: Currency;
     FParent: iModelPagamentoMetodos;
-    FVenda: iModelVenda;
-    procedure Gravar;
-    procedure Fiscal;
   public
-    constructor Create(Parent: iModelPagamentoMetodos; Venda: iModelVenda);
+    constructor Create(Parent: iModelPagamentoMetodos);
     destructor Destroy; override;
-    class function New(Parent: iModelPagamentoMetodos; Venda: iModelVenda)
+    class function New(Parent: iModelPagamentoMetodos)
       : iModelPagamentoMetodosExecutar;
     function SetValor(Value: Currency): iModelPagamentoMetodosExecutar;
     function &End: iModelPagamentoMetodos;
@@ -33,21 +29,10 @@ begin
   Result := FParent;
 end;
 
-procedure TModelPagamentoTipoCartaoCreditoExecultar.Fiscal;
-begin
-
-end;
-
-procedure TModelPagamentoTipoCartaoCreditoExecultar.Gravar;
-begin
-
-end;
-
 constructor TModelPagamentoTipoCartaoCreditoExecultar.Create
-  (Parent: iModelPagamentoMetodos; Venda: iModelVenda);
+  (Parent: iModelPagamentoMetodos);
 begin
   FParent := Parent;
-  FVenda := FVenda;
 end;
 
 destructor TModelPagamentoTipoCartaoCreditoExecultar.Destroy;
@@ -57,17 +42,15 @@ begin
 end;
 
 class function TModelPagamentoTipoCartaoCreditoExecultar.New
-  (Parent: iModelPagamentoMetodos; Venda: iModelVenda)
-  : iModelPagamentoMetodosExecutar;
+  (Parent: iModelPagamentoMetodos): iModelPagamentoMetodosExecutar;
 begin
-  Result := Self.Create(Parent, Venda);
+  Result := Self.Create(Parent);
 end;
 
 function TModelPagamentoTipoCartaoCreditoExecultar.SetValor(Value: Currency)
   : iModelPagamentoMetodosExecutar;
 begin
-  Result := Self;
-  FValor := Value;
+
 end;
 
 end.

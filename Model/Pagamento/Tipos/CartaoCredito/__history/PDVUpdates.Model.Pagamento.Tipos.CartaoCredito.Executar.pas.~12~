@@ -33,16 +33,6 @@ begin
   Result := FParent;
 end;
 
-procedure TModelPagamentoTipoCartaoCreditoExecultar.Fiscal;
-begin
-
-end;
-
-procedure TModelPagamentoTipoCartaoCreditoExecultar.Gravar;
-begin
-
-end;
-
 constructor TModelPagamentoTipoCartaoCreditoExecultar.Create
   (Parent: iModelPagamentoMetodos; Venda: iModelVenda);
 begin
@@ -66,8 +56,7 @@ end;
 function TModelPagamentoTipoCartaoCreditoExecultar.SetValor(Value: Currency)
   : iModelPagamentoMetodosExecutar;
 begin
-  Result := Self;
-  FValor := Value;
+
 end;
 
 end.

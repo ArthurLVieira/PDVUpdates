@@ -1,0 +1,58 @@
+unit PDVUpdates.Model.Pagamento.Tipos.CartaoCredito.Executar;
+
+interface
+
+uses
+  PDVUpdates.Model.Pagamento.Interfaces, PDVUpdates.Model.Venda.Interfaces;
+
+type
+
+  TModelPagamentoTipoCartaoCreditoExecultar = class(TInterfacedObject,
+    iModelPagamentoMetodosExecutar)
+  private
+    FParent: iModelPagamentoMetodos;
+    FVenda: iModelVenda;
+  public
+    constructor Create(Parent: iModelPagamentoMetodos; FVenda: iModelVenda);
+    destructor Destroy; override;
+    class function New(Parent: iModelPagamentoMetodos; FVenda: iModelVenda)
+      : iModelPagamentoMetodosExecutar;
+    function SetValor(Value: Currency): iModelPagamentoMetodosExecutar;
+    function &End: iModelPagamentoMetodos;
+  end;
+
+implementation
+
+{ TModelPagamentoTipoCartaoCreditoExecultar }
+
+function TModelPagamentoTipoCartaoCreditoExecultar.&End: iModelPagamentoMetodos;
+begin
+  Result := FParent;
+end;
+
+constructor TModelPagamentoTipoCartaoCreditoExecultar.Create
+  (Parent: iModelPagamentoMetodos; FVenda: iModelVenda);
+begin
+  FParent := Parent;
+  FVenda := FVenda.end;
+
+  destructor TModelPagamentoTipoCartaoCreditoExecultar.Destroy;
+  begin
+
+    inherited;
+  end;
+
+  class function TModelPagamentoTipoCartaoCreditoExecultar.New
+    (Parent: iModelPagamentoMetodos; FVenda: iModelVenda)
+    : iModelPagamentoMetodosExecutar;
+  begin
+    Result := Self.Create(Parent);
+  end;
+
+  function TModelPagamentoTipoCartaoCreditoExecultar.SetValor(Value: Currency)
+    : iModelPagamentoMetodosExecutar;
+  begin
+
+  end;
+
+end.
