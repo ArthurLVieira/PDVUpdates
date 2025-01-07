@@ -10,20 +10,24 @@ type
   TModelPagamentoTipoCartaoCreditoExecultar = class(TInterfacedObject,
     iModelPagamentoMetodosExecutar)
   private
-
+    FParent: iModelPagamentoMetodos;
   public
-    constructor Create;
+    constructor Create(Parent: iModelPagamentoMetodos);
     destructor Destroy; override;
-    class function New: iModelPagamentoMetodosExecutar;
+    class function New(Parent: iModelPagamentoMetodos)
+      : iModelPagamentoMetodosExecutar;
+    function SetValor(Value: Currency): iModelPagamentoMetodosExecutar;
+    function &End: iModelPagamentoMetodos;
   end;
 
 implementation
 
 { TModelPagamentoTipoCartaoCreditoExecultar }
 
-constructor TModelPagamentoTipoCartaoCreditoExecultar.Create;
+constructor TModelPagamentoTipoCartaoCreditoExecultar.Create
+  (Parent: iModelPagamentoMetodos);
 begin
-
+  FParent := Parent;
 end;
 
 destructor TModelPagamentoTipoCartaoCreditoExecultar.Destroy;
@@ -33,9 +37,9 @@ begin
 end;
 
 class function TModelPagamentoTipoCartaoCreditoExecultar.New
-  : iModelPagamentoMetodosExecutar;
+  (Parent: iModelPagamentoMetodos): iModelPagamentoMetodosExecutar;
 begin
-  Result := Self.Create;
+  Result := Self.Create(Parent);
 end;
 
 end.

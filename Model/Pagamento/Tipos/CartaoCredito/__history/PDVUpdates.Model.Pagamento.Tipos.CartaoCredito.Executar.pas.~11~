@@ -10,7 +10,6 @@ type
   TModelPagamentoTipoCartaoCreditoExecultar = class(TInterfacedObject,
     iModelPagamentoMetodosExecutar)
   private
-    FValor: Currency;
     FParent: iModelPagamentoMetodos;
     FVenda: iModelVenda;
     procedure Gravar;
@@ -31,16 +30,6 @@ implementation
 function TModelPagamentoTipoCartaoCreditoExecultar.&End: iModelPagamentoMetodos;
 begin
   Result := FParent;
-end;
-
-procedure TModelPagamentoTipoCartaoCreditoExecultar.Fiscal;
-begin
-
-end;
-
-procedure TModelPagamentoTipoCartaoCreditoExecultar.Gravar;
-begin
-
 end;
 
 constructor TModelPagamentoTipoCartaoCreditoExecultar.Create
@@ -66,8 +55,7 @@ end;
 function TModelPagamentoTipoCartaoCreditoExecultar.SetValor(Value: Currency)
   : iModelPagamentoMetodosExecutar;
 begin
-  Result := Self;
-  FValor := Value;
+
 end;
 
 end.
