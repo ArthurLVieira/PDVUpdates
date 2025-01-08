@@ -413,6 +413,21 @@
         <DCCReference Include="Model\Pagamento\Tipos\PDVUpdates.Model.Pagamento.Tipos.Factory.pas"/>
         <DCCReference Include="Model\Pagamento\Tipos\CartaoCredito\PDVUpdates.Model.Pagamento.Tipos.CartaoCredito.pas"/>
         <DCCReference Include="Model\Pagamento\Tipos\CartaoCredito\PDVUpdates.Model.Pagamento.Tipos.CartaoCredito.Executar.pas"/>
+        <DCCReference Include="Model\Empresa\PDVUpdates.Model.Empresa.Interfaces.pas"/>
+        <DCCReference Include="Model\Empresa\PDVUpdates.Model.Empresa.pas"/>
+        <DCCReference Include="Model\Fiscal\PDVUpdates.Model.Fiscal.Interfaces.pas"/>
+        <DCCReference Include="Model\Fiscal\PDVUpdates.Model.Fiscal.pas"/>
+        <DCCReference Include="Model\Fiscal\SAT\PDVUpdates.Model.Fiscal.dmSAT.pas">
+            <Form>dmSATFiscal</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="Model\Fiscal\NFCe\Componentes\PDVUpdates.Model.Fiscal.NFCe.Componentes.Interfaces.pas"/>
+        <DCCReference Include="Model\Fiscal\Proxy\PDVUpdates.Model.Fiscal.Proxy.Interfaces.pas"/>
+        <DCCReference Include="Model\Fiscal\Proxy\PDVUpdates.Model.Fiscal.Proxy.Identificacao.pas"/>
+        <DCCReference Include="Model\Fiscal\Proxy\PDVUpdates.Model.Fiscal.Proxy.Contribuinte.pas"/>
+        <DCCReference Include="Model\Fiscal\Proxy\PDVUpdates.Model.Fiscal.Proxy.Endereco.pas"/>
+        <DCCReference Include="Model\Fiscal\Proxy\PDVUpdates.Model.Fiscal.Proxy.Emitente.pas"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>

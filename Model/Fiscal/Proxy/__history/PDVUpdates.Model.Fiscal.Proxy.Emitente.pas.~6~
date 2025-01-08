@@ -1,0 +1,63 @@
+unit PDVUpdates.Model.Fiscal.Proxy.Emitente;
+
+interface
+
+uses
+  PDVUpdates.Model.Fiscal.Interfaces;
+
+type
+
+  TModelFiscalProxyEmitente = class(TInterfacedObject,
+    iModelFiscalProxyEmitente)
+  private
+    FParent: iModelFiscalProxy;
+    FContribuinte: iModelFiscalProxyContribuinte<iModelFiscalProxyEmitente>;
+    FEndereco: iModelFiscalProxyEndereco<iModelFiscalProxyEmitente>;
+  public
+    constructor Create;
+    destructor Destroy; override;
+    class function New: iModelFiscalProxyEmitente;
+    function Contribuinte
+      : iModelFiscalProxyContribuinte<iModelFiscalProxyEmitente>;
+    function Endereco: iModelFiscalProxyEndereco<iModelFiscalProxyEmitente>;
+    function &End: iModelFiscalProxy;
+  end;
+
+implementation
+
+{ TModelFiscalProxyEmitente }
+
+function TModelFiscalProxyEmitente.Contribuinte
+  : iModelFiscalProxyContribuinte<iModelFiscalProxyEmitente>;
+begin
+
+end;
+
+function TModelFiscalProxyEmitente.&End: iModelFiscalProxy;
+begin
+
+end;
+
+constructor TModelFiscalProxyEmitente.Create;
+begin
+
+end;
+
+destructor TModelFiscalProxyEmitente.Destroy;
+begin
+
+  inherited;
+end;
+
+function TModelFiscalProxyEmitente.Endereco
+  : iModelFiscalProxyEndereco<iModelFiscalProxyEmitente>;
+begin
+
+end;
+
+class function TModelFiscalProxyEmitente.New: iModelFiscalProxyEmitente;
+begin
+  Result := Self.Create;
+end;
+
+end.

@@ -54,8 +54,13 @@
     <Transaction>2025/01/03 22:19:28.000.587,=C:\Users\user\Documents\GitHub\PDVUpdates\Unit1.pas</Transaction>
     <Transaction>2025/01/03 22:19:54.000.137,C:\Users\user\Documents\GitHub\PDVUpdates\Unit1.pas=C:\Users\user\Documents\GitHub\PDVUpdates\Controller\Dialog\PDVUpdates.Controller.Dialog.Factory.pas</Transaction>
     <Transaction>2025/01/06 00:00:29.000.796,=C:\Users\user\Documents\GitHub\PDVUpdates\Unit1.pas</Transaction>
+<<<<<<< HEAD
     <Transaction>2025/01/06 00:02:02.000.141,C:\Users\user\Documents\GitHub\PDVUpdates\Unit1.pas=C:\Users\user\Documents\GitHub\PDVUpdates\Model\Conexao\PDVUpdates.Model.Conexao.pas</Transaction>
     <Transaction>2025/01/06 00:02:02.000.141,C:\Users\user\Documents\GitHub\PDVUpdates\Unit1.dfm=C:\Users\user\Documents\GitHub\PDVUpdates\Model\Conexao\PDVUpdates.Model.Conexao.dfm</Transaction>
+=======
+    <Transaction>2025/01/06 00:02:02.000.141,C:\Users\user\Documents\GitHub\PDVUpdates\Model\Conexao\PDVUpdates.Model.Conexao.dfm=C:\Users\user\Documents\GitHub\PDVUpdates\Unit1.dfm</Transaction>
+    <Transaction>2025/01/06 00:02:02.000.141,C:\Users\user\Documents\GitHub\PDVUpdates\Model\Conexao\PDVUpdates.Model.Conexao.pas=C:\Users\user\Documents\GitHub\PDVUpdates\Unit1.pas</Transaction>
+>>>>>>> b74b86aefee75b75e4e4bc93ec2c2395f068ed6c
     <Transaction>2025/01/06 12:40:13.000.537,=C:\Users\user\Documents\GitHub\PDVUpdates\Unit1.pas</Transaction>
     <Transaction>2025/01/06 12:41:03.000.912,C:\Users\user\Documents\GitHub\PDVUpdates\Unit1.pas=C:\Users\user\Documents\GitHub\PDVUpdates\Model\Usuario\Funcoes\PDVUpdates.Model.Usuario.Funcoes.ListaUsuario.pas</Transaction>
     <Transaction>2025/01/06 12:42:10.000.115,=C:\Users\user\Documents\GitHub\PDVUpdates\Unit1.pas</Transaction>
@@ -63,6 +68,7 @@
     <Transaction>2025/01/06 12:44:23.000.824,=C:\Users\user\Documents\GitHub\PDVUpdates\Unit1.pas</Transaction>
     <Transaction>2025/01/06 12:44:50.000.939,C:\Users\user\Documents\GitHub\PDVUpdates\Unit1.pas=C:\Users\user\Documents\GitHub\PDVUpdates\Model\Usuario\Funcoes\PDVUpdates.Model.Usuario.Funcoes.Interfaces.pas</Transaction>
     <Transaction>2025/01/06 12:55:15.000.582,=C:\Users\user\Documents\GitHub\PDVUpdates\Unit1.pas</Transaction>
+<<<<<<< HEAD
     <Transaction>2025/01/06 12:55:40.000.498,C:\Users\user\Documents\GitHub\PDVUpdates\Unit1.pas=C:\Users\user\Documents\GitHub\PDVUpdates\Model\Usuario\Funcoes\PDVUpdates.Model.Usuario.Funcoes.Factory.pas</Transaction>
     <Transaction>2025/01/06 22:10:37.000.755,C:\Users\user\Documents\GitHub\PDVUpdates\Model\Entity\PDVUpdates.Model.EntityTB_USUARIOS.pas=</Transaction>
     <Transaction>2025/01/06 22:12:58.000.431,=C:\Users\user\Documents\GitHub\PDVUpdates\Model\Entity\PDVUpdates.Model.Entity.CAIXA.pas</Transaction>
@@ -84,6 +90,50 @@
     <Transaction>2025/01/07 12:45:04.000.627,C:\Users\user\Documents\GitHub\PDVUpdates\Unit1.pas=C:\Users\user\Documents\GitHub\PDVUpdates\Model\Pagamento\Tipos\CartaoCredito\PDVUpdates.Model.Pagamento.Tipos.CartaoCredito.Executar.pas</Transaction>
     <Transaction>2025/01/07 14:41:50.973,=C:\Users\user\Documents\GitHub\PDVUpdates\Unit1.pas</Transaction>
     <Transaction>2025/01/07 14:42:45.868,=C:\Users\user\Documents\GitHub\PDVUpdates\Unit1.pas</Transaction>
+=======
+    <Transaction>2025/01/06 12:55:40.000.498,C:\Users\user\Documents\GitHub\PDVUpdates\Model\Usuario\Funcoes\PDVUpdates.Model.Usuario.Funcoes.Factory.pas=C:\Users\user\Documents\GitHub\PDVUpdates\Unit1.pas</Transaction>
+    <Transaction>2025/01/06 22:10:37.755,C:\Users\user\Documents\GitHub\PDVUpdates\Model\Entity\PDVUpdates.Model.EntityTB_USUARIOS.pas=</Transaction>
+    <Transaction>2025/01/06 22:12:58.431,=C:\Users\user\Documents\GitHub\PDVUpdates\Model\Entity\PDVUpdates.Model.Entity.CAIXA.pas</Transaction>
+    <Transaction>2025/01/06 23:59:08.684,=C:\Users\user\Documents\GitHub\PDVUpdates\Unit1.pas</Transaction>
+    <Transaction>2025/01/07 00:00:55.118,C:\Users\user\Documents\GitHub\PDVUpdates\Model\Venda\PDVUpdates.Model.Venda.Interfaces.pas=C:\Users\user\Documents\GitHub\PDVUpdates\Unit1.pas</Transaction>
+    <Transaction>2025/01/07 00:25:21.905,C:\Users\user\Documents\GitHub\PDVUpdates\Model\Entity\PDVUpdates.Model.Entity.Usuario.pas=</Transaction>
+    <Transaction>2025/01/07 00:25:56.749,=C:\Users\user\Documents\GitHub\PDVUpdates\Model\Entity\PDVUpdates.Model.Entity.USUARIO.pas</Transaction>
+    <Transaction>2025/01/07 00:36:02.610,=C:\Users\user\Documents\GitHub\PDVUpdates\Unit1.pas</Transaction>
+    <Transaction>2025/01/07 00:36:37.386,C:\Users\user\Documents\GitHub\PDVUpdates\Model\Pagamento\PDVUpdates.Model.Pagamento.Interfaces.pas=C:\Users\user\Documents\GitHub\PDVUpdates\Unit1.pas</Transaction>
+    <Transaction>2025/01/07 00:45:49.257,=C:\Users\user\Documents\GitHub\PDVUpdates\Unit1.pas</Transaction>
+    <Transaction>2025/01/07 00:46:30.372,C:\Users\user\Documents\GitHub\PDVUpdates\Model\Pagamento\PDVUpdates.Model.Pagamento.Iterator.pas=C:\Users\user\Documents\GitHub\PDVUpdates\Unit1.pas</Transaction>
+    <Transaction>2025/01/07 12:20:48.574,=C:\Users\user\Documents\GitHub\PDVUpdates\Unit1.pas</Transaction>
+    <Transaction>2025/01/07 12:24:12.489,C:\Users\user\Documents\GitHub\PDVUpdates\Model\Pagamento\Tipos\PDVUpdates.Model.Pagamento.Tipos.Interfaces.pas=C:\Users\user\Documents\GitHub\PDVUpdates\Unit1.pas</Transaction>
+    <Transaction>2025/01/07 12:28:34.832,=C:\Users\user\Documents\GitHub\PDVUpdates\Unit1.pas</Transaction>
+    <Transaction>2025/01/07 12:28:53.536,C:\Users\user\Documents\GitHub\PDVUpdates\Model\Pagamento\Tipos\PDVUpdates.Model.Pagamento.Tipos.Factory.pas=C:\Users\user\Documents\GitHub\PDVUpdates\Unit1.pas</Transaction>
+    <Transaction>2025/01/07 12:37:07.897,=C:\Users\user\Documents\GitHub\PDVUpdates\Unit1.pas</Transaction>
+    <Transaction>2025/01/07 12:38:06.710,C:\Users\user\Documents\GitHub\PDVUpdates\Model\Pagamento\Tipos\CartaoCredito\PDVUpdates.Model.Pagamento.Tipos.CartaoCredito.pas=C:\Users\user\Documents\GitHub\PDVUpdates\Unit1.pas</Transaction>
+    <Transaction>2025/01/07 12:44:09.502,=C:\Users\user\Documents\GitHub\PDVUpdates\Unit1.pas</Transaction>
+    <Transaction>2025/01/07 12:45:04.627,C:\Users\user\Documents\GitHub\PDVUpdates\Model\Pagamento\Tipos\CartaoCredito\PDVUpdates.Model.Pagamento.Tipos.CartaoCredito.Executar.pas=C:\Users\user\Documents\GitHub\PDVUpdates\Unit1.pas</Transaction>
+    <Transaction>2025/01/07 18:30:52.342,=C:\Users\user\Documents\GitHub\PDVUpdates\Unit1.pas</Transaction>
+    <Transaction>2025/01/07 18:32:39.059,C:\Users\user\Documents\GitHub\PDVUpdates\Model\Empresa\PDVUpdates.Model.Empresa.Interfaces.pas=C:\Users\user\Documents\GitHub\PDVUpdates\Unit1.pas</Transaction>
+    <Transaction>2025/01/07 18:35:58.693,=C:\Users\user\Documents\GitHub\PDVUpdates\Unit1.pas</Transaction>
+    <Transaction>2025/01/07 18:36:12.031,C:\Users\user\Documents\GitHub\PDVUpdates\Model\Empresa\PDVUpdates.Model.Empresa.pas=C:\Users\user\Documents\GitHub\PDVUpdates\Unit1.pas</Transaction>
+    <Transaction>2025/01/07 18:44:50.384,=C:\Users\user\Documents\GitHub\PDVUpdates\Unit1.pas</Transaction>
+    <Transaction>2025/01/07 18:45:41.688,C:\Users\user\Documents\GitHub\PDVUpdates\Model\Fiscal\PDVUpdates.Model.Fiscal.Interfaces.pas=C:\Users\user\Documents\GitHub\PDVUpdates\Unit1.pas</Transaction>
+    <Transaction>2025/01/07 22:27:14.696,=C:\Users\user\Documents\GitHub\PDVUpdates\Unit1.pas</Transaction>
+    <Transaction>2025/01/07 22:27:44.970,C:\Users\user\Documents\GitHub\PDVUpdates\Model\Fiscal\PDVUpdates.Model.Fiscal.pas=C:\Users\user\Documents\GitHub\PDVUpdates\Unit1.pas</Transaction>
+    <Transaction>2025/01/07 22:31:05.203,=C:\Users\user\Documents\GitHub\PDVUpdates\Unit2.pas</Transaction>
+    <Transaction>2025/01/07 22:33:23.549,C:\Users\user\Documents\GitHub\PDVUpdates\Model\Fiscal\SAT\PDVUpdates.Model.Fiscal.dmSAT.pas=C:\Users\user\Documents\GitHub\PDVUpdates\Unit2.pas</Transaction>
+    <Transaction>2025/01/07 22:33:23.549,C:\Users\user\Documents\GitHub\PDVUpdates\Model\Fiscal\SAT\PDVUpdates.Model.Fiscal.dmSAT.dfm=C:\Users\user\Documents\GitHub\PDVUpdates\Unit2.dfm</Transaction>
+    <Transaction>2025/01/07 22:35:58.698,=C:\Users\user\Documents\GitHub\PDVUpdates\Unit1.pas</Transaction>
+    <Transaction>2025/01/08 00:56:06.805,C:\Users\user\Documents\GitHub\PDVUpdates\Model\Fiscal\NFCe\Componentes\PDVUpdates.Model.Fiscal.NFCe.Componentes.Interfaces.pas=C:\Users\user\Documents\GitHub\PDVUpdates\Unit1.pas</Transaction>
+    <Transaction>2025/01/08 00:57:20.090,=C:\Users\user\Documents\GitHub\PDVUpdates\Unit1.pas</Transaction>
+    <Transaction>2025/01/08 00:58:01.694,C:\Users\user\Documents\GitHub\PDVUpdates\Model\Fiscal\Proxy\PDVUpdates.Model.Fiscal.Proxy.Interfaces.pas=C:\Users\user\Documents\GitHub\PDVUpdates\Unit1.pas</Transaction>
+    <Transaction>2025/01/08 00:58:30.591,=C:\Users\user\Documents\GitHub\PDVUpdates\Unit1.pas</Transaction>
+    <Transaction>2025/01/08 00:58:57.357,C:\Users\user\Documents\GitHub\PDVUpdates\Model\Fiscal\Proxy\PDVUpdates.Model.Fiscal.Proxy.Identificacao.pas=C:\Users\user\Documents\GitHub\PDVUpdates\Unit1.pas</Transaction>
+    <Transaction>2025/01/08 01:07:01.072,=C:\Users\user\Documents\GitHub\PDVUpdates\Unit1.pas</Transaction>
+    <Transaction>2025/01/08 01:07:27.593,C:\Users\user\Documents\GitHub\PDVUpdates\Model\Fiscal\Proxy\PDVUpdates.Model.Fiscal.Proxy.Contribuinte.pas=C:\Users\user\Documents\GitHub\PDVUpdates\Unit1.pas</Transaction>
+    <Transaction>2025/01/08 11:18:04.443,=C:\Users\user\Documents\GitHub\PDVUpdates\Unit1.pas</Transaction>
+    <Transaction>2025/01/08 11:18:27.563,C:\Users\user\Documents\GitHub\PDVUpdates\Model\Fiscal\Proxy\PDVUpdates.Model.Fiscal.Proxy.Endereco.pas=C:\Users\user\Documents\GitHub\PDVUpdates\Unit1.pas</Transaction>
+    <Transaction>2025/01/08 12:11:18.000,=C:\Users\user\Documents\GitHub\PDVUpdates\Unit1.pas</Transaction>
+    <Transaction>2025/01/08 12:11:55.735,C:\Users\user\Documents\GitHub\PDVUpdates\Model\Fiscal\Proxy\PDVUpdates.Model.Fiscal.Proxy.Emitente.pas=C:\Users\user\Documents\GitHub\PDVUpdates\Unit1.pas</Transaction>
+>>>>>>> b74b86aefee75b75e4e4bc93ec2c2395f068ed6c
   </Transactions>
 	<ProjectSortOrder AutoSort="0" SortType="0">
     <File Path="activity-1.7.2.dex.jar"/>
@@ -328,11 +378,29 @@
     <File Path="Model\Conexao"/>
     <File Path="Model\Conexao\PDVUpdates.Model.Conexao.pas"/>
     <File Path="Model\Conexao\PDVUpdates.Model.Conexao.dfm"/>
+    <File Path="Model\Empresa"/>
+    <File Path="Model\Empresa\PDVUpdates.Model.Empresa.Interfaces.pas"/>
+    <File Path="Model\Empresa\PDVUpdates.Model.Empresa.pas"/>
     <File Path="Model\Entity"/>
     <File Path="Model\Entity\PDVUpdates.Model.Entity.Factory.pas"/>
     <File Path="Model\Entity\PDVUpdates.Model.Entity.Interfaces.pas"/>
     <File Path="Model\Entity\PDVUpdates.Model.Entity.CAIXA.pas"/>
     <File Path="Model\Entity\PDVUpdates.Model.Entity.USUARIO.pas"/>
+    <File Path="Model\Fiscal"/>
+    <File Path="Model\Fiscal\NFCe"/>
+    <File Path="Model\Fiscal\NFCe\Componentes"/>
+    <File Path="Model\Fiscal\NFCe\Componentes\PDVUpdates.Model.Fiscal.NFCe.Componentes.Interfaces.pas"/>
+    <File Path="Model\Fiscal\Proxy"/>
+    <File Path="Model\Fiscal\Proxy\PDVUpdates.Model.Fiscal.Proxy.Interfaces.pas"/>
+    <File Path="Model\Fiscal\Proxy\PDVUpdates.Model.Fiscal.Proxy.Identificacao.pas"/>
+    <File Path="Model\Fiscal\Proxy\PDVUpdates.Model.Fiscal.Proxy.Contribuinte.pas"/>
+    <File Path="Model\Fiscal\Proxy\PDVUpdates.Model.Fiscal.Proxy.Endereco.pas"/>
+    <File Path="Model\Fiscal\Proxy\PDVUpdates.Model.Fiscal.Proxy.Emitente.pas"/>
+    <File Path="Model\Fiscal\SAT"/>
+    <File Path="Model\Fiscal\SAT\PDVUpdates.Model.Fiscal.dmSAT.pas"/>
+    <File Path="Model\Fiscal\SAT\PDVUpdates.Model.Fiscal.dmSAT.dfm"/>
+    <File Path="Model\Fiscal\PDVUpdates.Model.Fiscal.Interfaces.pas"/>
+    <File Path="Model\Fiscal\PDVUpdates.Model.Fiscal.pas"/>
     <File Path="Model\Item"/>
     <File Path="Model\Item\Metodos"/>
     <File Path="Model\Item\Metodos\PDVUpdates.Model.Item.Metodos.Acrescimo.pas"/>

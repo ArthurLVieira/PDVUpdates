@@ -1,0 +1,169 @@
+unit PDVUpdates.Model.Fiscal.Proxy.Endereco;
+
+interface
+
+uses
+  PDVUpdates.Model.Fiscal.Interfaces;
+
+type
+
+  TModelFiscalproxyEndereco<T> = class(TInterfacedObject,
+    iModelFiscalProxyendereco<T>)
+  private
+    FParent: T;
+    FLogradouro: String;
+    FNumero: Integer;
+    FBairro: String;
+    FCidade: String;
+    FUF: String;
+    FCEP: String;
+    FcMunicipio: String;
+    FComplemento: String;
+  public
+    constructor Create(Parent: T);
+    destructor Destroy; override;
+    class function New(Parent: T): iModelFiscalProxyendereco<T>;
+    function Logradouro(Value: String): iModelFiscalProxyendereco<T>; overload;
+    function Numero(Value: Integer): iModelFiscalProxyendereco<T>; overload;
+    function Bairro(Value: String): iModelFiscalProxyendereco<T>; overload;
+    function Cidade(Value: String): iModelFiscalProxyendereco<T>; overload;
+    function UF(Value: String): iModelFiscalProxyendereco<T>; overload;
+    function CEP(Value: String): iModelFiscalProxyendereco<T>; overload;
+    function cMunicipio(Value: String): iModelFiscalProxyendereco<T>; overload;
+    function Complemento(Value: String): iModelFiscalProxyendereco<T>; overload;
+    function Complemento: String; overload;
+    function cMunicipio: String; overload;
+    function Logradouro: String; overload;
+    function Numero: Integer; overload;
+    function Bairro: String; overload;
+    function Cidade: String; overload;
+    function UF: String; overload;
+    function CEP: String; overload;
+    function &End: T;
+  end;
+
+implementation
+
+{ TModelFiscalproxyEndereco<T> }
+
+function TModelFiscalproxyEndereco<T>.Bairro(Value: String)
+  : iModelFiscalProxyendereco<T>;
+begin
+  Result := Self;
+  FBairro := Value;
+end;
+
+function TModelFiscalproxyEndereco<T>.Bairro: String;
+begin
+  Result := FBairro;
+end;
+
+function TModelFiscalproxyEndereco<T>.CEP: String;
+begin
+  if FCEP = '' then
+    FCEP := '0';
+  Result := FBairro;
+end;
+
+function TModelFiscalproxyEndereco<T>.CEP(Value: String)
+  : iModelFiscalProxyendereco<T>;
+begin
+  Result := Self;
+  FCEP := Value;
+end;
+
+function TModelFiscalproxyEndereco<T>.Cidade: String;
+begin
+  Result := FCidade;
+end;
+
+function TModelFiscalproxyEndereco<T>.Cidade(Value: String)
+  : iModelFiscalProxyendereco<T>;
+begin
+  Result := Self;
+  FCidade := Value;
+end;
+
+function TModelFiscalproxyEndereco<T>.cMunicipio: String;
+begin
+  if FcMunicipio = '' then
+    FcMunicipio := '0';
+  Result := FcMunicipio;
+end;
+
+function TModelFiscalproxyEndereco<T>.cMunicipio(Value: String)
+  : iModelFiscalProxyendereco<T>;
+begin
+  Result := Self;
+  FcMunicipio := Value;
+end;
+
+function TModelFiscalproxyEndereco<T>.Complemento(Value: String)
+  : iModelFiscalProxyendereco<T>;
+begin
+  Result := Self;
+  FComplemento := Value;
+end;
+
+function TModelFiscalproxyEndereco<T>.Complemento: String;
+begin
+  Result := FComplemento;
+end;
+
+function TModelFiscalproxyEndereco<T>.&End: T;
+begin
+  Result := FParent;
+end;
+
+constructor TModelFiscalproxyEndereco<T>.Create(Parent: T);
+begin
+  FParent := Parent;
+end;
+
+destructor TModelFiscalproxyEndereco<T>.Destroy;
+begin
+
+  inherited;
+end;
+
+function TModelFiscalproxyEndereco<T>.Logradouro: String;
+begin
+  Result := FLogradouro;
+end;
+
+function TModelFiscalproxyEndereco<T>.Logradouro(Value: String)
+  : iModelFiscalProxyendereco<T>;
+begin
+  Result := Self;
+  FLogradouro := Value;
+end;
+
+class function TModelFiscalproxyEndereco<T>.New(Parent: T)
+  : iModelFiscalProxyendereco<T>;
+begin
+  Result := Self.Create(Parent);
+end;
+
+function TModelFiscalproxyEndereco<T>.Numero: Integer;
+begin
+
+end;
+
+function TModelFiscalproxyEndereco<T>.Numero(Value: Integer)
+  : iModelFiscalProxyendereco<T>;
+begin
+
+end;
+
+function TModelFiscalproxyEndereco<T>.UF: String;
+begin
+
+end;
+
+function TModelFiscalproxyEndereco<T>.UF(Value: String)
+  : iModelFiscalProxyendereco<T>;
+begin
+
+end;
+
+end.
