@@ -104,14 +104,7 @@ uses
   PDVUpdates.Model.Pagamento.Tipos.CartaoCredito in 'Model\Pagamento\Tipos\CartaoCredito\PDVUpdates.Model.Pagamento.Tipos.CartaoCredito.pas',
   PDVUpdates.Model.Pagamento.Tipos.CartaoCredito.Executar in 'Model\Pagamento\Tipos\CartaoCredito\PDVUpdates.Model.Pagamento.Tipos.CartaoCredito.Executar.pas',
   PDVUpdates.Model.Empresa.Interfaces in 'Model\Empresa\PDVUpdates.Model.Empresa.Interfaces.pas',
-  PDVUpdates.Model.Empresa in 'Model\Empresa\PDVUpdates.Model.Empresa.pas',
-  PDVUpdates.Model.Fiscal.Interfaces in 'Model\Fiscal\PDVUpdates.Model.Fiscal.Interfaces.pas',
-  PDVUpdates.Model.Fiscal in 'Model\Fiscal\PDVUpdates.Model.Fiscal.pas',
-  PDVUpdates.Model.Fiscal.dmSAT in 'Model\Fiscal\SAT\PDVUpdates.Model.Fiscal.dmSAT.pas' {dmSATFiscal: TDataModule},
-  PDVUpdates.Model.Fiscal.NFCe.Componentes.Interfaces in 'Model\Fiscal\NFCe\Componentes\PDVUpdates.Model.Fiscal.NFCe.Componentes.Interfaces.pas',
-  PDVUpdates.Model.Fiscal.Proxy.Interfaces in 'Model\Fiscal\Proxy\PDVUpdates.Model.Fiscal.Proxy.Interfaces.pas',
-  PDVUpdates.Model.Fiscal.Proxy.Identificacao in 'Model\Fiscal\Proxy\PDVUpdates.Model.Fiscal.Proxy.Identificacao.pas',
-  PDVUpdates.Model.Fiscal.Proxy.Contribuinte in 'Model\Fiscal\Proxy\PDVUpdates.Model.Fiscal.Proxy.Contribuinte.pas';
+  PDVUpdates.Model.Empresa in 'Model\Empresa\PDVUpdates.Model.Empresa.pas';
 
 {$R *.res}
 
@@ -121,6 +114,5 @@ begin
   Application.CreateForm(TFrmSenhaUsuario, FrmSenhaUsuario);
   Application.CreateForm(TFrmCapturaValor, FrmCapturaValor);
   Application.CreateForm(TDataModule1, DataModule1);
-  Application.CreateForm(TdmSATFiscal, dmSATFiscal);
   Application.Run;
 end.

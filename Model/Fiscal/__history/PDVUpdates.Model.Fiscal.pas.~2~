@@ -1,0 +1,39 @@
+unit PDVUpdates.Model.Fiscal;
+
+interface
+
+uses
+  PDVUpdates.Model.Fiscal.Interfaces;
+
+type
+
+  TModelFiscal = class(TInterfacedObject, iModelFiscal)
+  private
+
+  public
+    constructor Create;
+    destructor Destroy; override;
+    class function New: iModelFiscal;
+  end;
+
+implementation
+
+{ TModelFiscal }
+
+constructor TModelFiscal.Create;
+begin
+
+end;
+
+destructor TModelFiscal.Destroy;
+begin
+
+  inherited;
+end;
+
+class function TModelFiscal.New: iModelFiscal;
+begin
+  Result := Self.Create;
+end;
+
+end.

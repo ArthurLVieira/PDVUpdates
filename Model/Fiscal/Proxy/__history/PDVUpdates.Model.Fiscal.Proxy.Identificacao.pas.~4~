@@ -1,0 +1,52 @@
+unit PDVUpdates.Model.Fiscal.Proxy.Identificacao;
+
+interface
+
+uses
+  PDVUpdates.Model.Fiscal.Interfaces;
+
+type
+
+  TModelFiscalProxyIdentificacao = class(TInterfacedObject,
+    iModelFiscalProxyIdentificacao)
+  private
+    FParent: iModelFiscalProxy;
+    FNumero: Integer;
+    FSerie: Integer;
+    FData: TDateTime;
+  public
+    constructor Create(Parent: iModelFiscalProxy);
+    destructor Destroy; override;
+    class function New(Parent: iModelFiscalProxy)
+      : iModelFiscalProxyIdentificacao;
+    function Numero(Value: Integer): iModelFiscalProxyIdentificacao; overload;
+    function Data(Value: TDateTime): iModelFiscalProxyIdentificacao; overload;
+    function Serie(Value: Integer): iModelFiscalProxyIdentificacao; overload;
+    function Serie: Integer; overload;
+    function Numero: Integer; overload;
+    function Data: TDateTime; overload;
+    function &End: iModelFiscalProxy;
+  end;
+
+implementation
+
+{ TModelFiscalProxyIdentificacao }
+
+constructor TModelFiscalProxyIdentificacao.Create(Parent: iModelFiscalProxy);
+begin
+
+end;
+
+destructor TModelFiscalProxyIdentificacao.Destroy;
+begin
+
+  inherited;
+end;
+
+class function TModelFiscalProxyIdentificacao.New(Parent: iModelFiscalProxy)
+  : iModelFiscalProxyIdentificacao;
+begin
+  Result := Self.Create;
+end;
+
+end.

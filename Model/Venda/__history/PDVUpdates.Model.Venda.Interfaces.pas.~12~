@@ -4,8 +4,7 @@ interface
 
 uses
   PDVUpdates.Model.Cliente.Interfaces, PDVUpdates.Model.Item.Interfaces,
-  PDVUpdates.Model.Caixa.Interfaces, PDVUpdates.Model.Pagamento.Interfaces,
-  PDVUpdates.Model.Empresa.Interfaces;
+  PDVUpdates.Model.Caixa.Interfaces;
 
 type
   iModelVendaMetodos = interface;
@@ -20,11 +19,6 @@ type
     function Clientes(Value: iModelCliente): iModelVenda; overload;
     function Itens: iModelItem;
     function Caixa: iModelCaixa;
-    function Pagamento: iModelPagamento;
-    function Empresa: iModelEmpresa;
-    function SetState(Value: iModelVendaMetodos): iModelVendaMetodos;
-    function ModalidadeFiscal(Value: iModelFiscal): iModelVenda; overload;
-    function ModalidadeFiscal: iModelFiscal; overload;
 
   end;
 

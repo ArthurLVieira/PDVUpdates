@@ -1,0 +1,90 @@
+unit PDVUpdates.Model.Fiscal.Proxy.Identificacao;
+
+interface
+
+uses
+  PDVUpdates.Model.Fiscal.Interfaces;
+
+type
+
+  TModelFiscalProxyIdentificacao = class(TInterfacedObject,
+    iModelFiscalProxyIdentificacao)
+  private
+    FParent: iModelFiscalProxy;
+    FNumero: Integer;
+    FSerie: Integer;
+    FData: TDateTime;
+  public
+    constructor Create(Parent: iModelFiscalProxy);
+    destructor Destroy; override;
+    class function New(Parent: iModelFiscalProxy)
+      : iModelFiscalProxyIdentificacao;
+    function Numero(Value: Integer): iModelFiscalProxyIdentificacao; overload;
+    function Data(Value: TDateTime): iModelFiscalProxyIdentificacao; overload;
+    function Serie(Value: Integer): iModelFiscalProxyIdentificacao; overload;
+    function Serie: Integer; overload;
+    function Numero: Integer; overload;
+    function Data: TDateTime; overload;
+    function &End: iModelFiscalProxy;
+  end;
+
+implementation
+
+{ TModelFiscalProxyIdentificacao }
+
+function TModelFiscalProxyIdentificacao.&End: iModelFiscalProxy;
+begin
+  Result := FParent;
+end;
+
+constructor TModelFiscalProxyIdentificacao.Create(Parent: iModelFiscalProxy);
+begin
+  FParent := Parent;
+end;
+
+function TModelFiscalProxyIdentificacao.Data: TDateTime;
+begin
+
+end;
+
+function TModelFiscalProxyIdentificacao.Data(Value: TDateTime)
+  : iModelFiscalProxyIdentificacao;
+begin
+
+end;
+
+destructor TModelFiscalProxyIdentificacao.Destroy;
+begin
+
+  inherited;
+end;
+
+class function TModelFiscalProxyIdentificacao.New(Parent: iModelFiscalProxy)
+  : iModelFiscalProxyIdentificacao;
+begin
+  Result := Self.Create(Parent);
+end;
+
+function TModelFiscalProxyIdentificacao.Numero(Value: Integer)
+  : iModelFiscalProxyIdentificacao;
+begin
+
+end;
+
+function TModelFiscalProxyIdentificacao.Numero: Integer;
+begin
+
+end;
+
+function TModelFiscalProxyIdentificacao.Serie: Integer;
+begin
+
+end;
+
+function TModelFiscalProxyIdentificacao.Serie(Value: Integer)
+  : iModelFiscalProxyIdentificacao;
+begin
+
+end;
+
+end.

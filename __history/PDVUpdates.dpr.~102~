@@ -110,8 +110,7 @@ uses
   PDVUpdates.Model.Fiscal.dmSAT in 'Model\Fiscal\SAT\PDVUpdates.Model.Fiscal.dmSAT.pas' {dmSATFiscal: TDataModule},
   PDVUpdates.Model.Fiscal.NFCe.Componentes.Interfaces in 'Model\Fiscal\NFCe\Componentes\PDVUpdates.Model.Fiscal.NFCe.Componentes.Interfaces.pas',
   PDVUpdates.Model.Fiscal.Proxy.Interfaces in 'Model\Fiscal\Proxy\PDVUpdates.Model.Fiscal.Proxy.Interfaces.pas',
-  PDVUpdates.Model.Fiscal.Proxy.Identificacao in 'Model\Fiscal\Proxy\PDVUpdates.Model.Fiscal.Proxy.Identificacao.pas',
-  PDVUpdates.Model.Fiscal.Proxy.Contribuinte in 'Model\Fiscal\Proxy\PDVUpdates.Model.Fiscal.Proxy.Contribuinte.pas';
+  PDVUpdates.Model.Fiscal.Proxy.Identificacao in 'Model\Fiscal\Proxy\PDVUpdates.Model.Fiscal.Proxy.Identificacao.pas';
 
 {$R *.res}
 

@@ -413,6 +413,19 @@
         <DCCReference Include="Model\Pagamento\Tipos\PDVUpdates.Model.Pagamento.Tipos.Factory.pas"/>
         <DCCReference Include="Model\Pagamento\Tipos\CartaoCredito\PDVUpdates.Model.Pagamento.Tipos.CartaoCredito.pas"/>
         <DCCReference Include="Model\Pagamento\Tipos\CartaoCredito\PDVUpdates.Model.Pagamento.Tipos.CartaoCredito.Executar.pas"/>
+        <DCCReference Include="Model\Empresa\PDVUpdates.Model.Empresa.Interfaces.pas"/>
+        <DCCReference Include="Model\Empresa\PDVUpdates.Model.Empresa.pas"/>
+        <DCCReference Include="Model\Fiscal\PDVUpdates.Model.Fiscal.Interfaces.pas"/>
+        <DCCReference Include="Model\Fiscal\PDVUpdates.Model.Fiscal.pas"/>
+        <DCCReference Include="Model\Fiscal\SAT\PDVUpdates.Model.Fiscal.dmSAT.pas">
+            <Form>dmSATFiscal</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="Model\Fiscal\NFCe\Componentes\PDVUpdates.Model.Fiscal.NFCe.Componentes.Interfaces.pas"/>
+        <DCCReference Include="Model\Fiscal\Proxy\PDVUpdates.Model.Fiscal.Proxy.Interfaces.pas"/>
+        <DCCReference Include="Model\Fiscal\Proxy\PDVUpdates.Model.Fiscal.Proxy.Identificacao.pas"/>
+        <DCCReference Include="Model\Fiscal\Proxy\PDVUpdates.Model.Fiscal.Proxy.Contribuinte.pas"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>
@@ -438,7 +451,7 @@
                     <Excluded_Packages Name="$(BDSBIN)\dclofficexp290.bpl">Microsoft Office XP Sample Automation Server Wrapper Components</Excluded_Packages>
                 </Excluded_Packages>
             </Delphi.Personality>
-            <Deployment Version="4">
+            <Deployment Version="5">
                 <DeployFile LocalName="$(BDS)\Redist\iossimulator\libcgunwind.1.0.dylib" Class="DependencyModule">
                     <Platform Name="iOSSimulator">
                         <Overwrite>true</Overwrite>
@@ -473,16 +486,6 @@
                         <Operation>0</Operation>
                     </Platform>
                 </DeployClass>
-                <DeployClass Name="AndroidClasses">
-                    <Platform Name="Android">
-                        <RemoteDir>classes</RemoteDir>
-                        <Operation>64</Operation>
-                    </Platform>
-                    <Platform Name="Android64">
-                        <RemoteDir>classes</RemoteDir>
-                        <Operation>64</Operation>
-                    </Platform>
-                </DeployClass>
                 <DeployClass Name="AndroidFileProvider">
                     <Platform Name="Android">
                         <RemoteDir>res\xml</RemoteDir>
@@ -490,12 +493,6 @@
                     </Platform>
                     <Platform Name="Android64">
                         <RemoteDir>res\xml</RemoteDir>
-                        <Operation>1</Operation>
-                    </Platform>
-                </DeployClass>
-                <DeployClass Name="AndroidGDBServer">
-                    <Platform Name="Android">
-                        <RemoteDir>library\lib\armeabi-v7a</RemoteDir>
                         <Operation>1</Operation>
                     </Platform>
                 </DeployClass>
@@ -1119,6 +1116,9 @@
                         <Operation>1</Operation>
                     </Platform>
                     <Platform Name="Win64">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="Win64x">
                         <Operation>1</Operation>
                     </Platform>
                 </DeployClass>

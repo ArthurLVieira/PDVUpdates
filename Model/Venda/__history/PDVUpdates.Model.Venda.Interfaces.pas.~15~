@@ -23,8 +23,6 @@ type
     function Pagamento: iModelPagamento;
     function Empresa: iModelEmpresa;
     function SetState(Value: iModelVendaMetodos): iModelVendaMetodos;
-    function ModalidadeFiscal(Value: iModelFiscal): iModelVenda; overload;
-    function ModalidadeFiscal: iModelFiscal; overload;
 
   end;
 
