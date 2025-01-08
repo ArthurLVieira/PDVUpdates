@@ -111,7 +111,9 @@ uses
   PDVUpdates.Model.Fiscal.NFCe.Componentes.Interfaces in 'Model\Fiscal\NFCe\Componentes\PDVUpdates.Model.Fiscal.NFCe.Componentes.Interfaces.pas',
   PDVUpdates.Model.Fiscal.Proxy.Interfaces in 'Model\Fiscal\Proxy\PDVUpdates.Model.Fiscal.Proxy.Interfaces.pas',
   PDVUpdates.Model.Fiscal.Proxy.Identificacao in 'Model\Fiscal\Proxy\PDVUpdates.Model.Fiscal.Proxy.Identificacao.pas',
-  PDVUpdates.Model.Fiscal.Proxy.Contribuinte in 'Model\Fiscal\Proxy\PDVUpdates.Model.Fiscal.Proxy.Contribuinte.pas';
+  PDVUpdates.Model.Fiscal.Proxy.Contribuinte in 'Model\Fiscal\Proxy\PDVUpdates.Model.Fiscal.Proxy.Contribuinte.pas',
+  PDVUpdates.Model.Fiscal.Proxy.Endereco in 'Model\Fiscal\Proxy\PDVUpdates.Model.Fiscal.Proxy.Endereco.pas',
+  PDVUpdates.Model.Fiscal.Proxy.Emitente in 'Model\Fiscal\Proxy\PDVUpdates.Model.Fiscal.Proxy.Emitente.pas';
 
 {$R *.res}
 

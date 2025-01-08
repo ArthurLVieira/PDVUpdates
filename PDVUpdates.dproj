@@ -426,6 +426,8 @@
         <DCCReference Include="Model\Fiscal\Proxy\PDVUpdates.Model.Fiscal.Proxy.Interfaces.pas"/>
         <DCCReference Include="Model\Fiscal\Proxy\PDVUpdates.Model.Fiscal.Proxy.Identificacao.pas"/>
         <DCCReference Include="Model\Fiscal\Proxy\PDVUpdates.Model.Fiscal.Proxy.Contribuinte.pas"/>
+        <DCCReference Include="Model\Fiscal\Proxy\PDVUpdates.Model.Fiscal.Proxy.Endereco.pas"/>
+        <DCCReference Include="Model\Fiscal\Proxy\PDVUpdates.Model.Fiscal.Proxy.Emitente.pas"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>

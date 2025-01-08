@@ -101,6 +101,10 @@
     <Transaction>2025/01/08 00:58:57.357,C:\Users\user\Documents\GitHub\PDVUpdates\Model\Fiscal\Proxy\PDVUpdates.Model.Fiscal.Proxy.Identificacao.pas=C:\Users\user\Documents\GitHub\PDVUpdates\Unit1.pas</Transaction>
     <Transaction>2025/01/08 01:07:01.072,=C:\Users\user\Documents\GitHub\PDVUpdates\Unit1.pas</Transaction>
     <Transaction>2025/01/08 01:07:27.593,C:\Users\user\Documents\GitHub\PDVUpdates\Model\Fiscal\Proxy\PDVUpdates.Model.Fiscal.Proxy.Contribuinte.pas=C:\Users\user\Documents\GitHub\PDVUpdates\Unit1.pas</Transaction>
+    <Transaction>2025/01/08 11:18:04.443,=C:\Users\user\Documents\GitHub\PDVUpdates\Unit1.pas</Transaction>
+    <Transaction>2025/01/08 11:18:27.563,C:\Users\user\Documents\GitHub\PDVUpdates\Model\Fiscal\Proxy\PDVUpdates.Model.Fiscal.Proxy.Endereco.pas=C:\Users\user\Documents\GitHub\PDVUpdates\Unit1.pas</Transaction>
+    <Transaction>2025/01/08 12:11:18.000,=C:\Users\user\Documents\GitHub\PDVUpdates\Unit1.pas</Transaction>
+    <Transaction>2025/01/08 12:11:55.735,C:\Users\user\Documents\GitHub\PDVUpdates\Model\Fiscal\Proxy\PDVUpdates.Model.Fiscal.Proxy.Emitente.pas=C:\Users\user\Documents\GitHub\PDVUpdates\Unit1.pas</Transaction>
   </Transactions>
 	<ProjectSortOrder AutoSort="0" SortType="0">
     <File Path="activity-1.7.2.dex.jar"/>
@@ -361,6 +365,8 @@
     <File Path="Model\Fiscal\Proxy\PDVUpdates.Model.Fiscal.Proxy.Interfaces.pas"/>
     <File Path="Model\Fiscal\Proxy\PDVUpdates.Model.Fiscal.Proxy.Identificacao.pas"/>
     <File Path="Model\Fiscal\Proxy\PDVUpdates.Model.Fiscal.Proxy.Contribuinte.pas"/>
+    <File Path="Model\Fiscal\Proxy\PDVUpdates.Model.Fiscal.Proxy.Endereco.pas"/>
+    <File Path="Model\Fiscal\Proxy\PDVUpdates.Model.Fiscal.Proxy.Emitente.pas"/>
     <File Path="Model\Fiscal\SAT"/>
     <File Path="Model\Fiscal\SAT\PDVUpdates.Model.Fiscal.dmSAT.pas"/>
     <File Path="Model\Fiscal\SAT\PDVUpdates.Model.Fiscal.dmSAT.dfm"/>
