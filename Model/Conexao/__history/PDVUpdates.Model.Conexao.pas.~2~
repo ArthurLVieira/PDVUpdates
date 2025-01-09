@@ -7,21 +7,17 @@ uses
   FireDAC.Stan.Error, FireDAC.UI.Intf, FireDAC.Phys.Intf, FireDAC.Stan.Def,
   FireDAC.Stan.Pool, FireDAC.Stan.Async, FireDAC.Phys, FireDAC.FMXUI.Wait,
   FireDAC.Phys.FBDef, FireDAC.Phys.IBBase, FireDAC.Phys.FB, FireDAC.Comp.UI,
-  Data.DB, FireDAC.Comp.Client, PDVUpdates.Model.Conexao.Interfaces,
-  dbebr.factory.Interfaces;
+  Data.DB, FireDAC.Comp.Client;
 
 type
-  TDataModule1 = class(TDataModule, iModelConexao)
+  TDataModule1 = class(TDataModule)
     FDConnection1: TFDConnection;
     FDGUIxWaitCursor1: TFDGUIxWaitCursor;
     FDPhysFBDriverLink1: TFDPhysFBDriverLink;
   private
     { Private declarations }
-    FConn: IDBConnection;
-    function Conn: IDBConnection;
   public
     { Public declarations }
-    class function New: iModelConexao;
   end;
 
 var
@@ -30,17 +26,7 @@ var
 implementation
 
 {%CLASSGROUP 'FMX.Controls.TControl'}
+
 {$R *.dfm}
-{ TDataModule1 }
-
-function TDataModule1.Conn: IDBConnection;
-begin
-  Result := FConn;
-end;
-
-class function TDataModule1.New: iModelConexao;
-begin
-  Result := Self.Create(nil);
-end;
 
 end.

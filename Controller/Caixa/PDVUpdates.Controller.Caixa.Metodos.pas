@@ -38,8 +38,9 @@ begin
   FModel.Metodos.Abrir.SetValorAbertuta
     (TControllerFacade.New.Usuario.Operacoes.CapturaValor.SetTitle
     ('Valor de Abertura').SetTextConfirm('OK').SetTextCancel('Cancelar')
-    .GetValor).SetOperador(TControllerFacade.New.Usuario.Usuario.Caixa.
-    AbrirCaixa.&End).EndAbrir;
+    .GetValor).SetFiscal(TControllerFacade.New.Usuario.Usuario.Caixa.
+    DesbloquearCaixa.&End).SetOperador
+    (TControllerFacade.New.Usuario.Usuario.Caixa.AbrirCaixa.&End).EndAbrir;
 end;
 
 function TControllerCaixaMetodos.BloquearCaixa: iControllerCaixaMetodos;

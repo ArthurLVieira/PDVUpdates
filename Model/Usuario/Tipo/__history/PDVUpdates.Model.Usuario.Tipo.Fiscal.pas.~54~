@@ -11,11 +11,13 @@ type
   TModelUsuarioTipoFiscal = class(TInterfacedObject, iModelUsuarioMetodos)
   private
     Flista: TList<TRecordSenha>;
+    FRetorno: TRecordSenha;
     FParent: iModelUsuario;
     FResponsability: iModelUsuarioMetodos;
     FOperacoes: iControllerUsuarioOperacoesFactory;
     procedure OnConfirmSenha(Sender: TObject);
     procedure OnCancelSenha(Sender: TObject);
+    procedure PedirSenha;
   public
     constructor Create(Value: iModelUsuario); overload;
     constructor Create(Value: iModelUsuario;
@@ -54,12 +56,17 @@ begin
   Result := FParent;
 end;
 
+procedure TModelUsuarioTipoFiscal.PedirSenha;
+begin
+  FOperacoes.PedirSenha.SetTitle('Entre com a senha do Fiscal')
+    .SetTextConfirm('OK').SetTextCancel('Cancelar').Lista(Flista)
+    .Result(FRetorno).&End;
+end;
+
 function TModelUsuarioTipoFiscal.AbrirCaixa: iModelUsuarioMetodos;
 begin
   Result := Self;
-  FOperacoes.PedirSenha.SetTitle('Entre com a senha do Fiscal')
-    .SetTextConfirm('OK').SetTextCancel('Cancelar').Lista(Flista)
-    .Result(Usuario).&End;
+  PedirSenha;
 
   // FResponsability.AbrirCaixa;
 end;
@@ -89,18 +96,26 @@ end;
 
 constructor TModelUsuarioTipoFiscal.Create(Value: iModelUsuario;
   NextResponsability: iModelUsuarioMetodos);
+var
+  Usuario: TRecordSenha;
 begin
-  Flista := TList<TRecordSenha>.Create;
   FParent := Value;
   FResponsability := NextResponsability;
+
+  Flista := TList<TRecordSenha>.Create;
+
+  Usuario.User := 'Arthur';
+  Usuario.Password := '123';
+  Flista.Add(Usuario);
 end;
 
 constructor TModelUsuarioTipoFiscal.Create(Value: iModelUsuario);
 var
   Usuario: TRecordSenha;
 begin
-  Flista := TList<TRecordSenha>.Create;
   FParent := Value;
+
+  Flista := TList<TRecordSenha>.Create;
 
   Usuario.User := 'Arthur';
   Usuario.Password := '123';
@@ -139,7 +154,9 @@ end;
 function TModelUsuarioTipoFiscal.FecharCaixa: iModelUsuarioMetodos;
 begin
   Result := Self;
-  FResponsability.FecharCaixa;
+  FOperacoes.PedirSenha.SetTitle('Entre com a senha do Fiscal')
+    .SetTextConfirm('OK').SetTextCancel('Cancelar').Lista(Flista)
+    .Result(FRetorno).&End;
 end;
 
 class function TModelUsuarioTipoFiscal.New(Value: iModelUsuario;
@@ -161,6 +178,9 @@ end;
 function TModelUsuarioTipoFiscal.Sangria: iModelUsuarioMetodos;
 begin
   Result := Self;
+  FOperacoes.PedirSenha.SetTitle('Entre com a senha do Fiscal')
+    .SetTextConfirm('OK').SetTextCancel('Cancelar').Lista(Flista)
+    .Result(FRetorno).&End;
 end;
 
 function TModelUsuarioTipoFiscal.SetOperacao
@@ -173,6 +193,9 @@ end;
 function TModelUsuarioTipoFiscal.Suprimento: iModelUsuarioMetodos;
 begin
   Result := Self;
+  FOperacoes.PedirSenha.SetTitle('Entre com a senha do Fiscal')
+    .SetTextConfirm('OK').SetTextCancel('Cancelar').Lista(Flista)
+    .Result(FRetorno).&End;
 end;
 
 class function TModelUsuarioTipoFiscal.New(Value: iModelUsuario)

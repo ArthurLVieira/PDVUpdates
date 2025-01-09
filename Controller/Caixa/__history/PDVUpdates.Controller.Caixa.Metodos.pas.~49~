@@ -38,7 +38,9 @@ begin
   FModel.Metodos.Abrir.SetValorAbertuta
     (TControllerFacade.New.Usuario.Operacoes.CapturaValor.SetTitle
     ('Valor de Abertura').SetTextConfirm('OK').SetTextCancel('Cancelar')
-    .GetValor).SetOperador(nil).EndAbrir;
+    .GetValor).SetFiscal(TControllerFacade.New.Usuario.Usuario.Caixa.
+    DesbloquearCaixa.&End).SetOperador
+    (TControllerFacade.New.Usuario.Usuario.Caixa.AbrirCaixa.&End).EndAbrir;
 end;
 
 function TControllerCaixaMetodos.BloquearCaixa: iControllerCaixaMetodos;
@@ -75,10 +77,11 @@ end;
 function TControllerCaixaMetodos.Fechar: iControllerCaixaMetodos;
 begin
   Result := Self;
-  FModel.Metodos.Fechar.SetValorFechamento(TFrmCapturaValor.Create(nil)
-    .ExibirForm('Valor do fechamento', 'OK', 'Cancelar'))
-    .SetFiscal(TControllerFacade.New.Usuario.Usuario.Fiscal.FecharCaixa.&End)
-    .EndFechar;
+  FModel.Metodos.Fechar.SetValorFechamento
+    (TControllerFacade.New.Usuario.Operacoes.CapturaValor.SetTitle
+    ('Valor de Fechamento').SetTextConfirm('OK').SetTextCancel('Cancelar')
+    .GetValor).SetFiscal(TControllerFacade.New.Usuario.Usuario.Fiscal.
+    FecharCaixa.&End).EndFechar;
 end;
 
 class function TControllerCaixaMetodos.New(Value: iControllerCaixa)
@@ -90,18 +93,21 @@ end;
 function TControllerCaixaMetodos.Sangria: iControllerCaixaMetodos;
 begin
   Result := Self;
-  FModel.Metodos.Sangria.SetValorSangria(TFrmCapturaValor.Create(nil)
-    .ExibirForm('Valor da Sangria', 'OK', 'Cancelar')).SetAutorizadorSangria
+  FModel.Metodos.Sangria.SetValorSangria
+    (TControllerFacade.New.Usuario.Operacoes.CapturaValor.SetTitle
+    ('Valor de Sangria').SetTextConfirm('OK').SetTextCancel('Cancelar')
+    .GetValor).SetAutorizadorSangria
     (TControllerFacade.New.Usuario.Usuario.Caixa.Sangria.&End).EndSangria;
 end;
 
 function TControllerCaixaMetodos.Suprimento: iControllerCaixaMetodos;
 begin
   Result := Self;
-  FModel.Metodos.Suprimento.SetValorSuprimento(TFrmCapturaValor.Create(nil)
-    .ExibirForm('Valor do fechamento', 'OK', 'Cancelar'))
-    .SetAutorizadorSuprimento(TControllerFacade.New.Usuario.Usuario.Caixa.
-    Suprimento.&End);
+  FModel.Metodos.Suprimento.SetValorSuprimento
+    (TControllerFacade.New.Usuario.Operacoes.CapturaValor.SetTitle
+    ('Valor de Suprimento').SetTextConfirm('OK').SetTextCancel('Cancelar')
+    .GetValor).SetAutorizadorSuprimento
+    (TControllerFacade.New.Usuario.Usuario.Caixa.Suprimento.&End);
 
 end;
 

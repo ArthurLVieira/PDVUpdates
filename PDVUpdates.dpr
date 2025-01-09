@@ -113,7 +113,9 @@ uses
   PDVUpdates.Model.Fiscal.Proxy.Identificacao in 'Model\Fiscal\Proxy\PDVUpdates.Model.Fiscal.Proxy.Identificacao.pas',
   PDVUpdates.Model.Fiscal.Proxy.Contribuinte in 'Model\Fiscal\Proxy\PDVUpdates.Model.Fiscal.Proxy.Contribuinte.pas',
   PDVUpdates.Model.Fiscal.Proxy.Endereco in 'Model\Fiscal\Proxy\PDVUpdates.Model.Fiscal.Proxy.Endereco.pas',
-  PDVUpdates.Model.Fiscal.Proxy.Emitente in 'Model\Fiscal\Proxy\PDVUpdates.Model.Fiscal.Proxy.Emitente.pas';
+  PDVUpdates.Model.Fiscal.Proxy.Emitente in 'Model\Fiscal\Proxy\PDVUpdates.Model.Fiscal.Proxy.Emitente.pas',
+  PDVUpdates.Model.Conexao.Interfaces in 'Model\Conexao\PDVUpdates.Model.Conexao.Interfaces.pas',
+  PDVUpdates.Model.Conexao.Factory in 'Model\Conexao\PDVUpdates.Model.Conexao.Factory.pas';
 
 {$R *.res}
 

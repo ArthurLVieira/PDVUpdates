@@ -21,7 +21,6 @@ type
     function Conn: IDBConnection;
   public
     { Public declarations }
-    class function New: iModelConexao;
   end;
 
 var
@@ -31,16 +30,5 @@ implementation
 
 {%CLASSGROUP 'FMX.Controls.TControl'}
 {$R *.dfm}
-{ TDataModule1 }
-
-function TDataModule1.Conn: IDBConnection;
-begin
-  Result := FConn;
-end;
-
-class function TDataModule1.New: iModelConexao;
-begin
-  Result := Self.Create(nil);
-end;
 
 end.

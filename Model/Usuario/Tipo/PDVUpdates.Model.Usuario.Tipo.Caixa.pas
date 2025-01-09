@@ -92,6 +92,7 @@ end;
 function TModelUsuarioTipoCAixa.DesbloquearCaixa: iModelUsuarioMetodos;
 begin
   Result := Self;
+  FResponsability.DesbloquearCaixa;
 end;
 
 function TModelUsuarioTipoCAixa.Desconto: iModelUsuarioMetodos;

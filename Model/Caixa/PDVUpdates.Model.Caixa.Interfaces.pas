@@ -37,6 +37,7 @@ type
   iModelCaixaMetodosAbrir = interface
     ['{3A7B8AFC-D671-4280-AC39-8CA27840E6E0}']
     function SetValorAbertuta(Value: Currency): iModelCaixaMetodosAbrir;
+    function SetFiscal(Value: iModelUsuario): iModelCaixaMetodosAbrir;
     function SetOperador(Value: iModelUsuario): iModelCaixaMetodosAbrir;
     function &EndAbrir: iModelCaixaMetodos;
   end;

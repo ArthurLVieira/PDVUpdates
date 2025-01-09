@@ -17,6 +17,7 @@ type
     FOperacoes: iControllerUsuarioOperacoesFactory;
     procedure OnConfirmSenha(Sender: TObject);
     procedure OnCancelSenha(Sender: TObject);
+    procedure PedirSenha;
   public
     constructor Create(Value: iModelUsuario); overload;
     constructor Create(Value: iModelUsuario;
@@ -55,12 +56,17 @@ begin
   Result := FParent;
 end;
 
-function TModelUsuarioTipoFiscal.AbrirCaixa: iModelUsuarioMetodos;
+procedure TModelUsuarioTipoFiscal.PedirSenha;
 begin
-  Result := Self;
   FOperacoes.PedirSenha.SetTitle('Entre com a senha do Fiscal')
     .SetTextConfirm('OK').SetTextCancel('Cancelar').Lista(Flista)
     .Result(FRetorno).&End;
+end;
+
+function TModelUsuarioTipoFiscal.AbrirCaixa: iModelUsuarioMetodos;
+begin
+  Result := Self;
+  PedirSenha;
 
   // FResponsability.AbrirCaixa;
 end;
@@ -119,6 +125,7 @@ end;
 function TModelUsuarioTipoFiscal.DesbloquearCaixa: iModelUsuarioMetodos;
 begin
   Result := Self;
+  PedirSenha;
 end;
 
 function TModelUsuarioTipoFiscal.Desconto: iModelUsuarioMetodos;

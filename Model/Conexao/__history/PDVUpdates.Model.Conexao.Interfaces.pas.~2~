@@ -1,0 +1,17 @@
+unit PDVUpdates.Model.Conexao.Interfaces;
+
+interface
+
+uses
+  ormbr.factory.Interfaces, dbebr.factory.Interfaces;
+
+type
+
+  iModelConexao = interface
+    ['{290DE960-9313-4188-B76A-F7274A185B70}']
+    function Conn: IDBConnection;
+  end;
+
+implementation
+
+end.

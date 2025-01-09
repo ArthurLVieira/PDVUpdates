@@ -10,13 +10,14 @@ type
   private
     FParent: iModelCaixa;
     FValor: Currency;
-    FUsuario: iModelUsuario;
+    FUsuario, FFiscal: iModelUsuario;
   public
     constructor Create(Value: iModelCaixa);
     destructor Destroy; override;
     class function New(Value: iModelCaixa): iModelCaixaMetodosAbrir;
     function SetValorAbertuta(Value: Currency): iModelCaixaMetodosAbrir;
     function SetOperador(Value: iModelUsuario): iModelCaixaMetodosAbrir;
+    function SetFiscal(Value: iModelUsuario): iModelCaixaMetodosAbrir;
     function &EndAbrir: iModelCaixaMetodos;
   end;
 
@@ -45,6 +46,13 @@ class function TModelCaixaMetodosAbrir.New(Value: iModelCaixa)
   : iModelCaixaMetodosAbrir;
 begin
   Result := Self.Create(Value);
+end;
+
+function TModelCaixaMetodosAbrir.SetFiscal(Value: iModelUsuario)
+  : iModelCaixaMetodosAbrir;
+begin
+  Result := Self;
+  FFiscal := Value;
 end;
 
 function TModelCaixaMetodosAbrir.SetOperador(Value: iModelUsuario)
